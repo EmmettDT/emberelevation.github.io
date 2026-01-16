@@ -2,35 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ember Elevation</title>
+  <title>Ember Elevation — Premium Specialty Coffee</title>
+  <meta name="description" content="Ember Elevation is a premium Canadian specialty coffee brand sourcing rare, high-quality beans from the world’s most respected origins." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #141414, #000000 70%);
+      color: #f5f5f5;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 60px 40px;
       text-align: center;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+
+    .logo {
+      max-width: 320px;
+      width: 100%;
+      margin-bottom: 40px;
     }
-    p {
-      font-size: 1.2rem;
-      color: #cccccc;
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 1.4rem;
+      color: #c8c8c8;
+      margin-bottom: 40px;
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #b48a55, transparent);
+      margin: 40px auto;
+    }
+
+    .description {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #bdbdbd;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .coming-soon {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      letter-spacing: 0.25em;
+      color: #9a9a9a;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 25px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #666;
+      letter-spacing: 0.15em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+      }
+
+      .container {
+        padding: 40px 25px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div>
-    <h1>Ember Elevation</h1>
-    <p>Premium whole bean coffee from Canada.</p>
-    <p>Launching soon.</p>
+  <div class="container">
+    <img src="logo.png" alt="Ember Elevation Logo" class="logo" />
+
+    <h1>EMBER ELEVATION</h1>
+
+    <div class="tagline">
+      Premium specialty coffee, thoughtfully sourced.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="description">
+      Ember Elevation is a Canadian specialty coffee brand dedicated to rare,
+      meticulously selected beans from the world’s most respected growing regions.
+      Every offering is chosen for clarity, depth, and character — crafted for those
+      who value precision, origin, and elevation in every cup.
+    </div>
+
+    <div class="coming-soon">
+      LAUNCHING SOON
+    </div>
   </div>
+
+  <footer>
+    © Ember Elevation — Canada
+  </footer>
 </body>
 </html>
