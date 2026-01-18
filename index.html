@@ -72,7 +72,7 @@
       margin: 0 auto 3.8rem;
     }
 
-    /* ACCESS */
+    /* PRIVATE ACCESS */
     .access {
       margin-bottom: 4rem;
     }
@@ -83,6 +83,11 @@
       text-transform: uppercase;
       opacity: 0.55;
       margin-bottom: 1rem;
+    }
+
+    .access form {
+      display: flex;
+      justify-content: center;
     }
 
     .access input {
@@ -143,7 +148,7 @@
   <section class="hero">
     <div class="hero-inner">
 
-      <img src="logo.png?v=4" alt="Ember Elevation logo" class="logo" />
+      <img src="logo.png?v=5" alt="Ember Elevation logo" class="logo" />
 
       <h1>Ember Elevation</h1>
       <div class="subtitle">Ultra-Premium Specialty Coffee</div>
@@ -157,13 +162,26 @@
 
       <div class="access">
         <div class="access-label">Private Access</div>
-        <input type="email" placeholder="Enter your email" />
+
+        <form action="https://formspree.io/f/xykkeolk" method="POST">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </form>
       </div>
 
       <footer>
-        <a href="mailto:emberelevationcoffee@gmail.com">Contact</a>
+        Business Inquiries:
+        <a href="mailto:emberelevationcoffee@gmail.com">
+          emberelevationcoffee@gmail.com
+        </a>
         ·
-        <a href="https://instagram.com/ember_elevation" target="_blank">Instagram</a>
+        <a href="https://instagram.com/ember_elevation" target="_blank">
+          Instagram
+        </a>
         <br><br>
         © Ember Elevation — Canada
       </footer>
