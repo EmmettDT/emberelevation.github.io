@@ -3,143 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ember Elevation — Ultra-Premium Specialty Coffee</title>
-
-  <meta name="description" content="Ember Elevation is a Canadian ultra-premium specialty coffee brand focused on rare origins, elevation, and precision." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rare, high-elevation specialty coffee. Crafted with restraint. Launching soon." />
 
-  <!-- Luxury Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      margin: 0;
+    html, body {
+      height: 100%;
       font-family: 'Inter', sans-serif;
-      color: #eaeaea;
+      background: #000;
+      color: #f5f5f5;
+    }
+
+    .hero {
       min-height: 100vh;
-
       background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.65),
-          rgba(0, 0, 0, 0.9)
-        ),
-        url('mountains.jpg');
-
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-
+        radial-gradient(circle at center, rgba(0,0,0,0.45), rgba(0,0,0,0.9)),
+        url("mountains.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
     }
 
-    .container {
-      max-width: 1100px;
-      padding: 120px 40px;
+    .hero-inner {
+      max-width: 880px;
+      padding: 4rem 2rem;
+      animation: fadeIn 1.6s ease-out forwards;
     }
 
     .logo {
-      max-width: 300px;
-      width: 100%;
-      margin-bottom: 60px;
+      width: 240px;
+      max-width: 70vw;
+      margin: 0 auto 2.8rem;
+      display: block;
+      background: transparent !important;
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 4.5rem;
-      font-weight: 400;
-      letter-spacing: 0.15em;
-      margin: 0 0 20px;
-    }
-
-    .tagline {
-      font-size: 0.95rem;
-      letter-spacing: 0.2em;
+      font-weight: 300;
+      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+      letter-spacing: 0.24em;
       text-transform: uppercase;
-      color: #cfcfcf;
-      margin-bottom: 50px;
+      margin-bottom: 1.6rem;
     }
 
-    .divider {
-      width: 90px;
-      height: 1px;
-      margin: 0 auto 50px;
-      background: linear-gradient(to right, transparent, #b48a55, transparent);
+    .subtitle {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 2.6rem;
     }
 
     .description {
-      font-size: 1.05rem;
-      line-height: 1.9;
-      max-width: 760px;
-      margin: 0 auto;
-      color: #d6d6d6;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      opacity: 0.75;
+      max-width: 720px;
+      margin: 0 auto 3.8rem;
     }
 
-    .coming-soon {
-      margin-top: 70px;
-      font-size: 0.75rem;
-      letter-spacing: 0.35em;
-      color: #a0a0a0;
+    /* ACCESS */
+    .access {
+      margin-bottom: 4rem;
     }
 
-    footer {
-      position: fixed;
-      bottom: 25px;
-      width: 100%;
-      text-align: center;
+    .access-label {
       font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      color: #777;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      margin-bottom: 1rem;
     }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 3rem;
-        letter-spacing: 0.12em;
-      }
+    .access input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+      padding: 0.6rem 0;
+      width: 260px;
+      max-width: 80vw;
+      color: #f5f5f5;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
 
-      .container {
-        padding: 100px 25px;
+    .access input::placeholder {
+      color: rgba(255,255,255,0.35);
+    }
+
+    .access input:focus {
+      outline: none;
+      border-bottom-color: rgba(255,255,255,0.6);
+    }
+
+    /* FOOTER */
+    footer {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+      margin: 0 0.6rem;
+    }
+
+    footer a:hover {
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
-    <img src="logo.png" alt="Ember Elevation Logo" class="logo" />
+  <section class="hero">
+    <div class="hero-inner">
 
-    <h1>EMBER ELEVATION</h1>
+      <img src="logo.png?v=4" alt="Ember Elevation logo" class="logo" />
 
-    <div class="tagline">
-      Ultra-Premium Specialty Coffee
+      <h1>Ember Elevation</h1>
+      <div class="subtitle">Ultra-Premium Specialty Coffee</div>
+
+      <p class="description">
+        Ember Elevation is a Canadian specialty coffee brand devoted to rare,
+        high-elevation coffees sourced with precision and intent.
+        Each offering is selected for clarity, depth, and character —
+        crafted for those who value origin, restraint, and excellence in every cup.
+      </p>
+
+      <div class="access">
+        <div class="access-label">Private Access</div>
+        <input type="email" placeholder="Enter your email" />
+      </div>
+
+      <footer>
+        <a href="mailto:emberelevationcoffee@gmail.com">Contact</a>
+        ·
+        <a href="https://instagram.com/ember_elevation" target="_blank">Instagram</a>
+        <br><br>
+        © Ember Elevation — Canada
+      </footer>
+
     </div>
-
-    <div class="divider"></div>
-
-    <div class="description">
-      Ember Elevation is a Canadian specialty coffee brand devoted to rare, high-elevation
-      coffees sourced with precision and intent. Each offering is selected for clarity,
-      depth, and character — crafted for those who value origin, restraint, and excellence
-      in every cup.
-    </div>
-
-    <div class="coming-soon">
-      LAUNCHING SOON
-    </div>
-  </div>
-
-  <footer>
-    © Ember Elevation — Canada
-  </footer>
+  </section>
 
 </body>
 </html>
