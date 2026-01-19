@@ -24,44 +24,36 @@
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
-      background: #000;
+      background-color: #000;
       overflow-x: hidden;
     }
 
-    /* Shared background wrapper */
+    /* Continuous background environment */
     .page {
-      background-image: url('mountains.jpg');
+      min-height: 100vh;
+      background-image: 
+        linear-gradient(
+          rgba(0,0,0,0.35),
+          rgba(0,0,0,0.55),
+          rgba(0,0,0,0.75)
+        ),
+        url("mountains.jpg");
       background-size: cover;
-      background-position: center bottom;
-      background-attachment: fixed;
-      position: relative;
-    }
-
-    /* Dark mist overlay */
-    .page::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.35),
-        rgba(0,0,0,0.55)
-      );
-      z-index: 0;
+      background-position: center top;
+      background-repeat: no-repeat;
     }
 
     section {
-      position: relative;
-      z-index: 1;
       width: 100%;
       display: flex;
       justify-content: center;
       text-align: center;
-      padding: 120px 20px;
+      padding: 160px 20px;
     }
 
     .container {
       max-width: 900px;
+      margin: 0 auto;
     }
 
     /* HERO */
@@ -71,8 +63,8 @@
     }
 
     .logo {
-      width: 70px;
-      margin-bottom: 40px;
+      width: 72px;
+      margin-bottom: 42px;
       opacity: 0.95;
     }
 
@@ -85,96 +77,91 @@
     }
 
     .subtitle {
-      font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 40px;
+      margin-bottom: 44px;
     }
 
     .intro {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.15rem;
-      line-height: 1.7;
+      line-height: 1.75;
       color: var(--text-muted);
       max-width: 720px;
-      margin: 0 auto 48px;
+      margin: 0 auto 50px;
     }
 
     .pillars {
       font-size: 0.7rem;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--text-soft);
     }
 
     .scroll {
-      margin-top: 80px;
+      margin-top: 90px;
       font-size: 0.65rem;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--text-soft);
     }
 
     /* PHILOSOPHY */
     .philosophy {
-      padding-top: 180px;
-      padding-bottom: 160px;
+      padding-top: 220px;
+      padding-bottom: 200px;
     }
 
     .section-label {
       font-size: 0.65rem;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.32em;
       text-transform: uppercase;
       color: var(--text-soft);
-      margin-bottom: 30px;
+      margin-bottom: 34px;
     }
 
     .philosophy-text {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.25rem;
-      line-height: 1.75;
+      line-height: 1.8;
       color: var(--text-muted);
       max-width: 760px;
-      margin: 0 auto 90px;
+      margin: 0 auto 110px;
     }
 
     .values {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 60px 120px;
+      gap: 56px 120px;
       max-width: 700px;
       margin: 0 auto;
       font-size: 0.7rem;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--text-soft);
     }
 
     /* ACCESS */
     .access {
-      padding-top: 200px;
-      padding-bottom: 160px;
+      padding-top: 240px;
+      padding-bottom: 200px;
     }
 
     .access-title {
       font-size: 0.7rem;
-      letter-spacing: 0.3em;
+      letter-spacing: 0.32em;
       text-transform: uppercase;
       color: var(--text-soft);
-      margin-bottom: 30px;
-    }
-
-    .email {
-      margin-top: 30px;
+      margin-bottom: 36px;
     }
 
     input[type="email"] {
       background: transparent;
       border: none;
       border-bottom: 1px solid rgba(255,255,255,0.4);
-      padding: 12px;
+      padding: 14px;
       width: 280px;
       font-size: 0.9rem;
       color: var(--text-main);
@@ -188,22 +175,23 @@
     }
 
     .privacy {
-      margin-top: 14px;
+      margin-top: 16px;
       font-size: 0.65rem;
       color: var(--text-soft);
     }
 
     /* FOOTER */
     footer {
-      padding-bottom: 60px;
+      padding: 120px 20px 70px;
+      text-align: center;
       font-size: 0.65rem;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--text-soft);
     }
 
     footer div {
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
     @media (max-width: 768px) {
@@ -214,11 +202,12 @@
 
       .values {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 34px;
       }
     }
   </style>
 </head>
+
 <body>
 
   <div class="page">
@@ -252,8 +241,8 @@
 
         <p class="philosophy-text">
           True quality comes from restraint. We work with responsible farms that prioritize land, people,
-          and process, and we roast each coffee fresh to preserve clarity and character. Fewer releases
-          allow higher standards — without compromise.
+          and process, roasting each coffee fresh to preserve clarity and character. Fewer releases allow
+          higher standards — without compromise.
         </p>
 
         <div class="values">
@@ -270,10 +259,7 @@
       <div class="container">
         <div class="access-title">Private Access — Limited Releases</div>
 
-        <div class="email">
-          <input type="email" placeholder="Enter your email" />
-        </div>
-
+        <input type="email" placeholder="Enter your email" />
         <div class="privacy">No spam. Only release notifications.</div>
       </div>
     </section>
