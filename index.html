@@ -41,30 +41,32 @@
       background-repeat: no-repeat;
     }
 
+    /* GLOBAL SECTIONS */
     section {
       width: 100%;
       display: flex;
       justify-content: center;
       text-align: center;
-      padding: 160px 20px;
+      padding: 0 20px;
     }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
+      width: 100%;
     }
 
     /* HERO */
     .hero {
       min-height: 100vh;
-      padding-top: 90px;
+      display: flex;
+      align-items: center;
     }
 
-    /* LOGO — SIZE + CORRECTED SPACING */
     .logo {
       width: 420px;
       max-width: 85vw;
-      margin-bottom: 56px;
+      margin-bottom: 48px;
       opacity: 0.98;
     }
 
@@ -101,7 +103,7 @@
     }
 
     .scroll {
-      margin-top: 90px;
+      margin-top: 60px;
       font-size: 0.65rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
@@ -110,8 +112,7 @@
 
     /* PHILOSOPHY */
     .philosophy {
-      padding-top: 220px;
-      padding-bottom: 200px;
+      padding: 220px 20px 200px;
     }
 
     .section-label {
@@ -145,8 +146,7 @@
 
     /* ACCESS */
     .access {
-      padding-top: 240px;
-      padding-bottom: 200px;
+      padding: 240px 20px 200px;
     }
 
     .access-title {
@@ -167,7 +167,6 @@
       color: var(--text-main);
       text-align: center;
       outline: none;
-      font-family: 'Inter', sans-serif;
     }
 
     input::placeholder {
@@ -180,7 +179,6 @@
       color: var(--text-soft);
     }
 
-    /* FOOTER */
     footer {
       padding: 120px 20px 70px;
       text-align: center;
