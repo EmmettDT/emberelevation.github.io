@@ -41,7 +41,6 @@
       background-repeat: no-repeat;
     }
 
-    /* GLOBAL SECTIONS */
     section {
       width: 100%;
       display: flex;
@@ -56,17 +55,18 @@
       width: 100%;
     }
 
-    /* HERO */
+    /* HERO — TOP ANCHORED */
     .hero {
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+      padding-top: 48px;
     }
 
     .logo {
       width: 420px;
       max-width: 85vw;
-      margin-bottom: 48px;
+      margin-bottom: 36px;
       opacity: 0.98;
     }
 
@@ -75,7 +75,7 @@
       font-size: 3.4rem;
       font-weight: 400;
       letter-spacing: 0.35em;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .subtitle {
@@ -83,16 +83,16 @@
       letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 44px;
+      margin-bottom: 36px;
     }
 
     .intro {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      line-height: 1.75;
+      font-size: 1.1rem;
+      line-height: 1.7;
       color: var(--text-muted);
-      max-width: 720px;
-      margin: 0 auto 50px;
+      max-width: 700px;
+      margin: 0 auto 40px;
     }
 
     .pillars {
@@ -103,7 +103,7 @@
     }
 
     .scroll {
-      margin-top: 60px;
+      margin-top: 40px;
       font-size: 0.65rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
@@ -194,8 +194,8 @@
 
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.4rem;
-        letter-spacing: 0.25em;
+        font-size: 2.2rem;
+        letter-spacing: 0.24em;
       }
 
       .values {
