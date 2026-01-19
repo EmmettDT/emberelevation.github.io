@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ember Elevation — Ultra-Premium Whole-Bean Coffee</title>
+  <title>Ember Elevation – Ultra-Premium Whole-Bean Coffee</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --text-main: rgba(255,255,255,0.92);
-      --text-muted: rgba(255,255,255,0.65);
-      --text-soft: rgba(255,255,255,0.45);
+      --text-main: rgba(255, 255, 255, 0.92);
+      --text-muted: rgba(255, 255, 255, 0.65);
+      --text-soft: rgba(255, 255, 255, 0.45);
     }
 
     * {
@@ -31,7 +31,7 @@
     /* Continuous background environment */
     .page {
       min-height: 100vh;
-      background-image: 
+      background-image:
         linear-gradient(
           rgba(0,0,0,0.35),
           rgba(0,0,0,0.55),
@@ -62,10 +62,11 @@
       padding-top: 130px;
     }
 
-    /* ✅ ONLY CHANGE IS HERE */
+    /* ✅ LOGO — ONLY INTENTIONAL CHANGE */
     .logo {
-      width: 170px;
-      margin-bottom: 56px;
+      width: 280px;
+      max-width: 70vw;
+      margin-bottom: 72px;
       opacity: 0.98;
     }
 
@@ -195,6 +196,7 @@
       margin-top: 12px;
     }
 
+    /* MOBILE */
     @media (max-width: 768px) {
       h1 {
         font-size: 2.4rem;
@@ -210,7 +212,6 @@
 </head>
 
 <body>
-
   <div class="page">
 
     <!-- HERO -->
@@ -242,9 +243,9 @@
         <div class="section-label">Our Philosophy</div>
 
         <p class="philosophy-text">
-          True quality comes from restraint. We work with responsible farms that prioritize land, people,
-          and process, roasting each coffee fresh to preserve clarity and character. Fewer releases allow
-          higher standards — without compromise.
+          True quality comes from restraint. We work with responsible farms that prioritize land,
+          people, and process, roasting each coffee fresh to preserve clarity and character.
+          Fewer releases allow higher standards — without compromise.
         </p>
 
         <div class="values">
@@ -260,7 +261,6 @@
     <section class="access">
       <div class="container">
         <div class="access-title">Private Access — Limited Releases</div>
-
         <input type="email" placeholder="Enter your email" />
         <div class="privacy">No spam. Only release notifications.</div>
       </div>
@@ -274,6 +274,5 @@
     </footer>
 
   </div>
-
 </body>
 </html>
