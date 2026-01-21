@@ -55,7 +55,6 @@
       margin: 0 auto;
     }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       align-items: flex-start;
@@ -109,7 +108,6 @@
       color: var(--text-soft);
     }
 
-    /* PHILOSOPHY */
     .philosophy {
       padding: 220px 20px 200px;
     }
@@ -143,7 +141,6 @@
       color: var(--text-soft);
     }
 
-    /* OUR COFFEES */
     .coffees {
       padding: 220px 20px 220px;
     }
@@ -163,10 +160,6 @@
       gap: 80px;
       max-width: 900px;
       margin: 0 auto;
-    }
-
-    .coffee {
-      text-align: center;
     }
 
     .coffee-name {
@@ -192,7 +185,6 @@
       color: var(--text-muted);
     }
 
-    /* ACCESS */
     .access {
       padding: 240px 20px 200px;
     }
@@ -203,6 +195,12 @@
       text-transform: uppercase;
       color: var(--text-soft);
       margin-bottom: 36px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     input[type="email"] {
@@ -233,6 +231,16 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--text-soft);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--text-soft);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     footer div {
@@ -261,7 +269,6 @@
 <body>
   <div class="page">
 
-    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <img src="logo.png" alt="Ember Elevation Logo" class="logo" />
@@ -277,14 +284,14 @@
       </div>
     </section>
 
-    <!-- PHILOSOPHY -->
     <section class="philosophy">
       <div class="container">
         <div class="section-label">Our Philosophy</div>
         <p class="philosophy-text">
           True quality comes from restraint. We work with responsible farms and cooperatives that
-          prioritize land, people, and process. By releasing fewer coffees, we hold every origin to a
-          higher standard — clarity, balance, and character without compromise.
+          prioritize land, people, and process. We source from farms that follow fair-trade and organic
+          practices. By releasing fewer coffees, we hold every origin to a higher standard — clarity,
+          balance, and character without compromise.
         </p>
 
         <div class="values">
@@ -296,7 +303,6 @@
       </div>
     </section>
 
-    <!-- OUR COFFEES -->
     <section class="coffees">
       <div class="container">
         <div class="section-label">Our Coffees</div>
@@ -307,7 +313,6 @@
         </p>
 
         <div class="coffee-grid">
-
           <div class="coffee">
             <div class="coffee-name">Guatemala Nahualá</div>
             <div class="coffee-meta">Medium Roast · 1200–1500 m</div>
@@ -337,24 +342,27 @@
               intensity without harshness.
             </p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ACCESS -->
     <section class="access">
       <div class="container">
         <div class="access-title">Private Access · Limited Releases</div>
-        <input type="email" placeholder="Enter your email" />
+        <form action="https://formspree.io/f/xykkeolk" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required />
+        </form>
         <div class="privacy">No spam. Only release notifications.</div>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
       <div>Small-Batch · Direct-to-Consumer · Canada</div>
-      <div>Business Inquiries · Email · Instagram</div>
+      <div>
+        Business Inquiries ·
+        <a href="mailto:emberelevationcoffee@gmail.com">Email</a> ·
+        <a href="https://instagram.com/ember_elevation" target="_blank" rel="noopener">Instagram</a>
+      </div>
       <div>Ember Elevation — Canada</div>
     </footer>
 
