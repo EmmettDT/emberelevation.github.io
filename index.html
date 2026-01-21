@@ -55,7 +55,7 @@
       width: 100%;
     }
 
-    /* HERO — TOP ANCHORED */
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -110,7 +110,7 @@
       color: var(--text-soft);
     }
 
-    /* PHILOSOPHY */
+    /* PHILOSOPHY + COFFEE SECTIONS */
     .philosophy {
       padding: 220px 20px 200px;
     }
@@ -207,62 +207,97 @@
 </head>
 
 <body>
-  <div class="page">
+<div class="page">
 
-    <section class="hero">
-      <div class="container">
-        <img src="logo.png" alt="Ember Elevation Logo" class="logo" />
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <img src="logo.png" alt="Ember Elevation Logo" class="logo" />
 
-        <h1>EMBER ELEVATION</h1>
-        <div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
+      <h1>EMBER ELEVATION</h1>
+      <div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
 
-        <p class="intro">
-          Ember Elevation is a Canadian specialty coffee brand devoted exclusively to freshly roasted,
-          whole-bean coffees grown at high elevation. Our coffees are sourced from farms that practice
-          fair trade and organic cultivation, selected with restraint, and released in limited quantities —
-          never blended for volume, never rushed, never produced for scale.
-        </p>
+      <p class="intro">
+        Ember Elevation is a Canadian specialty coffee brand devoted exclusively to
+        freshly roasted, whole-bean coffees grown at elevation. Our releases are
+        selected with restraint and roasted with intention — never blended for
+        volume, never rushed, never produced for scale.
+      </p>
 
-        <div class="pillars">
-          Whole Bean Only · Roasted Fresh · Limited Releases
+      <div class="pillars">
+        Whole Bean Only · Roasted Fresh · Limited Releases
+      </div>
+
+      <div class="scroll">Scroll</div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="section-label">Our Philosophy</div>
+
+      <p class="philosophy-text">
+        True quality comes from restraint. We work with responsible farms and
+        cooperatives that prioritize land, people, and process. By releasing fewer
+        coffees, we hold every origin to a higher standard — clarity, balance,
+        and character without compromise.
+      </p>
+
+      <div class="values">
+        <div>High-Elevation Origins</div>
+        <div>Freshly Roasted</div>
+        <div>Small-Batch · Limited</div>
+        <div>Responsibly Sourced</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COFFEES -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="section-label">Our Coffees</div>
+
+      <p class="philosophy-text">
+        Each Ember Elevation release is chosen for depth, structure, and refinement.
+        These coffees represent elevated growing regions, careful processing, and
+        profiles designed to shine across espresso and brewed preparations.
+      </p>
+
+      <div class="values">
+        <div>
+          Guatemala Nahualá<br>
+          <span style="letter-spacing:0.18em;">Medium Roast · 1200–1500m</span>
         </div>
 
-        <div class="scroll">Scroll</div>
-      </div>
-    </section>
+        <div>
+          Papua New Guinea Enorga<br>
+          <span style="letter-spacing:0.18em;">Medium-Dark Roast · 1300–1750m</span>
+        </div>
 
-    <section class="philosophy">
-      <div class="container">
-        <div class="section-label">Our Philosophy</div>
-        <p class="philosophy-text">
-          True quality comes from restraint. We work with responsible farms that prioritize land,
-          people, and process, roasting each coffee fresh to preserve clarity and character.
-          Fewer releases allow higher standards — without compromise.
-        </p>
-
-        <div class="values">
-          <div>High-Elevation Origins</div>
-          <div>Freshly Roasted</div>
-          <div>Small-Batch · Limited</div>
-          <div>Responsibly Sourced</div>
+        <div>
+          Superior Dark<br>
+          <span style="letter-spacing:0.18em;">Dark Roast · Full-Bodied</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="access">
-      <div class="container">
-        <div class="access-title">Private Access — Limited Releases</div>
-        <input type="email" placeholder="Enter your email" />
-        <div class="privacy">No spam. Only release notifications.</div>
-      </div>
-    </section>
+  <!-- ACCESS -->
+  <section class="access">
+    <div class="container">
+      <div class="access-title">Private Access · Limited Releases</div>
+      <input type="email" placeholder="Enter your email" />
+      <div class="privacy">No spam. Only release notifications.</div>
+    </div>
+  </section>
 
-    <footer>
-      <div>Small-Batch · Direct-to-Consumer · Canada</div>
-      <div>Business Inquiries · Email · Instagram</div>
-      <div>© Ember Elevation — Canada</div>
-    </footer>
+  <footer>
+    <div>Small-Batch · Direct-to-Consumer · Canada</div>
+    <div>Business Inquiries · Email · Instagram</div>
+    <div>Ember Elevation — Canada</div>
+  </footer>
 
-  </div>
+</div>
 </body>
 </html>
