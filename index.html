@@ -237,6 +237,15 @@
       margin-top: 12px;
     }
 
+    footer a {
+      color: var(--text-soft);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 900px) {
       .coffee-grid {
         grid-template-columns: 1fr;
@@ -265,11 +274,54 @@
         <h1>EMBER ELEVATION</h1>
         <div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
         <p class="intro">
-          Ember Elevation is a Canadian specialty coffee brand devoted exclusively to freshly roasted,
-          whole-bean coffees grown at elevation.
+          Ember Elevation is a Canadian specialty coffee brand devoted exclusively to freshly roasted, whole-bean coffees grown at elevation.
         </p>
         <div class="pillars">Whole Bean Only · Roasted Fresh · Limited Releases</div>
         <div class="scroll">Scroll</div>
+      </div>
+    </section>
+
+    <section class="philosophy">
+      <div class="container">
+        <div class="section-label">Our Philosophy</div>
+        <p class="philosophy-text">
+          True quality comes from restraint. We work with responsible farms and cooperatives that prioritize land, people, and process.
+        </p>
+        <div class="values">
+          <div>High-Elevation Origins</div>
+          <div>Freshly Roasted</div>
+          <div>Small-Batch · Limited</div>
+          <div>Responsibly Sourced</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coffees">
+      <div class="container">
+        <div class="section-label">Our Coffees</div>
+        <p class="coffees-intro">
+          Each Ember Elevation release is chosen for depth, structure, and refinement.
+        </p>
+
+        <div class="coffee-grid">
+          <div class="coffee">
+            <h3>GUATEMALA NAHUALÁ</h3>
+            <div class="meta">Medium Roast · 1200–1500 m</div>
+            <p>A balanced cup with layered chocolate tones and subtle sweetness.</p>
+          </div>
+
+          <div class="coffee">
+            <h3>PAPUA NEW GUINEA ENORGA</h3>
+            <div class="meta">Medium-Dark Roast · 1300–1750 m</div>
+            <p>Earthy depth with lifted citrus character and rich body.</p>
+          </div>
+
+          <div class="coffee">
+            <h3>SUPERIOR DARK</h3>
+            <div class="meta">Dark Roast · Full-Bodied</div>
+            <p>Bold and smooth with deep chocolate and caramelized sugar notes.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -280,7 +332,6 @@
         <form action="https://formspree.io/f/xykkeo1k" method="POST">
           <input type="hidden" name="_redirect" value="https://emberelevation.github.io/" />
           <input type="email" name="email" placeholder="Enter your email" required />
-          <input type="submit" style="position:absolute; left:-9999px;" />
         </form>
 
         <div class="privacy">No spam. Only release notifications.</div>
@@ -289,8 +340,12 @@
 
     <footer>
       <div>Small-Batch · Direct-to-Consumer · Canada</div>
-      <div>Business Inquiries · Email · Instagram</div>
-      <div>Ember Elevation — Canada</div>
+      <div>
+        Business Inquiries ·
+        <a href="mailto:emberelevationcoffee@gmail.com">Email</a> ·
+        <a href="https://instagram.com/ember_elevation" target="_blank">Instagram</a>
+      </div>
+      <div>Ember Elevation · Canada</div>
     </footer>
 
   </div>
