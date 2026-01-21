@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ember Elevation – Ultra-Premium Whole-Bean Coffee</title>
+  <title>Ember Elevation — Ultra-Premium Whole-Bean Coffee</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --text-main: rgba(255, 255, 255, 0.92);
-      --text-muted: rgba(255, 255, 255, 0.65);
-      --text-soft: rgba(255, 255, 255, 0.45);
+      --text-main: rgba(255,255,255,0.92);
+      --text-muted: rgba(255,255,255,0.65);
+      --text-soft: rgba(255,255,255,0.45);
     }
 
     * {
@@ -50,15 +50,14 @@
     }
 
     .container {
+      width: 100%;
       max-width: 900px;
       margin: 0 auto;
-      width: 100%;
     }
 
     /* HERO */
     .hero {
       min-height: 100vh;
-      display: flex;
       align-items: flex-start;
       padding-top: 48px;
     }
@@ -110,7 +109,7 @@
       color: var(--text-soft);
     }
 
-    /* PHILOSOPHY + COFFEE SECTIONS */
+    /* PHILOSOPHY */
     .philosophy {
       padding: 220px 20px 200px;
     }
@@ -129,7 +128,7 @@
       line-height: 1.8;
       color: var(--text-muted);
       max-width: 760px;
-      margin: 0 auto 110px;
+      margin: 0 auto;
     }
 
     .values {
@@ -137,11 +136,60 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 56px 120px;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 90px auto 0;
       font-size: 0.7rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--text-soft);
+    }
+
+    /* OUR COFFEES */
+    .coffees {
+      padding: 220px 20px 220px;
+    }
+
+    .coffees-intro {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 120px;
+    }
+
+    .coffee-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 80px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .coffee {
+      text-align: center;
+    }
+
+    .coffee-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .coffee-meta {
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 26px;
+    }
+
+    .coffee-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-muted);
     }
 
     /* ACCESS */
@@ -181,7 +229,6 @@
 
     footer {
       padding: 120px 20px 70px;
-      text-align: center;
       font-size: 0.65rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -202,102 +249,115 @@
         grid-template-columns: 1fr;
         gap: 34px;
       }
+
+      .coffee-grid {
+        grid-template-columns: 1fr;
+        gap: 90px;
+      }
     }
   </style>
 </head>
 
 <body>
-<div class="page">
+  <div class="page">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <img src="logo.png" alt="Ember Elevation Logo" class="logo" />
-
-      <h1>EMBER ELEVATION</h1>
-      <div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
-
-      <p class="intro">
-        Ember Elevation is a Canadian specialty coffee brand devoted exclusively to
-        freshly roasted, whole-bean coffees grown at elevation. Our releases are
-        selected with restraint and roasted with intention — never blended for
-        volume, never rushed, never produced for scale.
-      </p>
-
-      <div class="pillars">
-        Whole Bean Only · Roasted Fresh · Limited Releases
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <img src="logo.png" alt="Ember Elevation Logo" class="logo" />
+        <h1>EMBER ELEVATION</h1>
+        <div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
+        <p class="intro">
+          Ember Elevation is a Canadian specialty coffee brand devoted exclusively to freshly roasted,
+          whole-bean coffees grown at elevation. Our releases are selected with restraint and roasted
+          with intention — never blended for volume, never rushed, never produced for scale.
+        </p>
+        <div class="pillars">Whole Bean Only · Roasted Fresh · Limited Releases</div>
+        <div class="scroll">Scroll</div>
       </div>
+    </section>
 
-      <div class="scroll">Scroll</div>
-    </div>
-  </section>
+    <!-- PHILOSOPHY -->
+    <section class="philosophy">
+      <div class="container">
+        <div class="section-label">Our Philosophy</div>
+        <p class="philosophy-text">
+          True quality comes from restraint. We work with responsible farms and cooperatives that
+          prioritize land, people, and process. By releasing fewer coffees, we hold every origin to a
+          higher standard — clarity, balance, and character without compromise.
+        </p>
 
-  <!-- PHILOSOPHY -->
-  <section class="philosophy">
-    <div class="container">
-      <div class="section-label">Our Philosophy</div>
-
-      <p class="philosophy-text">
-        True quality comes from restraint. We work with responsible farms and
-        cooperatives that prioritize land, people, and process. By releasing fewer
-        coffees, we hold every origin to a higher standard — clarity, balance,
-        and character without compromise.
-      </p>
-
-      <div class="values">
-        <div>High-Elevation Origins</div>
-        <div>Freshly Roasted</div>
-        <div>Small-Batch · Limited</div>
-        <div>Responsibly Sourced</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COFFEES -->
-  <section class="philosophy">
-    <div class="container">
-      <div class="section-label">Our Coffees</div>
-
-      <p class="philosophy-text">
-        Each Ember Elevation release is chosen for depth, structure, and refinement.
-        These coffees represent elevated growing regions, careful processing, and
-        profiles designed to shine across espresso and brewed preparations.
-      </p>
-
-      <div class="values">
-        <div>
-          Guatemala Nahualá<br>
-          <span style="letter-spacing:0.18em;">Medium Roast · 1200–1500m</span>
-        </div>
-
-        <div>
-          Papua New Guinea Enorga<br>
-          <span style="letter-spacing:0.18em;">Medium-Dark Roast · 1300–1750m</span>
-        </div>
-
-        <div>
-          Superior Dark<br>
-          <span style="letter-spacing:0.18em;">Dark Roast · Full-Bodied</span>
+        <div class="values">
+          <div>High-Elevation Origins</div>
+          <div>Freshly Roasted</div>
+          <div>Small-Batch · Limited</div>
+          <div>Responsibly Sourced</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ACCESS -->
-  <section class="access">
-    <div class="container">
-      <div class="access-title">Private Access · Limited Releases</div>
-      <input type="email" placeholder="Enter your email" />
-      <div class="privacy">No spam. Only release notifications.</div>
-    </div>
-  </section>
+    <!-- OUR COFFEES -->
+    <section class="coffees">
+      <div class="container">
+        <div class="section-label">Our Coffees</div>
+        <p class="coffees-intro">
+          Each Ember Elevation release is chosen for depth, structure, and refinement.
+          These coffees represent elevated growing regions, careful processing,
+          and profiles designed to shine across espresso and brewed preparations.
+        </p>
 
-  <footer>
-    <div>Small-Batch · Direct-to-Consumer · Canada</div>
-    <div>Business Inquiries · Email · Instagram</div>
-    <div>Ember Elevation — Canada</div>
-  </footer>
+        <div class="coffee-grid">
 
-</div>
+          <div class="coffee">
+            <div class="coffee-name">Guatemala Nahualá</div>
+            <div class="coffee-meta">Medium Roast · 1200–1500 m</div>
+            <p class="coffee-desc">
+              A composed and balanced cup with layered chocolate tones, subtle sweetness,
+              and a clean, structured finish. Grown in the volcanic highlands of Quetzaltenango
+              and roasted to preserve clarity and elegance.
+            </p>
+          </div>
+
+          <div class="coffee">
+            <div class="coffee-name">Papua New Guinea Enorga</div>
+            <div class="coffee-meta">Medium-Dark Roast · 1300–1750 m</div>
+            <p class="coffee-desc">
+              Full-bodied yet vibrant, with earthy depth and lifted citrus character.
+              This highland coffee offers richness without heaviness, delivering complexity
+              and a lingering, expressive finish.
+            </p>
+          </div>
+
+          <div class="coffee">
+            <div class="coffee-name">Superior Dark</div>
+            <div class="coffee-meta">Dark Roast · Full-Bodied</div>
+            <p class="coffee-desc">
+              A bold, deeply developed roast with pronounced dark chocolate and caramelized
+              sugar notes. Smooth, weighty, and grounding — crafted for those who prefer
+              intensity without harshness.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESS -->
+    <section class="access">
+      <div class="container">
+        <div class="access-title">Private Access · Limited Releases</div>
+        <input type="email" placeholder="Enter your email" />
+        <div class="privacy">No spam. Only release notifications.</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>Small-Batch · Direct-to-Consumer · Canada</div>
+      <div>Business Inquiries · Email · Instagram</div>
+      <div>Ember Elevation — Canada</div>
+    </footer>
+
+  </div>
 </body>
 </html>
