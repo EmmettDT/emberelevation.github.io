@@ -9,52 +9,27 @@
 
 <style>
 
-:root {
+:root{
 --text-main: rgba(255,255,255,0.92);
 --text-muted: rgba(255,255,255,0.65);
 --text-soft: rgba(255,255,255,0.45);
 }
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-font-family: 'Inter', sans-serif;
-color: var(--text-main);
-background-color: #000;
-overflow-x: hidden;
+body{
+font-family:'Inter',sans-serif;
+color:var(--text-main);
+background-color:#000;
+overflow-x:hidden;
 }
 
-/* NAVIGATION */
-
-.nav {
-position: fixed;
-top: 32px;
-right: 40px;
-font-size: 0.7rem;
-letter-spacing: 0.28em;
-text-transform: uppercase;
-z-index: 100;
-}
-
-.nav a {
-color: var(--text-soft);
-text-decoration: none;
-margin-left: 28px;
-transition: opacity .2s ease;
-}
-
-.nav a:hover {
-opacity: 0.8;
-}
-
-/* PAGE */
-
-.page {
-min-height: 100vh;
+.page{
+min-height:100vh;
 background-image:
 linear-gradient(
 rgba(0,0,0,0.35),
@@ -62,232 +37,265 @@ rgba(0,0,0,0.55),
 rgba(0,0,0,0.75)
 ),
 url("mountains.jpg");
-background-size: cover;
-background-position: center top;
-background-repeat: no-repeat;
+background-size:cover;
+background-position:center top;
+background-repeat:no-repeat;
 }
 
-section {
-width: 100%;
-display: flex;
-justify-content: center;
-text-align: center;
-padding: 0 20px;
+section{
+width:100%;
+display:flex;
+justify-content:center;
+text-align:center;
+padding:0 20px;
 }
 
-.container {
-width: 100%;
-max-width: 900px;
-margin: 0 auto;
+.container{
+width:100%;
+max-width:900px;
+margin:0 auto;
 }
 
-.hero {
-min-height: 100vh;
-align-items: flex-start;
-padding-top: 48px;
+/* NAVIGATION */
+
+.nav{
+position:fixed;
+top:40px;
+right:60px;
+font-size:0.7rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+z-index:100;
 }
 
-.logo {
-width: 420px;
-max-width: 85vw;
-margin-bottom: 36px;
-opacity: 0.98;
+.nav a{
+color:var(--text-soft);
+text-decoration:none;
+margin-left:30px;
+transition:opacity .2s ease;
 }
 
-h1 {
-font-family: 'Cormorant Garamond', serif;
-font-size: 3.4rem;
-font-weight: 400;
-letter-spacing: 0.35em;
-margin-bottom: 16px;
+.nav a:hover{
+opacity:0.8;
 }
 
-.subtitle {
-font-size: 0.75rem;
-letter-spacing: 0.28em;
-text-transform: uppercase;
-color: var(--text-muted);
-margin-bottom: 36px;
+/* HERO */
+
+.hero{
+min-height:100vh;
+align-items:flex-start;
+padding-top:48px;
 }
 
-.intro {
-font-family: 'Cormorant Garamond', serif;
-font-size: 1.1rem;
-line-height: 1.7;
-color: var(--text-muted);
-max-width: 700px;
-margin: 0 auto 40px;
+.logo{
+width:420px;
+max-width:85vw;
+margin-bottom:36px;
+opacity:0.98;
 }
 
-.pillars {
-font-size: 0.7rem;
-letter-spacing: 0.28em;
-text-transform: uppercase;
-color: var(--text-soft);
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:3.4rem;
+font-weight:400;
+letter-spacing:0.35em;
+margin-bottom:16px;
 }
 
-.scroll {
-margin-top: 40px;
-font-size: 0.65rem;
-letter-spacing: 0.28em;
-text-transform: uppercase;
-color: var(--text-soft);
+.subtitle{
+font-size:0.75rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-muted);
+margin-bottom:36px;
 }
 
-.philosophy {
-padding: 220px 20px 200px;
+.intro{
+font-family:'Cormorant Garamond',serif;
+font-size:1.1rem;
+line-height:1.7;
+color:var(--text-muted);
+max-width:700px;
+margin:0 auto 40px;
 }
 
-.section-label {
-font-size: 0.65rem;
-letter-spacing: 0.32em;
-text-transform: uppercase;
-color: var(--text-soft);
-margin-bottom: 34px;
+.pillars{
+font-size:0.7rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-soft);
 }
 
-.philosophy-text {
-font-family: 'Cormorant Garamond', serif;
-font-size: 1.25rem;
-line-height: 1.8;
-color: var(--text-muted);
-max-width: 760px;
-margin: 0 auto;
+.scroll{
+margin-top:40px;
+font-size:0.65rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-soft);
 }
 
-.values {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 56px 120px;
-max-width: 700px;
-margin: 90px auto 0;
-font-size: 0.7rem;
-letter-spacing: 0.28em;
-text-transform: uppercase;
-color: var(--text-soft);
+/* PHILOSOPHY */
+
+.philosophy{
+padding:220px 20px 200px;
 }
 
-.coffees {
-padding: 220px 20px 220px;
+.section-label{
+font-size:0.65rem;
+letter-spacing:0.32em;
+text-transform:uppercase;
+color:var(--text-soft);
+margin-bottom:34px;
 }
 
-.coffees-intro {
-font-family: 'Cormorant Garamond', serif;
-font-size: 1.15rem;
-line-height: 1.7;
-color: var(--text-muted);
-max-width: 760px;
-margin: 0 auto 120px;
+.philosophy-text{
+font-family:'Cormorant Garamond',serif;
+font-size:1.25rem;
+line-height:1.8;
+color:var(--text-muted);
+max-width:760px;
+margin:0 auto;
 }
 
-.coffee-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 80px;
-max-width: 900px;
-margin: 0 auto;
+.values{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:56px 120px;
+max-width:700px;
+margin:90px auto 0;
+font-size:0.7rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-soft);
 }
 
-.coffee-name {
-font-family: 'Cormorant Garamond', serif;
-font-size: 1.2rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-margin-bottom: 12px;
+/* COFFEES */
+
+.coffees{
+padding:220px 20px 220px;
 }
 
-.coffee-meta {
-font-size: 0.65rem;
-letter-spacing: 0.28em;
-text-transform: uppercase;
-color: var(--text-soft);
-margin-bottom: 26px;
+.coffees-intro{
+font-family:'Cormorant Garamond',serif;
+font-size:1.15rem;
+line-height:1.7;
+color:var(--text-muted);
+max-width:760px;
+margin:0 auto 120px;
 }
 
-.coffee-desc {
-font-family: 'Cormorant Garamond', serif;
-font-size: 1.05rem;
-line-height: 1.7;
-color: var(--text-muted);
+.coffee-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:80px;
+max-width:900px;
+margin:0 auto;
 }
 
-.access {
-padding: 240px 20px 200px;
+.coffee-name{
+font-family:'Cormorant Garamond',serif;
+font-size:1.2rem;
+letter-spacing:0.18em;
+text-transform:uppercase;
+margin-bottom:12px;
 }
 
-.access-title {
-font-size: 0.7rem;
-letter-spacing: 0.32em;
-text-transform: uppercase;
-color: var(--text-soft);
-margin-bottom: 36px;
+.coffee-meta{
+font-size:0.65rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-soft);
+margin-bottom:26px;
 }
 
-form {
-display: flex;
-flex-direction: column;
-align-items: center;
+.coffee-desc{
+font-family:'Cormorant Garamond',serif;
+font-size:1.05rem;
+line-height:1.7;
+color:var(--text-muted);
 }
 
-input[type="email"] {
-background: transparent;
-border: none;
-border-bottom: 1px solid rgba(255,255,255,0.4);
-padding: 14px;
-width: 280px;
-font-size: 0.9rem;
-color: var(--text-main);
-text-align: center;
-outline: none;
+/* ACCESS */
+
+.access{
+padding:240px 20px 200px;
 }
 
-input::placeholder {
-color: var(--text-soft);
+.access-title{
+font-size:0.7rem;
+letter-spacing:0.32em;
+text-transform:uppercase;
+color:var(--text-soft);
+margin-bottom:36px;
 }
 
-.privacy {
-margin-top: 16px;
-font-size: 0.65rem;
-color: var(--text-soft);
+form{
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
-footer {
-padding: 120px 20px 70px;
-font-size: 0.65rem;
-letter-spacing: 0.22em;
-text-transform: uppercase;
-color: var(--text-soft);
-text-align: center;
+input[type="email"]{
+background:transparent;
+border:none;
+border-bottom:1px solid rgba(255,255,255,0.4);
+padding:14px;
+width:280px;
+font-size:0.9rem;
+color:var(--text-main);
+text-align:center;
+outline:none;
 }
 
-footer a {
-color: var(--text-soft);
-text-decoration: none;
+input::placeholder{
+color:var(--text-soft);
 }
 
-footer a:hover {
-text-decoration: underline;
+.privacy{
+margin-top:16px;
+font-size:0.65rem;
+color:var(--text-soft);
 }
 
-footer div {
-margin-top: 12px;
+/* FOOTER */
+
+footer{
+padding:120px 20px 70px;
+font-size:0.65rem;
+letter-spacing:0.22em;
+text-transform:uppercase;
+color:var(--text-soft);
+text-align:center;
 }
 
-@media (max-width: 768px) {
-
-h1 {
-font-size: 2.2rem;
-letter-spacing: 0.24em;
+footer a{
+color:var(--text-soft);
+text-decoration:none;
 }
 
-.values {
-grid-template-columns: 1fr;
-gap: 34px;
+footer a:hover{
+text-decoration:underline;
 }
 
-.coffee-grid {
-grid-template-columns: 1fr;
-gap: 90px;
+footer div{
+margin-top:12px;
+}
+
+@media (max-width:768px){
+
+h1{
+font-size:2.2rem;
+letter-spacing:0.24em;
+}
+
+.values{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.coffee-grid{
+grid-template-columns:1fr;
+gap:90px;
 }
 
 }
@@ -297,7 +305,6 @@ gap: 90px;
 
 <body>
 
-<!-- NAVIGATION -->
 <div class="nav">
 <a href="index.html">Home</a>
 <a href="shop.html">Coffees</a>
@@ -305,11 +312,13 @@ gap: 90px;
 
 <div class="page">
 
-<!-- HERO -->
 <section class="hero">
 <div class="container">
-<img src="logo.png" alt="Ember Elevation Logo" class="logo" />
+
+<img src="logo.png" alt="Ember Elevation Logo" class="logo"/>
+
 <h1>EMBER ELEVATION</h1>
+
 <div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
 
 <p class="intro">
@@ -319,7 +328,107 @@ with intention — never blended for volume, never rushed, never produced for sc
 </p>
 
 <div class="pillars">Whole Bean Only · Roasted Fresh · Limited Releases</div>
+
 <div class="scroll">Scroll</div>
 
 </div>
 </section>
+
+<section class="philosophy">
+<div class="container">
+
+<div class="section-label">Our Philosophy</div>
+
+<p class="philosophy-text">
+True quality comes from restraint. We work with responsible farms and cooperatives that
+prioritize land, people, and process. We source from farms that follow fair-trade and organic
+practices. By releasing fewer coffees, we hold every origin to a higher standard — clarity,
+balance, and character without compromise.
+</p>
+
+<div class="values">
+<div>High-Elevation Origins</div>
+<div>Freshly Roasted</div>
+<div>Small-Batch · Limited</div>
+<div>Responsibly Sourced</div>
+</div>
+
+</div>
+</section>
+
+<section class="coffees">
+<div class="container">
+
+<div class="section-label">Our Coffees</div>
+
+<p class="coffees-intro">
+Each Ember Elevation release is chosen for depth, structure, and refinement.
+These coffees represent elevated growing regions, careful processing,
+and profiles designed to shine across espresso and brewed preparations.
+</p>
+
+<div class="coffee-grid">
+
+<div class="coffee">
+<div class="coffee-name">Guatemala Nahualá</div>
+<div class="coffee-meta">Medium Roast · 1200–1500 m</div>
+<p class="coffee-desc">
+Balanced chocolate tones with subtle sweetness and a clean,
+structured finish from the volcanic highlands of Quetzaltenango.
+</p>
+</div>
+
+<div class="coffee">
+<div class="coffee-name">Papua New Guinea Enorga</div>
+<div class="coffee-meta">Medium-Dark Roast · 1300–1750 m</div>
+<p class="coffee-desc">
+Full-bodied with lifted citrus character and a lingering,
+expressive finish.
+</p>
+</div>
+
+<div class="coffee">
+<div class="coffee-name">Ethiopia Yirgacheffe</div>
+<div class="coffee-meta">Light Roast · 1500–1900 m</div>
+<p class="coffee-desc">
+Bright citrus and elegant floral notes with refined sweetness
+and a crisp finish.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="access">
+<div class="container">
+
+<div class="access-title">Private Access · Limited Releases</div>
+
+<form action="https://formspree.io/f/xykkeolk" method="POST">
+<input type="email" name="email" placeholder="Enter your email" required>
+</form>
+
+<div class="privacy">No spam. Only release notifications.</div>
+
+</div>
+</section>
+
+<footer>
+
+<div>Small-Batch · Direct-to-Consumer · Canada</div>
+
+<div>
+Business Inquiries ·
+<a href="mailto:emberelevationcoffee@gmail.com">Email</a> ·
+<a href="https://instagram.com/ember_elevation" target="_blank">Instagram</a>
+</div>
+
+<div>Ember Elevation — Canada</div>
+
+</footer>
+
+</div>
+</body>
+</html>
