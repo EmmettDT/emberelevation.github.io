@@ -10,7 +10,7 @@
 
 body{
 margin:0;
-font-family: serif;
+font-family:serif;
 background-image:url("mountains.jpg");
 background-size:cover;
 background-position:center 80%;
@@ -20,34 +20,106 @@ color:white;
 text-align:center;
 }
 
-.container{
-max-width:800px;
-margin:auto;
-padding:140px 20px;
+/* cinematic overlay */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.55)
+);
+z-index:-1;
+pointer-events:none;
 }
 
-h1{
-letter-spacing:8px;
-font-weight:300;
-margin-bottom:50px;
-}
-
-p{
-line-height:1.8;
-margin-bottom:25px;
-font-size:18px;
-}
+/* navigation */
 
 .nav{
 position:fixed;
 top:30px;
 left:40px;
+letter-spacing:2px;
 }
 
-a{
+.nav a{
+margin-right:22px;
 color:white;
 text-decoration:none;
+font-size:16px;
+transition:opacity .3s;
+}
+
+.nav a:hover{
+opacity:.6;
+}
+
+/* container */
+
+.container{
+max-width:900px;
+margin:auto;
+padding:160px 20px;
+animation:fadeUp 1.4s ease;
+}
+
+/* headings */
+
+h1{
+letter-spacing:10px;
+font-weight:300;
+margin-bottom:70px;
+font-size:42px;
+}
+
+h2{
+letter-spacing:5px;
+font-weight:300;
+margin-top:70px;
 font-size:20px;
+}
+
+/* text */
+
+p{
+line-height:1.9;
+margin-top:15px;
+font-size:18px;
+max-width:650px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* feature row */
+
+.features{
+margin-top:70px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+font-size:14px;
+letter-spacing:3px;
+opacity:.9;
+}
+
+/* animation */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -56,41 +128,107 @@ font-size:20px;
 
 <body>
 
+<div class="overlay"></div>
+
 <div class="nav">
 <a href="index.html">Home</a>
+<a href="coffee.html">The Coffee</a>
+<a href="shop.html">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </div>
 
 <div class="container">
 
 <h1>ABOUT</h1>
 
+<h2>OUR PHILOSOPHY</h2>
+
 <p>
 Ember Elevation was created with a simple purpose — to offer exceptional
-whole-bean coffee sourced from high-elevation farms around the world.
+whole-bean coffees sourced from high-elevation farms around the world.
+Rather than focusing on volume, the brand is built around a curated
+selection of origins chosen for clarity, structure, and character.
 </p>
 
 <p>
-Coffee grown at higher altitudes develops greater complexity, clarity,
-and character. These conditions produce beans with deeper sweetness,
-brighter acidity, and more distinctive flavor profiles.
+True quality comes from restraint. By releasing fewer coffees, each
+origin can be selected and roasted with greater intention, allowing
+its natural profile to speak clearly in the cup.
+</p>
+
+
+<h2>WHY ELEVATION MATTERS</h2>
+
+<p>
+Coffee grown at higher altitudes matures more slowly, allowing sugars
+and organic compounds within the bean to develop with greater
+complexity. These conditions produce coffees with brighter acidity,
+deeper sweetness, and more refined aromatic structure.
 </p>
 
 <p>
-Each coffee we offer is selected for balance, quality, and individuality.
-Rather than overwhelming the lineup with dozens of options, Ember
-Elevation focuses on a small, curated collection of coffees that
-represent some of the most respected growing regions in the world.
+From the highlands of Ethiopia to the volcanic slopes of Guatemala and
+the rugged mountains of Papua New Guinea, these regions produce some
+of the most respected coffees in the world.
+</p>
+
+
+<h2>RESPONSIBLE SOURCING</h2>
+
+<p>
+Ember Elevation works with cooperatives and producers that prioritize
+sustainable farming, responsible land stewardship, and fair economic
+opportunities for growers. Many of the coffees offered are certified
+Fair Trade and Organic, supporting farming communities while
+maintaining exceptional quality standards.
 </p>
 
 <p>
-From the bright citrus and berry notes of Ethiopia to the smooth
-chocolate tones of Guatemala and the rich depth of Papua New Guinea,
-each origin brings its own unique expression to the cup.
+These partnerships ensure that each coffee reflects not only the
+character of its origin, but also the care and craft of the people who
+cultivate it.
+</p>
+
+
+<h2>ROASTING APPROACH</h2>
+
+<p>
+Every origin is roasted with restraint to highlight its natural
+structure and balance. Lighter roasts preserve bright citrus and
+floral complexity, while medium and medium-dark roasts reveal deeper
+chocolate, nut, and caramel tones.
 </p>
 
 <p>
-Ember Elevation is built around the idea that great coffee should be
-simple, intentional, and memorable.
+The goal is not to impose flavor, but to refine what already exists
+within the coffee.
+</p>
+
+
+<div class="features">
+
+<div>HIGH-ELEVATION ORIGINS</div>
+<div>FRESHLY ROASTED</div>
+
+<div>SMALL-BATCH RELEASES</div>
+<div>RESPONSIBLY SOURCED</div>
+
+</div>
+
+
+<h2>THE EXPERIENCE</h2>
+
+<p>
+Great coffee is not only about origin or roasting — it is about the
+experience of preparation and the ritual of brewing. Whether prepared
+as espresso, pour-over, or French press, each coffee reveals a
+different expression in the cup.
+</p>
+
+<p>
+Ember Elevation exists to make those moments simple, intentional,
+and memorable.
 </p>
 
 </div>
