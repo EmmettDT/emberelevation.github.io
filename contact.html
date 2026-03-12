@@ -10,7 +10,7 @@
 
 body{
 margin:0;
-font-family: serif;
+font-family:serif;
 background-image:url("mountains.jpg");
 background-size:cover;
 background-position:center 80%;
@@ -20,33 +20,109 @@ color:white;
 text-align:center;
 }
 
-.container{
-max-width:700px;
-margin:auto;
-padding:160px 20px;
+/* cinematic overlay */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.55)
+);
+z-index:-1;
+pointer-events:none;
 }
 
-h1{
-letter-spacing:8px;
-font-weight:300;
-margin-bottom:50px;
-}
-
-p{
-font-size:18px;
-line-height:1.8;
-}
+/* navigation */
 
 .nav{
 position:fixed;
 top:30px;
 left:40px;
+letter-spacing:2px;
 }
 
-a{
+.nav a{
+margin-right:22px;
 color:white;
 text-decoration:none;
-font-size:20px;
+font-size:16px;
+transition:opacity .3s;
+}
+
+.nav a:hover{
+opacity:.6;
+}
+
+/* container */
+
+.container{
+max-width:750px;
+margin:auto;
+padding:160px 20px;
+animation:fadeUp 1.4s ease;
+}
+
+/* headings */
+
+h1{
+letter-spacing:10px;
+font-weight:300;
+margin-bottom:50px;
+font-size:42px;
+}
+
+h2{
+letter-spacing:4px;
+font-weight:300;
+margin-top:60px;
+font-size:18px;
+}
+
+/* text */
+
+p{
+font-size:18px;
+line-height:1.9;
+max-width:600px;
+margin:15px auto;
+}
+
+/* contact links */
+
+.contact{
+margin-top:30px;
+font-size:18px;
+letter-spacing:1px;
+}
+
+.contact a{
+display:block;
+margin:12px 0;
+color:white;
+text-decoration:none;
+transition:opacity .3s;
+}
+
+.contact a:hover{
+opacity:.7;
+}
+
+/* animation */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -55,8 +131,14 @@ font-size:20px;
 
 <body>
 
+<div class="overlay"></div>
+
 <div class="nav">
 <a href="index.html">Home</a>
+<a href="coffee.html">The Coffee</a>
+<a href="shop.html">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </div>
 
 <div class="container">
@@ -64,16 +146,50 @@ font-size:20px;
 <h1>CONTACT</h1>
 
 <p>
-For inquiries, partnerships, or questions about our coffee,
-please reach out.
+Ember Elevation is built around a simple idea — to share exceptional
+high-elevation coffees from some of the world’s most respected growing
+regions. Each origin is selected for clarity, balance, and character
+in the cup.
 </p>
 
 <p>
-Email: contact@emberelevation.com
+Our coffees are sourced through specialty producers and prepared by a
+trusted roasting partner who helps bring out the unique qualities of
+each origin.
 </p>
 
 <p>
-Instagram: @emberelevation
+If you have questions about our coffees, brewing methods, or potential
+collaborations, we would be glad to hear from you.
+</p>
+
+<h2>GET IN TOUCH</h2>
+
+<div class="contact">
+
+<a href="mailto:emberelevationcoffee@gmail.com">
+emberelevationcoffee@gmail.com
+</a>
+
+<a href="https://instagram.com/ember_elevation" target="_blank">
+Instagram — @ember_elevation
+</a>
+
+</div>
+
+<h2>COLLABORATIONS</h2>
+
+<p>
+Ember Elevation is always open to thoughtful collaborations with
+creators, cafés, and coffee enthusiasts who share a passion for
+specialty coffee culture. If you are interested in working together,
+feel free to reach out.
+</p>
+
+<p>
+Thank you for supporting a small coffee project built on curiosity,
+craft, and respect for the origins that make exceptional coffee
+possible.
 </p>
 
 </div>
