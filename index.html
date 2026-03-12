@@ -69,6 +69,8 @@ margin-bottom:36px;
 opacity:0.98;
 }
 
+/* HERO TYPOGRAPHY */
+
 h1{
 font-family:'Cormorant Garamond',serif;
 font-size:3.4rem;
@@ -109,6 +111,8 @@ text-transform:uppercase;
 color:var(--text-soft);
 }
 
+/* PHILOSOPHY */
+
 .philosophy{
 padding:220px 20px 200px;
 }
@@ -141,6 +145,8 @@ letter-spacing:0.28em;
 text-transform:uppercase;
 color:var(--text-soft);
 }
+
+/* COFFEE SECTION */
 
 .coffees{
 padding:220px 20px 220px;
@@ -186,6 +192,8 @@ line-height:1.7;
 color:var(--text-muted);
 }
 
+/* ACCESS */
+
 .access{
 padding:240px 20px 200px;
 }
@@ -226,6 +234,8 @@ font-size:0.65rem;
 color:var(--text-soft);
 }
 
+/* FOOTER */
+
 footer{
 padding:120px 20px 70px;
 font-size:0.65rem;
@@ -248,13 +258,14 @@ footer div{
 margin-top:12px;
 }
 
-/* navigation consistent with other pages */
+/* NAVIGATION */
 
 .nav{
 position:fixed;
 top:30px;
 left:40px;
 letter-spacing:2px;
+z-index:1000;
 }
 
 .nav a{
@@ -262,12 +273,38 @@ margin-right:22px;
 color:white;
 text-decoration:none;
 font-size:16px;
-transition:opacity .3s;
+transition:opacity .3s ease;
 }
 
 .nav a:hover{
 opacity:.6;
 }
+
+/* FADE-IN ANIMATION */
+
+.fade{
+opacity:0;
+transform:translateY(20px);
+animation:fadeUp 1.4s ease forwards;
+}
+
+.fade-delay-1{animation-delay:.2s;}
+.fade-delay-2{animation-delay:.4s;}
+.fade-delay-3{animation-delay:.6s;}
+.fade-delay-4{animation-delay:.8s;}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -303,13 +340,18 @@ gap:90px;
 
 <div class="page">
 
+<!-- HERO -->
+
 <section class="hero">
 <div class="container">
-<img src="logo.png" alt="Ember Elevation Logo" class="logo" />
-<h1>EMBER ELEVATION</h1>
-<div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
 
-<p class="intro">
+<img src="logo.png" alt="Ember Elevation Logo" class="logo fade fade-delay-1">
+
+<h1 class="fade fade-delay-2">EMBER ELEVATION</h1>
+
+<div class="subtitle fade fade-delay-3">Ultra-Premium Whole-Bean Coffee</div>
+
+<p class="intro fade fade-delay-4">
 Ember Elevation is a Canadian specialty coffee brand devoted to carefully
 sourced whole-bean coffees grown at high elevations. Our releases are
 selected with restraint and roasted by a trusted specialty roasting partner —
@@ -321,6 +363,8 @@ never blended for volume, never rushed, never produced for scale.
 
 </div>
 </section>
+
+<!-- PHILOSOPHY -->
 
 <section class="philosophy">
 <div class="container">
@@ -345,6 +389,8 @@ clarity, balance, and character without compromise.
 </div>
 </section>
 
+<!-- COFFEES -->
+
 <section class="coffees">
 <div class="container">
 
@@ -363,8 +409,7 @@ and profiles designed to shine across espresso and brewed preparations.
 <div class="coffee-meta">Medium Roast · 1200–1500 m</div>
 <p class="coffee-desc">
 A composed and balanced cup with layered chocolate tones, subtle sweetness,
-and a clean, structured finish. Grown in the volcanic highlands of
-Quetzaltenango and roasted to preserve clarity and elegance.
+and a clean, structured finish.
 </p>
 </div>
 
@@ -372,9 +417,8 @@ Quetzaltenango and roasted to preserve clarity and elegance.
 <div class="coffee-name">Papua New Guinea Enorga</div>
 <div class="coffee-meta">Medium-Dark Roast · 1300–1750 m</div>
 <p class="coffee-desc">
-Full-bodied yet vibrant, with earthy depth and lifted citrus character.
-This highland coffee offers richness without heaviness, delivering
-complexity and a lingering, expressive finish.
+Full-bodied yet vibrant, with earthy depth and lifted citrus character
+and a lingering expressive finish.
 </p>
 </div>
 
@@ -382,10 +426,8 @@ complexity and a lingering, expressive finish.
 <div class="coffee-name">Ethiopia Yirgacheffe</div>
 <div class="coffee-meta">Light Roast · 1500–1900 m</div>
 <p class="coffee-desc">
-Bright, clean, and elegantly aromatic, this washed Yirgacheffe offers
-lifted citrus, soft floral notes, and a refined sweetness layered with
-hints of berry and dark cocoa — a vibrant expression of Ethiopia’s
-highland terroir.
+Bright, floral, and refined with lifted citrus and layered berry sweetness —
+a vibrant expression of Ethiopia’s highland terroir.
 </p>
 </div>
 
@@ -394,15 +436,23 @@ highland terroir.
 </div>
 </section>
 
+<!-- ACCESS -->
+
 <section class="access">
 <div class="container">
+
 <div class="access-title">Private Access · Limited Releases</div>
+
 <form action="https://formspree.io/f/xykkeolk" method="POST">
 <input type="email" name="email" placeholder="Enter your email" required />
 </form>
+
 <div class="privacy">No spam. Only release notifications.</div>
+
 </div>
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 
