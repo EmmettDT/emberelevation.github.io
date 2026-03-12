@@ -1,400 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ember Elevation — Premium Whole-Bean Coffee</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ember Elevation — Premium Whole-Bean Coffee</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --text-main: rgba(255,255,255,0.92);
-      --text-muted: rgba(255,255,255,0.65);
-      --text-soft: rgba(255,255,255,0.45);
-    }
+<style>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+:root{
+--text-main:rgba(255,255,255,0.92);
+--text-muted:rgba(255,255,255,0.65);
+--text-soft:rgba(255,255,255,0.45);
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-main);
-      background-color: #000;
-      overflow-x: hidden;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .page {
-      min-height: 100vh;
-      background-image:
-        linear-gradient(
-          rgba(0,0,0,0.35),
-          rgba(0,0,0,0.55),
-          rgba(0,0,0,0.75)
-        ),
-        url("mountains.jpg");
-      background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
-    }
+body{
+font-family:'Inter',sans-serif;
+color:var(--text-main);
+background-color:#000;
+overflow-x:hidden;
+}
 
-    section {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-    }
+.page{
+min-height:100vh;
+background-image:
+linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.55),
+rgba(0,0,0,0.75)
+),
+url("mountains.jpg");
+background-size:cover;
+background-position:center top;
+background-repeat:no-repeat;
+}
 
-    .container {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+section{
+width:100%;
+display:flex;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+}
 
-    .hero {
-      min-height: 100vh;
-      align-items: flex-start;
-      padding-top: 48px;
-    }
+.container{
+width:100%;
+max-width:900px;
+margin:0 auto;
+}
 
-    .logo {
-      width: 420px;
-      max-width: 85vw;
-      margin-bottom: 36px;
-      opacity: 0.98;
-    }
+.hero{
+min-height:100vh;
+align-items:flex-start;
+padding-top:48px;
+}
 
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.4rem;
-      font-weight: 400;
-      letter-spacing: 0.35em;
-      margin-bottom: 16px;
-    }
+.logo{
+width:420px;
+max-width:85vw;
+margin-bottom:36px;
+opacity:0.98;
+}
 
-    .subtitle {
-      font-size: 0.75rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 36px;
-    }
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:3.4rem;
+font-weight:400;
+letter-spacing:0.35em;
+margin-bottom:16px;
+}
 
-    .intro {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
+.subtitle{
+font-size:0.75rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-muted);
+margin-bottom:36px;
+}
 
-    .pillars {
-      font-size: 0.7rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
+.intro{
+font-family:'Cormorant Garamond',serif;
+font-size:1.1rem;
+line-height:1.7;
+color:var(--text-muted);
+max-width:700px;
+margin:0 auto 40px;
+}
 
-    .scroll {
-      margin-top: 40px;
-      font-size: 0.65rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
+.pillars{
+font-size:0.7rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-soft);
+}
 
-    .philosophy {
-      padding: 220px 20px 200px;
-    }
+.scroll{
+margin-top:40px;
+font-size:0.65rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-soft);
+}
 
-    .section-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      margin-bottom: 34px;
-    }
+.philosophy{
+padding:220px 20px 200px;
+}
 
-    .philosophy-text {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem;
-      line-height: 1.8;
-      color: var(--text-muted);
-      max-width: 760px;
-      margin: 0 auto;
-    }
+.section-label{
+font-size:0.65rem;
+letter-spacing:0.32em;
+text-transform:uppercase;
+color:var(--text-soft);
+margin-bottom:34px;
+}
 
-    .values {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 56px 120px;
-      max-width: 700px;
-      margin: 90px auto 0;
-      font-size: 0.7rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-    }
+.philosophy-text{
+font-family:'Cormorant Garamond',serif;
+font-size:1.25rem;
+line-height:1.8;
+color:var(--text-muted);
+max-width:760px;
+margin:0 auto;
+}
 
-    .coffees {
-      padding: 220px 20px 220px;
-    }
+.values{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:56px 120px;
+max-width:700px;
+margin:90px auto 0;
+font-size:0.7rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-soft);
+}
 
-    .coffees-intro {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: var(--text-muted);
-      max-width: 760px;
-      margin: 0 auto 120px;
-    }
+.coffees{
+padding:220px 20px 220px;
+}
 
-    .coffee-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 80px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+.coffees-intro{
+font-family:'Cormorant Garamond',serif;
+font-size:1.15rem;
+line-height:1.7;
+color:var(--text-muted);
+max-width:760px;
+margin:0 auto 120px;
+}
 
-    .coffee-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
+.coffee-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:80px;
+max-width:900px;
+margin:0 auto;
+}
 
-    .coffee-meta {
-      font-size: 0.65rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      margin-bottom: 26px;
-    }
+.coffee-name{
+font-family:'Cormorant Garamond',serif;
+font-size:1.2rem;
+letter-spacing:0.18em;
+text-transform:uppercase;
+margin-bottom:12px;
+}
 
-    .coffee-desc {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--text-muted);
-    }
+.coffee-meta{
+font-size:0.65rem;
+letter-spacing:0.28em;
+text-transform:uppercase;
+color:var(--text-soft);
+margin-bottom:26px;
+}
 
-    .access {
-      padding: 240px 20px 200px;
-    }
+.coffee-desc{
+font-family:'Cormorant Garamond',serif;
+font-size:1.05rem;
+line-height:1.7;
+color:var(--text-muted);
+}
 
-    .access-title {
-      font-size: 0.7rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      margin-bottom: 36px;
-    }
+.access{
+padding:240px 20px 200px;
+}
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.access-title{
+font-size:0.7rem;
+letter-spacing:0.32em;
+text-transform:uppercase;
+color:var(--text-soft);
+margin-bottom:36px;
+}
 
-    input[type="email"] {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid rgba(255,255,255,0.4);
-      padding: 14px;
-      width: 280px;
-      font-size: 0.9rem;
-      color: var(--text-main);
-      text-align: center;
-      outline: none;
-    }
+form{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
 
-    input::placeholder {
-      color: var(--text-soft);
-    }
+input[type="email"]{
+background:transparent;
+border:none;
+border-bottom:1px solid rgba(255,255,255,0.4);
+padding:14px;
+width:280px;
+font-size:0.9rem;
+color:var(--text-main);
+text-align:center;
+outline:none;
+}
 
-    .privacy {
-      margin-top: 16px;
-      font-size: 0.65rem;
-      color: var(--text-soft);
-    }
+input::placeholder{
+color:var(--text-soft);
+}
 
-    footer {
-      padding: 120px 20px 70px;
-      font-size: 0.65rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--text-soft);
-      text-align: center;
-    }
+.privacy{
+margin-top:16px;
+font-size:0.65rem;
+color:var(--text-soft);
+}
 
-    footer a {
-      color: var(--text-soft);
-      text-decoration: none;
-    }
+footer{
+padding:120px 20px 70px;
+font-size:0.65rem;
+letter-spacing:0.22em;
+text-transform:uppercase;
+color:var(--text-soft);
+text-align:center;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+footer a{
+color:var(--text-soft);
+text-decoration:none;
+}
 
-    footer div {
-      margin-top: 12px;
-    }
+footer a:hover{
+text-decoration:underline;
+}
 
-    .nav{
-      position:fixed;
-      top:30px;
-      left:40px;
-    }
+footer div{
+margin-top:12px;
+}
 
-    .nav a{
-      color:white;
-      text-decoration:none;
-      font-size:14px;
-    }
+/* navigation consistent with other pages */
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.2rem;
-        letter-spacing: 0.24em;
-      }
+.nav{
+position:fixed;
+top:30px;
+left:40px;
+letter-spacing:2px;
+}
 
-      .values {
-        grid-template-columns: 1fr;
-        gap: 34px;
-      }
+.nav a{
+margin-right:22px;
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:opacity .3s;
+}
 
-      .coffee-grid {
-        grid-template-columns: 1fr;
-        gap: 90px;
-      }
-    }
-  </style>
+.nav a:hover{
+opacity:.6;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:2.2rem;
+letter-spacing:0.24em;
+}
+
+.values{
+grid-template-columns:1fr;
+gap:34px;
+}
+
+.coffee-grid{
+grid-template-columns:1fr;
+gap:90px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="nav">
-<a href="/index.html">Home</a> · 
-<a href="/shop.html">Shop</a> · 
-<a href="/about.html">About</a> · 
-<a href="/coffee.html">The Coffee</a> · 
-<a href="/contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="about.html">About</a>
+<a href="coffee.html">The Coffee</a>
+<a href="contact.html">Contact</a>
 </div>
 
-  <div class="page">
+<div class="page">
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <img src="logo.png" alt="Ember Elevation Logo" class="logo" />
-        <h1>EMBER ELEVATION</h1>
-        <div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
-        <p class="intro">
-          Ember Elevation is a Canadian specialty coffee brand devoted exclusively to freshly roasted,
-          whole-bean coffees grown at high elevations. Our releases are selected with restraint and roasted
-          with intention — never blended for volume, never rushed, never produced for scale.
-        </p>
-        <div class="pillars">Whole Bean Only · Roasted Fresh · Limited Releases</div>
-        <div class="scroll">Scroll</div>
-      </div>
-    </section>
+<section class="hero">
+<div class="container">
+<img src="logo.png" alt="Ember Elevation Logo" class="logo" />
+<h1>EMBER ELEVATION</h1>
+<div class="subtitle">Ultra-Premium Whole-Bean Coffee</div>
 
-    <!-- PHILOSOPHY -->
-    <section class="philosophy">
-      <div class="container">
-        <div class="section-label">Our Philosophy</div>
-        <p class="philosophy-text">
-          True quality comes from restraint. We work with responsible farms and cooperatives that
-          prioritize land, people, and process. We source from farms that follow fair-trade and organic
-          practices. By releasing fewer coffees, we hold every origin to a higher standard — clarity,
-          balance, and character without compromise.
-        </p>
+<p class="intro">
+Ember Elevation is a Canadian specialty coffee brand devoted to carefully
+sourced whole-bean coffees grown at high elevations. Our releases are
+selected with restraint and roasted by a trusted specialty roasting partner —
+never blended for volume, never rushed, never produced for scale.
+</p>
 
-        <div class="values">
-          <div>High-Elevation Origins</div>
-          <div>Freshly Roasted</div>
-          <div>Small-Batch · Limited</div>
-          <div>Responsibly Sourced</div>
-        </div>
-      </div>
-    </section>
+<div class="pillars">Whole Bean Only · Freshly Roasted · Limited Releases</div>
+<div class="scroll">Scroll</div>
 
-    <!-- OUR COFFEES -->
-    <section class="coffees">
-      <div class="container">
-        <div class="section-label">Our Coffees</div>
-        <p class="coffees-intro">
-          Each Ember Elevation release is chosen for depth, structure, and refinement.
-          These coffees represent elevated growing regions, careful processing,
-          and profiles designed to shine across espresso and brewed preparations.
-        </p>
+</div>
+</section>
 
-        <div class="coffee-grid">
+<section class="philosophy">
+<div class="container">
 
-          <div class="coffee">
-            <div class="coffee-name">Guatemala Nahualá</div>
-            <div class="coffee-meta">Medium Roast · 1200–1500 m</div>
-            <p class="coffee-desc">
-              A composed and balanced cup with layered chocolate tones, subtle sweetness,
-              and a clean, structured finish. Grown in the volcanic highlands of Quetzaltenango
-              and roasted to preserve clarity and elegance.
-            </p>
-          </div>
+<div class="section-label">Our Philosophy</div>
 
-          <div class="coffee">
-            <div class="coffee-name">Papua New Guinea Enorga</div>
-            <div class="coffee-meta">Medium-Dark Roast · 1300–1750 m</div>
-            <p class="coffee-desc">
-              Full-bodied yet vibrant, with earthy depth and lifted citrus character.
-              This highland coffee offers richness without heaviness, delivering complexity
-              and a lingering, expressive finish.
-            </p>
-          </div>
+<p class="philosophy-text">
+True quality comes from restraint. We work with responsible farms and
+cooperatives that prioritize land, people, and process. Many of the farms
+we source from follow fair-trade and organic cultivation practices.
+By releasing fewer coffees, we hold every origin to a higher standard —
+clarity, balance, and character without compromise.
+</p>
 
-          <div class="coffee">
-            <div class="coffee-name">Ethiopia Yirgacheffe</div>
-            <div class="coffee-meta">Light Roast · 1500–1900 m</div>
-            <p class="coffee-desc">
-              Bright, clean, and elegantly aromatic, this washed Yirgacheffe offers lifted citrus,
-              soft floral notes, and a refined sweetness layered with hints of berry and dark cocoa.
-              Exceptionally balanced with a crisp finish — a vibrant expression of Ethiopia’s
-              highland terroir.
-            </p>
-          </div>
+<div class="values">
+<div>High-Elevation Origins</div>
+<div>Freshly Roasted</div>
+<div>Small-Batch · Limited</div>
+<div>Responsibly Sourced</div>
+</div>
 
-        </div>
-      </div>
-    </section>
+</div>
+</section>
 
-    <!-- ACCESS -->
-    <section class="access">
-      <div class="container">
-        <div class="access-title">Private Access · Limited Releases</div>
-        <form action="https://formspree.io/f/xykkeolk" method="POST">
-          <input type="email" name="email" placeholder="Enter your email" required />
-        </form>
-        <div class="privacy">No spam. Only release notifications.</div>
-      </div>
-    </section>
+<section class="coffees">
+<div class="container">
 
-    <!-- FOOTER -->
-    <footer>
-      <div>Small-Batch · Direct-to-Consumer · Canada</div>
-      <div>
-        Business Inquiries ·
-        <a href="mailto:emberelevationcoffee@gmail.com">Email</a> ·
-        <a href="https://instagram.com/ember_elevation" target="_blank" rel="noopener">Instagram</a>
-      </div>
-      <div>Ember Elevation — Canada</div>
-    </footer>
+<div class="section-label">Our Coffees</div>
 
-  </div>
+<p class="coffees-intro">
+Each Ember Elevation release is chosen for depth, structure, and refinement.
+These coffees represent elevated growing regions, careful processing,
+and profiles designed to shine across espresso and brewed preparations.
+</p>
+
+<div class="coffee-grid">
+
+<div class="coffee">
+<div class="coffee-name">Guatemala Nahualá</div>
+<div class="coffee-meta">Medium Roast · 1200–1500 m</div>
+<p class="coffee-desc">
+A composed and balanced cup with layered chocolate tones, subtle sweetness,
+and a clean, structured finish. Grown in the volcanic highlands of
+Quetzaltenango and roasted to preserve clarity and elegance.
+</p>
+</div>
+
+<div class="coffee">
+<div class="coffee-name">Papua New Guinea Enorga</div>
+<div class="coffee-meta">Medium-Dark Roast · 1300–1750 m</div>
+<p class="coffee-desc">
+Full-bodied yet vibrant, with earthy depth and lifted citrus character.
+This highland coffee offers richness without heaviness, delivering
+complexity and a lingering, expressive finish.
+</p>
+</div>
+
+<div class="coffee">
+<div class="coffee-name">Ethiopia Yirgacheffe</div>
+<div class="coffee-meta">Light Roast · 1500–1900 m</div>
+<p class="coffee-desc">
+Bright, clean, and elegantly aromatic, this washed Yirgacheffe offers
+lifted citrus, soft floral notes, and a refined sweetness layered with
+hints of berry and dark cocoa — a vibrant expression of Ethiopia’s
+highland terroir.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="access">
+<div class="container">
+<div class="access-title">Private Access · Limited Releases</div>
+<form action="https://formspree.io/f/xykkeolk" method="POST">
+<input type="email" name="email" placeholder="Enter your email" required />
+</form>
+<div class="privacy">No spam. Only release notifications.</div>
+</div>
+</section>
+
+<footer>
+
+<div>Small-Batch · Direct-to-Consumer · Canada</div>
+
+<div>
+Business Inquiries ·
+<a href="mailto:emberelevationcoffee@gmail.com">Email</a> ·
+<a href="https://instagram.com/ember_elevation" target="_blank" rel="noopener">Instagram</a>
+</div>
+
+<div>Ember Elevation — Canada</div>
+
+</footer>
+
+</div>
+
 </body>
 </html>
