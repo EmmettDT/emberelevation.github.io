@@ -10,7 +10,7 @@
 
 body{
 margin:0;
-font-family: serif;
+font-family:serif;
 background-image:url("mountains.jpg");
 background-size:cover;
 background-position:center 80%;
@@ -20,27 +20,106 @@ color:white;
 text-align:center;
 }
 
+/* cinematic overlay */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.55)
+);
+z-index:-1;
+pointer-events:none;
+}
+
+/* navigation */
+
+.nav{
+position:fixed;
+top:30px;
+left:40px;
+letter-spacing:2px;
+}
+
+.nav a{
+margin-right:22px;
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:opacity .3s;
+}
+
+.nav a:hover{
+opacity:.6;
+}
+
+/* container */
+
 .container{
 max-width:900px;
 margin:auto;
-padding:120px 20px;
-min-height:100svh;
+padding:160px 20px;
+animation:fadeUp 1.4s ease;
 }
+
+/* headings */
 
 h1{
-letter-spacing:8px;
+letter-spacing:10px;
 font-weight:300;
-margin-bottom:60px;
+margin-bottom:40px;
+font-size:42px;
 }
 
-.coffee{
+h2{
+letter-spacing:4px;
+font-weight:300;
+margin-top:20px;
+font-size:22px;
+}
+
+/* intro text */
+
+.intro{
+max-width:600px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
 margin-bottom:80px;
 }
 
-.coffee h2{
-letter-spacing:3px;
-font-weight:300;
+/* coffee blocks */
+
+.coffee{
+margin-bottom:90px;
 }
+
+.meta{
+font-size:15px;
+letter-spacing:2px;
+margin-top:8px;
+opacity:.85;
+}
+
+.notes{
+margin-top:8px;
+font-size:17px;
+}
+
+.origin{
+max-width:520px;
+margin:12px auto 0 auto;
+font-size:15px;
+line-height:1.7;
+opacity:.9;
+}
+
+/* buttons */
 
 button{
 margin-top:20px;
@@ -60,19 +139,21 @@ color:black;
 transform:translateY(-2px);
 }
 
-.nav{
-position:fixed;
-top:30px;
-left:40px;
+/* animation */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
-a{
-color:white;
-text-decoration:none;
-font-size:20px;
-}
+/* mobile adjustment */
 
-/* mobile adjustment so trees stay behind text */
 @media (max-width:768px){
 body{
 background-position:center 95%;
@@ -85,40 +166,121 @@ background-position:center 95%;
 
 <body>
 
+<div class="overlay"></div>
+
 <div class="nav">
 <a href="index.html">Home</a>
+<a href="coffee.html">The Coffee</a>
+<a href="shop.html">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </div>
 
 <div class="container">
 
 <h1>OUR COFFEES</h1>
 
-<div class="coffee">
-<h2>Ethiopia Yirgacheffe</h2>
-<p>Light Roast • 1500–1900m</p>
-<p>Lemon / Dark Cocoa / Berry</p>
-<button>Buy</button>
-</div>
+<p class="intro">
+Ember Elevation offers a curated collection of high-elevation coffees
+sourced from some of the most respected growing regions in the world.
+Each origin is selected for clarity, structure, and individuality in
+the cup.
+</p>
+
 
 <div class="coffee">
-<h2>Guatemala Nahualá</h2>
-<p>Medium Roast • 1200–1500m</p>
-<p>Walnut / Milk Chocolate / Apricot</p>
-<button>Buy</button>
+
+<h2>ETHIOPIA YIRGACHEFFE</h2>
+
+<div class="meta">
+Light Roast • 1500–1900m
 </div>
 
-<div class="coffee">
-<h2>Papua New Guinea Enorga</h2>
-<p>Medium-Dark Roast • 1300–1750m</p>
-<p>Chocolate / Lemon / Mango</p>
-<button>Buy</button>
+<div class="notes">
+Lemon • Dark Cocoa • Berry
 </div>
 
-<div class="coffee">
-<h2>The Elevation Collection</h2>
-<p>All Three Origins</p>
-<p>Guatemala Nahualá / Papua New Guinea Enorga / Ethiopia Yirgacheffe</p>
+<p class="origin">
+Sourced from Ethiopian cooperatives in the Yirgacheffe region where
+coffee is grown at exceptional elevations. These farms follow Fair
+Trade and organic cultivation practices, producing coffees known for
+their floral aromatics and vibrant citrus clarity.
+</p>
+
 <button>Buy</button>
+
+</div>
+
+
+<div class="coffee">
+
+<h2>GUATEMALA NAHUALÁ</h2>
+
+<div class="meta">
+Medium Roast • 1200–1500m
+</div>
+
+<div class="notes">
+Walnut • Milk Chocolate • Apricot
+</div>
+
+<p class="origin">
+Grown in the volcanic highlands of Quetzaltenango by producers within
+the Nahualá cooperative. Mineral-rich soils and cool mountain
+conditions produce coffees with balanced sweetness and deep chocolate
+structure.
+</p>
+
+<button>Buy</button>
+
+</div>
+
+
+<div class="coffee">
+
+<h2>PAPUA NEW GUINEA ENORGA</h2>
+
+<div class="meta">
+Medium-Dark Roast • 1300–1750m
+</div>
+
+<div class="notes">
+Chocolate • Lemon • Mango
+</div>
+
+<p class="origin">
+Produced by village growers in the Purosa region of Papua New Guinea’s
+Eastern Highlands through the Highlands Organic Agriculture Co-op.
+Farmers follow organic farming practices while cultivating coffee as
+their primary livelihood, supporting thousands of families within the
+region.
+</p>
+
+<button>Buy</button>
+
+</div>
+
+
+<div class="coffee">
+
+<h2>THE ELEVATION COLLECTION</h2>
+
+<div class="meta">
+All Three Origins
+</div>
+
+<div class="notes">
+Guatemala Nahualá • Papua New Guinea Enorga • Ethiopia Yirgacheffe
+</div>
+
+<p class="origin">
+A curated trio showcasing the range of Ember Elevation's coffees —
+from bright Ethiopian citrus to balanced Guatemalan chocolate and the
+full-bodied depth of Papua New Guinea.
+</p>
+
+<button>Buy</button>
+
 </div>
 
 </div>
