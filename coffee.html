@@ -20,40 +20,121 @@ color:white;
 text-align:center;
 }
 
-.container{
-max-width:800px;
-margin:auto;
-padding:140px 20px;
+/* cinematic overlay (keeps mountains visible) */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.55)
+);
+z-index:-1;
+pointer-events:none;
 }
 
-h1{
-letter-spacing:8px;
-font-weight:300;
-margin-bottom:60px;
-}
-
-h2{
-letter-spacing:4px;
-font-weight:300;
-margin-top:40px;
-}
-
-p{
-line-height:1.8;
-margin-top:15px;
-font-size:18px;
-}
+/* navigation */
 
 .nav{
 position:fixed;
 top:30px;
 left:40px;
+letter-spacing:2px;
 }
 
-a{
+.nav a{
+margin-right:22px;
 color:white;
 text-decoration:none;
+font-size:16px;
+transition:opacity .3s;
+}
+
+.nav a:hover{
+opacity:.6;
+}
+
+/* page container */
+
+.container{
+max-width:900px;
+margin:auto;
+padding:160px 20px;
+animation:fadeUp 1.4s ease;
+}
+
+/* headings */
+
+h1{
+letter-spacing:10px;
+font-weight:300;
+margin-bottom:70px;
+font-size:42px;
+}
+
+h2{
+letter-spacing:5px;
+font-weight:300;
+margin-top:70px;
 font-size:20px;
+}
+
+h3{
+letter-spacing:4px;
+font-weight:300;
+margin-top:60px;
+font-size:18px;
+}
+
+/* paragraphs */
+
+p{
+line-height:1.9;
+margin-top:15px;
+font-size:18px;
+max-width:650px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* coffee cards */
+
+.coffee{
+margin-top:60px;
+}
+
+.meta{
+margin-top:12px;
+font-size:15px;
+letter-spacing:2px;
+opacity:.85;
+}
+
+/* brew section */
+
+.brew{
+margin-top:80px;
+}
+
+.brew p{
+font-size:17px;
+}
+
+/* animation */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -62,8 +143,14 @@ font-size:20px;
 
 <body>
 
+<div class="overlay"></div>
+
 <div class="nav">
 <a href="index.html">Home</a>
+<a href="coffee.html">The Coffee</a>
+<a href="shop.html">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
 </div>
 
 <div class="container">
@@ -72,31 +159,118 @@ font-size:20px;
 
 <h2>HIGH-ELEVATION ORIGINS</h2>
 <p>
-Altitude plays a major role in the development of coffee flavor.
-Beans grown at higher elevations mature more slowly, allowing them
-to develop greater complexity and density.
+Altitude plays a defining role in the development of coffee flavor.
+At higher elevations coffee cherries mature more slowly, allowing
+greater density and complexity to develop in the bean. These
+conditions produce coffees with brighter acidity, deeper sweetness,
+and greater clarity in the cup.
 </p>
 
 <h2>SPECIALTY GRADE COFFEE</h2>
 <p>
 All Ember Elevation coffees are sourced from specialty-grade
-producers. Specialty coffee is evaluated for clarity, balance,
-sweetness, and overall cup quality.
+producers and cooperatives. Specialty coffee is evaluated for
+clarity, balance, sweetness, and overall cup quality — ensuring
+each origin expresses its unique character with precision.
 </p>
 
 <h2>ROAST PHILOSOPHY</h2>
 <p>
-Each origin is roasted to highlight its natural character. Lighter
-roasts preserve bright fruit and floral notes, while medium and
-medium-dark roasts develop deeper chocolate and caramel flavors.
+Every origin is roasted with restraint to highlight its natural
+structure and flavor profile. Lighter roasts preserve floral and
+citrus complexity, while medium and medium-dark roasts develop
+deeper chocolate, nut, and caramel tones.
 </p>
 
-<h2>BREWING</h2>
+<h2>OUR COFFEES</h2>
+
+<div class="coffee">
+
+<h3>ETHIOPIA YIRGACHEFFE</h3>
+
+<div class="meta">
+Light Roast • 1500–1900 m • Fair Trade • Organic
+</div>
+
 <p>
-Whole-bean coffee preserves freshness and allows you to grind for
-your preferred brewing method. Whether prepared as espresso, pour-over,
-or French press, each coffee reveals a different expression in the cup.
+Bright, clean, and elegantly aromatic. This washed Yirgacheffe
+reveals lifted citrus, delicate floral notes, and refined
+sweetness layered with hints of berry and dark cocoa. A vibrant,
+balanced expression of Ethiopia's renowned highland terroir.
 </p>
+
+</div>
+
+<div class="coffee">
+
+<h3>GUATEMALA NAHUALÁ</h3>
+
+<div class="meta">
+Medium Roast • 1200–1500 m • Fair Trade • Organic
+</div>
+
+<p>
+A structured and balanced cup defined by layered chocolate
+richness and subtle sweetness. Notes of walnut, milk chocolate,
+and apricot develop into a smooth, clean finish. Grown in the
+volcanic highlands of Quetzaltenango where mineral-rich soils
+produce coffees of exceptional depth.
+</p>
+
+</div>
+
+<div class="coffee">
+
+<h3>PAPUA NEW GUINEA ENORGA</h3>
+
+<div class="meta">
+Medium-Dark Roast • 1300–1750 m • Fair Trade • Organic
+</div>
+
+<p>
+Full-bodied yet vibrant, with earthy depth balanced by lifted
+citrus brightness. Notes of chocolate, mango, and subtle cocoa
+develop through the cup, finishing smooth and lingering with
+refined complexity.
+</p>
+
+<p>
+Produced in the Purosa region of Papua New Guinea’s Eastern
+Highlands by small village growers whose primary livelihood is
+coffee cultivation. Through the Highlands Organic Agriculture
+Co-op, farmers follow certified organic and Fair Trade practices
+that support thousands of families and strengthen local farming
+communities.
+</p>
+
+</div>
+
+<div class="brew">
+
+<h2>BREW RECOMMENDATIONS</h2>
+
+<p>
+Whole-bean coffee preserves freshness and allows precise grinding
+for each brewing method. Different preparations reveal unique
+expressions of each origin.
+</p>
+
+<p>
+<strong>Espresso</strong><br>
+18g coffee → 36g yield → 25-30 seconds
+</p>
+
+<p>
+<strong>Pour Over</strong><br>
+20g coffee → 300g water → slow three-pour extraction
+</p>
+
+<p>
+<strong>French Press</strong><br>
+30g coffee → 500g water → 4 minute brew
+</p>
+
+</div>
 
 </div>
 
