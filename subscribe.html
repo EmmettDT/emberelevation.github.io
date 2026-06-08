@@ -1,84 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Subscribe & Save — Ember Elevation</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscribe & Save — Ember Elevation</title>
+
+<style>
+
+body{
+margin:0;
+font-family:serif;
+background-image:url("mountains.jpg");
+background-size:cover;
+background-position:center 80%;
+background-repeat:no-repeat;
+min-height:100svh;
+color:white;
+text-align:center;
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.55)
+);
+z-index:-1;
+pointer-events:none;
+}
+
+.nav{
+position:fixed;
+top:30px;
+left:40px;
+letter-spacing:2px;
+}
+
+.nav a{
+margin-right:22px;
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:opacity .3s;
+}
+
+.nav a:hover{
+opacity:.6;
+}
+
+.container{
+max-width:950px;
+margin:auto;
+padding:160px 20px;
+animation:fadeUp 1.4s ease;
+}
+
+h1{
+letter-spacing:10px;
+font-weight:300;
+margin-bottom:70px;
+font-size:42px;
+}
+
+h2{
+letter-spacing:5px;
+font-weight:300;
+margin-top:70px;
+font-size:20px;
+}
+
+h3{
+letter-spacing:4px;
+font-weight:300;
+margin-top:70px;
+font-size:22px;
+}
+
+p{
+line-height:1.95;
+margin-top:18px;
+font-size:18px;
+max-width:620px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.subscribe{
+margin-top:100px;
+}
+
+.details{
+margin-top:24px;
+font-size:15px;
+line-height:2;
+letter-spacing:1.5px;
+opacity:.88;
+}
+
+.button{
+display:inline-block;
+margin-top:45px;
+padding:15px 38px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+letter-spacing:3px;
+font-size:13px;
+text-transform:uppercase;
+transition:all .3s;
+}
+
+.button:hover{
+background:white;
+color:black;
+}
+
+.note{
+margin-top:35px;
+font-size:15px;
+letter-spacing:2px;
+opacity:.85;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
 </head>
 
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="coffee.html">The Coffee</a>
-    <a href="shop.html">Shop</a>
-    <a href="subscribe.html">Subscribe</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
-  <main class="page">
-    <section class="hero">
-      <h1>SUBSCRIBE & SAVE</h1>
+<div class="overlay"></div>
 
-      <p>
-        Fresh specialty coffee, delivered automatically.
-        Choose your preferred Ember Elevation coffees, select your delivery schedule,
-        and receive your order without having to reorder each time.
-      </p>
-    </section>
+<div class="nav">
+<a href="index.html">Home</a>
+<a href="coffee.html">The Coffee</a>
+<a href="shop.html">Shop</a>
+<a href="subscribe.html">Subscribe</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
 
-    <section class="coffee-section">
-      <h2>COFFEE ON YOUR SCHEDULE</h2>
+<div class="container">
 
-      <p>
-        Designed for those who want fresh whole-bean coffee at home with less effort.
-        Select the coffees you enjoy most, choose how often they arrive, and save 10%
-        on recurring orders.
-      </p>
+<h1>SUBSCRIBE & SAVE</h1>
 
-      <p>
-        Available delivery schedules include weekly, bi-weekly, every three weeks,
-        and monthly.
-      </p>
+<h2>FRESH COFFEE, DELIVERED AUTOMATICALLY</h2>
+<p>
+Designed for those who want fresh specialty coffee at home without having to reorder each time. Choose your preferred Ember Elevation coffees, select your delivery schedule, and receive your order automatically.
+</p>
 
-      <a class="button" href="PASTE-YOUR-SHOPIFY-SUBSCRIPTION-LINK-HERE">
-        Start Your Subscription
-      </a>
-    </section>
+<div class="subscribe">
 
-    <section class="coffee-section">
-      <h2>HOW IT WORKS</h2>
+<h3>CHOOSE YOUR COFFEES</h3>
 
-      <p>
-        1. Choose the coffee or coffees you want.
-      </p>
+<p>
+Select the coffees you enjoy most, choose your quantity, and build a recurring order around your own routine. Whether you prefer one origin or a combination of coffees, your subscription is made to fit the way you drink coffee.
+</p>
 
-      <p>
-        2. Select your quantity and delivery schedule.
-      </p>
+<div class="details">
+Costa Rica Tarrazú<br>
+Guatemala Nahualá<br>
+Papua New Guinea Enorga<br>
+Ethiopia Yirgacheffe<br>
+The Elevation Collection
+</div>
 
-      <p>
-        3. Subscribe once, then receive fresh coffee automatically.
-      </p>
+</div>
 
-      <p>
-        You stay in control. Subscriptions can be updated, skipped, paused,
-        or cancelled through your customer account.
-      </p>
-    </section>
+<div class="subscribe">
 
-    <section class="coffee-section">
-      <h2>AVAILABLE COFFEES</h2>
+<h3>SELECT YOUR SCHEDULE</h3>
 
-      <p>
-        Costa Rica Tarrazú · Guatemala Nahualá · Ethiopia Yirgacheffe ·
-        Papua New Guinea Enorga · The Elevation Collection
-      </p>
+<p>
+Coffee should arrive before you run out. Choose a delivery frequency that matches your routine, from weekly delivery to a slower monthly schedule.
+</p>
 
-      <a class="button" href="PASTE-YOUR-SHOPIFY-SUBSCRIPTION-LINK-HERE">
-        Subscribe & Save 10%
-      </a>
-    </section>
-  </main>
+<div class="details">
+Weekly<br>
+Bi-weekly<br>
+Every Three Weeks<br>
+Monthly
+</div>
+
+</div>
+
+<div class="subscribe">
+
+<h3>SAVE ON EVERY ORDER</h3>
+
+<p>
+Subscribers receive 10% off recurring coffee orders. It is a simple way to keep fresh whole-bean coffee arriving consistently while keeping your favourite coffees on hand.
+</p>
+
+<p>
+You remain in control. Subscriptions can be updated, skipped, paused, or cancelled through your customer account.
+</p>
+
+<a class="button" href="PASTE-SHOPIFY-SUBSCRIPTION-LINK-HERE">Start Subscription</a>
+
+<div class="note">
+10% off recurring orders • Whole bean • 340g bags
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
