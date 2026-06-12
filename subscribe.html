@@ -546,7 +546,7 @@ updateSummary();
 
 document
 .getElementById("buildSubscription")
-.addEventListener("click",function(e){
+.addEventListener("click", async function(e){
 
 e.preventDefault();
 
@@ -573,9 +573,11 @@ document.getElementById(item[0]).value
 
 if(qty > 0){
 
-items.push(
-`${item[1]}:${qty}`
-);
+items.push({
+id:item[1],
+quantity:qty,
+selling_plan:sellingPlan
+});
 
 }
 
@@ -588,11 +590,40 @@ return;
 
 }
 
+try{
+
+await fetch(
+"https://ember-elevation.myshopify.com/cart/clear.js",
+{
+method:"POST",
+credentials:"include"
+}
+);
+
+await fetch(
+"https://ember-elevation.myshopify.com/cart/add.js",
+{
+method:"POST",
+credentials:"include",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+items:items
+})
+}
+);
+
 window.location.href =
-"https://ember-elevation.myshopify.com/cart/" +
-items.join(",") +
-"?selling_plan=" +
-sellingPlan;
+"https://ember-elevation.myshopify.com/cart";
+
+}catch(error){
+
+console.error(error);
+
+alert("There was a problem creating your subscription.");
+
+}
 
 });
 
