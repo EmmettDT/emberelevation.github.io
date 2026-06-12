@@ -546,30 +546,40 @@ updateSummary();
 
 document
 .getElementById("buildSubscription")
-.addEventListener("click",function(e){
+.addEventListener("click", async function(e){
 
 e.preventDefault();
 
-const items = [];
+const frequency =
+document.getElementById("frequency").value;
 
-[
+const sellingPlan =
+PLANS[frequency];
+
+const products = [
 ["costaRica","53421129662771"],
 ["guatemala","53095594033459"],
 ["png","53095764197683"],
 ["ethiopia","53095858372915"],
 ["collection","53131692310835"]
-].forEach(item => {
+];
+
+const items = [];
+
+products.forEach(product => {
 
 const qty =
 parseInt(
-document.getElementById(item[0]).value
+document.getElementById(product[0]).value
 ) || 0;
 
 if(qty > 0){
 
-items.push(
-`${item[1]}:${qty}`
-);
+items.push({
+id: product[1],
+quantity: qty,
+selling_plan: sellingPlan
+});
 
 }
 
@@ -582,9 +592,42 @@ return;
 
 }
 
+try{
+
+await fetch(
+"https://ember-elevation.myshopify.com/cart/clear.js",
+{
+method:"POST"
+}
+);
+
+for(const item of items){
+
+await fetch(
+"https://ember-elevation.myshopify.com/cart/add.js",
+{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(item)
+}
+);
+
+}
+
 window.location.href =
-"https://ember-elevation.myshopify.com/cart/" +
-items.join(",");
+"https://ember-elevation.myshopify.com/cart";
+
+}catch(error){
+
+console.error(error);
+
+alert(
+"There was a problem creating your subscription."
+);
+
+}
 
 });
 
