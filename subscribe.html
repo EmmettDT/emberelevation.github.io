@@ -600,19 +600,21 @@ credentials:"include"
 }
 );
 
-await fetch(
-"https://ember-elevation.myshopify.com/cart/add.js",
-{
-method:"POST",
-credentials:"include",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-items:items
-})
+for (const item of items) {
+
+  await fetch(
+    "https://ember-elevation.myshopify.com/cart/add.js",
+    {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(item)
+    }
+  );
+
 }
-);
 
 window.location.href =
 "https://ember-elevation.myshopify.com/cart";
