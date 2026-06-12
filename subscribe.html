@@ -550,30 +550,7 @@ document
 
 e.preventDefault();
 
-const total =
-(parseInt(document.getElementById("costaRica").value)||0)+
-(parseInt(document.getElementById("guatemala").value)||0)+
-(parseInt(document.getElementById("png").value)||0)+
-(parseInt(document.getElementById("ethiopia").value)||0)+
-(parseInt(document.getElementById("collection").value)||0);
-
-if(total === 0){
-
-alert(
-"Please select at least one coffee."
-);
-
-return;
-
-}
-
-const frequency =
-document.getElementById("frequency").value;
-
-const sellingPlanId =
-PLANS[frequency];
-
-const cartItems = [];
+const items = [];
 
 [
 ["costaRica","53421129662771"],
@@ -590,32 +567,24 @@ document.getElementById(item[0]).value
 
 if(qty > 0){
 
-cartItems.push({
-id:item[1],
-quantity:qty,
-selling_plan:sellingPlanId
-});
+items.push(
+`${item[1]}:${qty}`
+);
 
 }
 
 });
 
-fetch(
-"https://ember-elevation.myshopify.com/cart/add.js",
-{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-items:cartItems
-})
+if(items.length === 0){
+
+alert("Please select at least one coffee.");
+return;
+
 }
-)
-.then(() => {
+
 window.location.href =
-"https://ember-elevation.myshopify.com/cart";
-});
+"https://ember-elevation.myshopify.com/cart/" +
+items.join(",");
 
 });
 
