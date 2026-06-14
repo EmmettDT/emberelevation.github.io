@@ -546,7 +546,7 @@ updateSummary();
 
 document
 .getElementById("buildSubscription")
-.addEventListener("click", async function(e){
+.addEventListener("click", function(e){
 
 e.preventDefault();
 
@@ -573,11 +573,9 @@ document.getElementById(item[0]).value
 
 if(qty > 0){
 
-items.push({
-id:item[1],
-quantity:qty,
-selling_plan:sellingPlan
-});
+items.push(
+`${item[1]}:${qty}`
+);
 
 }
 
@@ -590,44 +588,13 @@ return;
 
 }
 
-try{
+const cartUrl =
+`https://ember-elevation.myshopify.com/cart/${items.join(",")}?selling_plan=${sellingPlan}`;
 
-await fetch(
-"https://ember-elevation.myshopify.com/cart/clear.js",
-{
-method:"POST",
-credentials:"include"
-}
-);
-
-for (const item of items) {
-
-  await fetch(
-    "https://ember-elevation.myshopify.com/cart/add.js",
-    {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(item)
-    }
-  );
-
-}
-
-window.location.href =
-"https://ember-elevation.myshopify.com/cart";
-
-}catch(error){
-
-console.error(error);
-
-alert("There was a problem creating your subscription.");
-
-}
+window.location.href = cartUrl;
 
 });
+
 
 </script>
 
