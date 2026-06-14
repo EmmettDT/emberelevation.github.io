@@ -546,7 +546,7 @@ updateSummary();
 
 document
 .getElementById("buildSubscription")
-.addEventListener("click", function(e){
+.addEventListener("click", async function(e){
 
 e.preventDefault();
 
@@ -573,9 +573,11 @@ document.getElementById(item[0]).value
 
 if(qty > 0){
 
-items.push(
-`${item[1]}:${qty}`
-);
+items.push({
+id:Number(item[1]),
+quantity:qty,
+selling_plan:Number(sellingPlan)
+});
 
 }
 
@@ -588,13 +590,46 @@ return;
 
 }
 
-const cartUrl =
-`https://ember-elevation.myshopify.com/cart/${items.join(",")}?selling_plan=${sellingPlan}`;
+try{
 
-window.location.href = cartUrl;
+const response = await fetch(
+"https://ember-elevation.myshopify.com/cart/add.js",
+{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+items:items
+})
+}
+);
+
+if(!response.ok){
+
+const errorText =
+await response.text();
+
+console.error(errorText);
+
+alert(errorText);
+
+return;
+
+}
+
+window.location.href =
+"https://ember-elevation.myshopify.com/cart";
+
+}catch(error){
+
+console.error(error);
+
+alert(error);
+
+}
 
 });
-
 
 </script>
 
