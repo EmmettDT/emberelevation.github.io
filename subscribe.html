@@ -2,42 +2,43 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Subscribe & Save — Ember Elevation</title>
 
 <style>
 
-*{
+body{
 margin:0;
-padding:0;
-box-sizing:border-box;
+font-family:serif;
+background-image:url("mountains.jpg");
+background-size:cover;
+background-position:center 80%;
+background-repeat:no-repeat;
+min-height:100svh;
+color:white;
+text-align:center;
 }
 
-body{
-font-family:serif;
-background-image:
-linear-gradient(
-rgba(0,0,0,.45),
-rgba(0,0,0,.35),
-rgba(0,0,0,.55)
-),
-url("mountains.jpg");
-background-size:cover;
-background-position:center center;
-background-repeat:no-repeat;
-background-attachment:scroll;
-color:white;
-overflow-x:hidden;
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.25),
+rgba(0,0,0,0.55)
+);
+z-index:-1;
+pointer-events:none;
 }
 
 .nav{
 position:fixed;
 top:30px;
 left:40px;
-z-index:100;
 letter-spacing:2px;
 }
 
@@ -46,194 +47,87 @@ margin-right:22px;
 color:white;
 text-decoration:none;
 font-size:16px;
-transition:.3s;
+transition:opacity .3s;
 }
 
 .nav a:hover{
-opacity:.65;
+opacity:.6;
 }
 
 .container{
-max-width:1100px;
+max-width:900px;
 margin:auto;
-padding:180px 30px 140px;
+padding:160px 20px;
+animation:fadeUp 1.4s ease;
 }
 
-.hero{
-text-align:center;
-max-width:950px;
-margin:auto;
-}
-
-.hero h1{
-font-size:72px;
+h1{
+letter-spacing:10px;
 font-weight:300;
-letter-spacing:14px;
-margin-bottom:35px;
-}
-
-.hero h2{
-font-size:22px;
-font-weight:300;
-letter-spacing:6px;
-margin-bottom:45px;
-}
-
-.hero p{
-font-size:21px;
-line-height:2;
-max-width:1000px;
-margin:auto;
-opacity:.95;
-}
-
-.section{
-margin-top:170px;
-text-align:center;
-}
-
-.section-title{
-font-size:42px;
-font-weight:300;
-letter-spacing:8px;
 margin-bottom:40px;
+font-size:42px;
 }
 
-.section-subtitle{
-font-size:20px;
-letter-spacing:5px;
-margin-bottom:35px;
-opacity:.95;
+h2{
+letter-spacing:4px;
+font-weight:300;
+margin-top:20px;
+font-size:22px;
 }
 
-.section-text{
-max-width:850px;
+.intro{
+max-width:650px;
 margin:auto;
-font-size:20px;
-line-height:2.2;
-opacity:.92;
-}
-
-.benefit-grid{
-margin-top:80px;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:60px;
-}
-
-.benefit-card{
-text-align:center;
-}
-
-.benefit-card h3{
-font-size:22px;
-font-weight:300;
-letter-spacing:3px;
-margin-bottom:25px;
-}
-
-.benefit-card p{
+line-height:1.8;
 font-size:18px;
-line-height:2;
-opacity:.9;
-}
-
-.steps-grid{
-margin-top:80px;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:60px;
-}
-
-.step-card{
-text-align:center;
-}
-
-.step-number{
-font-size:42px;
-opacity:.55;
-margin-bottom:20px;
-}
-
-.step-card h3{
-font-size:22px;
-font-weight:300;
-letter-spacing:3px;
-margin-bottom:25px;
-}
-
-.step-card p{
-font-size:18px;
-line-height:2;
-opacity:.9;
-}
-
-.divider{
-width:120px;
-height:1px;
-background:rgba(255,255,255,.4);
-margin:55px auto;
-}
-
-@media(max-width:1000px){
-
-.nav{
-position:relative;
-top:auto;
-left:auto;
-text-align:center;
-padding:25px 15px;
-}
-
-.nav a{
-display:inline-block;
-margin:8px 10px;
-font-size:14px;
-}
-
-.container{
-padding:80px 25px 100px;
-}
-
-.hero h1{
-font-size:42px;
-letter-spacing:7px;
-}
-
-.hero h2{
-font-size:17px;
-letter-spacing:3px;
-}
-
-.hero p{
-font-size:17px;
-line-height:1.9;
+margin-bottom:90px;
 }
 
 .section{
-margin-top:110px;
+margin-bottom:90px;
 }
 
-.section-title{
-font-size:30px;
-letter-spacing:5px;
+.copy{
+max-width:620px;
+margin:12px auto 0 auto;
+font-size:15px;
+line-height:1.8;
+opacity:.9;
 }
 
-.section-subtitle{
-font-size:16px;
-letter-spacing:3px;
+button{
+margin-top:20px;
+padding:12px 32px;
+background:transparent;
+color:white;
+border:1px solid white;
+cursor:pointer;
+letter-spacing:2px;
+font-size:12px;
+transition:all .35s ease;
 }
 
-.section-text{
-font-size:16px;
+button:hover{
+background:white;
+color:black;
+transform:translateY(-2px);
 }
 
-.benefit-grid,
-.steps-grid{
-grid-template-columns:1fr;
-gap:50px;
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
+@media (max-width:768px){
+body{
+background-position:center 95%;
+}
 }
 
 </style>
@@ -241,6 +135,8 @@ gap:50px;
 </head>
 
 <body>
+
+<div class="overlay"></div>
 
 <div class="nav">
 <a href="index.html">Home</a>
@@ -253,85 +149,59 @@ gap:50px;
 
 <div class="container">
 
-<div class="hero">
-
 <h1>SUBSCRIBE & SAVE</h1>
 
-<h2>FRESH COFFEE. DELIVERED AUTOMATICALLY.</h2>
+<p class="intro">
 
-<p>
-
-Enjoy 10% off every recurring order and keep freshly roasted specialty coffee arriving exactly when you need it. Ember Elevation subscriptions are built for coffee lovers who value quality, convenience, and consistency. Select your favourite coffees, choose a delivery schedule, and let us handle the rest.
+Enjoy 10% off every recurring order and keep freshly roasted specialty coffee arriving exactly when you need it. Ember Elevation subscriptions are built for coffee lovers who value quality, convenience, and consistency.
 
 </p>
 
-</div>
-
 <div class="section">
 
-<div class="section-title">
+<h2>WHY SUBSCRIBE</h2>
 
-WHY SUBSCRIBE?
-
-</div>
-
-<div class="divider"></div>
-
-<div class="section-text">
+<p class="copy">
 
 Never worry about running out of coffee again. Every subscription is designed to deliver freshly roasted specialty coffee directly to your door while giving you complete control over your deliveries.
 
+</p>
+
 </div>
 
-<div class="benefit-grid">
+<div class="section">
 
-<div class="benefit-card">
+<h2>SUBSCRIPTION BENEFITS</h2>
 
-<h3>10% OFF</h3>
+<p class="copy">
 
-<p>
-
-Save 10% on every recurring order while enjoying the same exceptional coffee you already love.
+10% off every recurring order • Freshly roasted before every shipment • Pause anytime • Skip deliveries when needed • Change products anytime • Cancel anytime • Canada-wide delivery
 
 </p>
 
 </div>
 
-<div class="benefit-card">
+<div class="section">
 
-<h3>FRESHLY ROASTED</h3>
+<h2>AVAILABLE COFFEES</h2>
 
-<p>
+<p class="copy">
 
-Each order is roasted before shipment to ensure maximum freshness and flavour.
+<p class="copy">
 
-</p>
-
-</div>
-
-<div class="benefit-card">
-
-<h3>FLEXIBLE</h3>
-
-<p>
-
-Choose weekly, bi-weekly, every three weeks, or monthly delivery schedules.
+Subscribers can choose from any coffee in the Ember Elevation collection and receive the same savings regardless of which origin they prefer.
 
 </p>
 
 </div>
 
-<div class="benefit-card">
+<div class="section">
 
-<h3>FULL CONTROL</h3>
+<h2>COSTA RICA TARRAZÚ</h2>
 
-<p>
+<div class="copy">
 
-Pause, skip, update, or cancel your subscription at any time through your customer account.
-
-</p>
-
-</div>
+Light-Medium Roast • Bright, balanced, and approachable with notes of caramel, fruit, and sweetness.
 
 </div>
 
@@ -339,73 +209,11 @@ Pause, skip, update, or cancel your subscription at any time through your custom
 
 <div class="section">
 
-<div class="section-title">
+<h2>GUATEMALA NAHUALÁ</h2>
 
-HOW IT WORKS
+<div class="copy">
 
-</div>
-
-<div class="divider"></div>
-
-<div class="steps-grid">
-
-<div class="steps-grid">
-
-<div class="step-card">
-
-<div class="step-number">01</div>
-
-<h3>CHOOSE YOUR COFFEE</h3>
-
-<p>
-
-Select from our collection of carefully sourced single-origin coffees and curated offerings.
-
-</p>
-
-</div>
-
-<div class="step-card">
-
-<div class="step-number">02</div>
-
-<h3>SELECT SUBSCRIBE & SAVE</h3>
-
-<p>
-
-On the product page, choose the Subscribe & Save option to unlock recurring delivery pricing.
-
-</p>
-
-</div>
-
-<div class="step-card">
-
-<div class="step-number">03</div>
-
-<h3>CHOOSE YOUR SCHEDULE</h3>
-
-<p>
-
-Pick the delivery frequency that best matches your brewing habits and coffee consumption.
-
-</p>
-
-</div>
-
-<div class="step-card">
-
-<div class="step-number">04</div>
-
-<h3>ENJOY AUTOMATIC DELIVERY</h3>
-
-<p>
-
-We'll roast and ship your coffee according to your chosen schedule automatically.
-
-</p>
-
-</div>
+Medium Roast • Rich chocolate notes with a smooth body and everyday drinkability.
 
 </div>
 
@@ -413,69 +221,11 @@ We'll roast and ship your coffee according to your chosen schedule automatically
 
 <div class="section">
 
-<div class="section-title">
+<h2>ETHIOPIA YIRGACHEFFE</h2>
 
-DELIVERY OPTIONS
+<div class="copy">
 
-</div>
-
-<div class="divider"></div>
-
-<div class="section-text">
-
-Choose the schedule that best matches your coffee routine. Every option includes the same freshly roasted coffee and the same 10% subscription savings.
-
-</div>
-
-<div class="benefit-grid">
-
-<div class="benefit-card">
-
-<h3>EVERY WEEK</h3>
-
-<p>
-
-Perfect for households, offices, or anyone brewing multiple cups every day.
-
-</p>
-
-</div>
-
-<div class="benefit-card">
-
-<h3>EVERY 2 WEEKS</h3>
-
-<p>
-
-A great balance for regular coffee drinkers who want consistent freshness.
-
-</p>
-
-</div>
-
-<div class="benefit-card">
-
-<h3>EVERY 3 WEEKS</h3>
-
-<p>
-
-Ideal for moderate coffee consumption while maintaining peak flavour.
-
-</p>
-
-</div>
-
-<div class="benefit-card">
-
-<h3>MONTHLY</h3>
-
-<p>
-
-Best for occasional brewers who still want freshly roasted coffee on hand.
-
-</p>
-
-</div>
+Light Roast • Elegant floral aromatics with citrus brightness and a refined finish.
 
 </div>
 
@@ -483,77 +233,11 @@ Best for occasional brewers who still want freshly roasted coffee on hand.
 
 <div class="section">
 
-<div class="section-title">
+<h2>PAPUA NEW GUINEA ENORGA</h2>
 
-AVAILABLE COFFEES
+<div class="copy">
 
-</div>
-
-<div class="divider"></div>
-
-<div class="section-text">
-
-Choose from our collection of carefully selected single-origin coffees, each chosen for clarity, structure, and a distinctive flavour experience in the cup.
-
-</div>
-
-<div class="steps-grid">
-
-<div class="step-card">
-
-<h3>COSTA RICA TARRAZÚ</h3>
-
-<p>
-
-Light-Medium Roast<br><br>
-
-Bright, balanced, and approachable with notes of caramel, fruit, and sweetness.
-
-</p>
-
-</div>
-
-<div class="step-card">
-
-<h3>GUATEMALA NAHUALÁ</h3>
-
-<p>
-
-Medium Roast<br><br>
-
-Rich chocolate notes with a smooth body and everyday drinkability.
-
-</p>
-
-</div>
-
-<div class="step-card">
-
-<h3>ETHIOPIA YIRGACHEFFE</h3>
-
-<p>
-
-Light Roast<br><br>
-
-Elegant floral aromatics with citrus brightness and a refined finish.
-
-</p>
-
-</div>
-
-<div class="step-card">
-
-<h3>PAPUA NEW GUINEA ENORGA</h3>
-
-<p>
-
-Medium-Dark Roast<br><br>
-
-Full-bodied, bold, and balanced with deeper chocolate characteristics.
-
-</p>
-
-</div>
+Medium-Dark Roast • Full-bodied, bold, and balanced with deeper chocolate characteristics.
 
 </div>
 
@@ -561,17 +245,11 @@ Full-bodied, bold, and balanced with deeper chocolate characteristics.
 
 <div class="section">
 
-<div class="section-title">
+<h2>THE ELEVATION COLLECTION</h2>
 
-ELEVATION COLLECTION
+<div class="copy">
 
-</div>
-
-<div class="divider"></div>
-
-<div class="section-text">
-
-Experience three of our most popular coffees in one curated collection. A perfect way to explore a range of flavour profiles while enjoying subscription savings.
+Experience three of our most popular coffees in one curated collection while enjoying subscription savings and automatic delivery.
 
 </div>
 
@@ -579,98 +257,55 @@ Experience three of our most popular coffees in one curated collection. A perfec
 
 <div class="section">
 
-<div class="section-title">
+<h2>HOW IT WORKS</h2>
 
-SUBSCRIPTION BENEFITS
+<p class="copy">
 
-</div>
+Choose your coffee, select Subscribe & Save on the product page, pick your preferred delivery schedule, and we'll automatically roast and ship your coffee according to that schedule.
 
-<div class="divider"></div>
-
-<div class="section-text">
-
-✓ Save 10% on every recurring order<br><br>
-
-✓ Freshly roasted before every shipment<br><br>
-
-✓ Weekly, bi-weekly, every 3 weeks, or monthly delivery options<br><br>
-
-✓ Change products anytime<br><br>
-
-✓ Skip upcoming deliveries when needed<br><br>
-
-✓ Pause your subscription at any time<br><br>
-
-✓ Cancel anytime with no commitment<br><br>
-
-✓ Manage subscriptions through your customer account<br><br>
-
-✓ Canada-wide delivery
-
-</div>
+</p>
 
 </div>
 
 <div class="section">
 
-<div class="section-title">
+<h2>DELIVERY OPTIONS</h2>
 
-NEVER RUN OUT OF GREAT COFFEE
+<p class="copy">
 
-</div>
+Every Week • Every 2 Weeks • Every 3 Weeks • Monthly
 
-<div class="divider"></div>
-
-<div class="section-text">
-
-Start your subscription directly through our online store, choose your favourite coffees, select your delivery frequency, and enjoy fresh specialty coffee delivered automatically.
+</p>
 
 </div>
 
-<a
-href="https://ember-elevation.myshopify.com/collections/all"
-style="
-display:inline-block;
-margin-top:60px;
-padding:22px 60px;
-border:1px solid rgba(255,255,255,.8);
-color:white;
-text-decoration:none;
-letter-spacing:4px;
-font-size:15px;
-text-transform:uppercase;
-transition:.3s;
-">
+<div class="section">
 
-START MY SUBSCRIPTION
+<h2>NEVER RUN OUT OF GREAT COFFEE</h2>
 
+<p class="copy">
+
+Start your subscription directly through our online store, select your favourite coffee, choose your delivery frequency, and enjoy freshly roasted specialty coffee delivered automatically.
+
+</p>
+
+<a href="https://ember-elevation.myshopify.com/collections/all">
+<button>START MY SUBSCRIPTION</button>
 </a>
 
-<div style="
-margin-top:30px;
-font-size:14px;
-letter-spacing:2px;
-opacity:.75;
-">
-
-Select your coffee, choose Subscribe & Save, and customize your delivery schedule on the product page.
-
-</div>
-
 </div>
 
 <div style="
-margin-top:170px;
-max-width:900px;
+margin-top:100px;
+max-width:700px;
 margin-left:auto;
 margin-right:auto;
-text-align:center;
-font-size:19px;
-line-height:2.2;
+font-size:16px;
+line-height:2;
 opacity:.9;
 ">
 
-At Ember Elevation, we believe exceptional coffee should always be within reach. Our subscription program is designed to provide convenience without compromising quality, ensuring that every delivery arrives freshly roasted and ready to brew.
+At Ember Elevation, we believe exceptional coffee should always be within reach. Our subscription program is designed to provide convenience without compromising quality, ensuring every delivery arrives freshly roasted and ready to brew.
 
 </div>
 
