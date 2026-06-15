@@ -84,7 +84,7 @@ margin-bottom:90px;
 }
 
 .section{
-margin-bottom:90px;
+margin-bottom:100px;
 }
 
 .copy{
@@ -92,6 +92,65 @@ max-width:620px;
 margin:12px auto 0 auto;
 font-size:15px;
 line-height:1.8;
+opacity:.9;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+margin-top:45px;
+}
+
+.feature-box{
+background:rgba(0,0,0,.18);
+border:1px solid rgba(255,255,255,.12);
+backdrop-filter:blur(4px);
+padding:24px 18px;
+}
+
+.feature-box h3{
+font-size:16px;
+font-weight:300;
+letter-spacing:2px;
+margin-bottom:12px;
+}
+
+.feature-box p{
+font-size:14px;
+line-height:1.7;
+opacity:.9;
+}
+
+.steps-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+margin-top:45px;
+}
+
+.step-box{
+background:rgba(0,0,0,.12);
+border:1px solid rgba(255,255,255,.10);
+padding:24px 18px;
+}
+
+.step-number{
+font-size:28px;
+opacity:.6;
+margin-bottom:10px;
+}
+
+.step-box h3{
+font-size:16px;
+font-weight:300;
+letter-spacing:2px;
+margin-bottom:12px;
+}
+
+.step-box p{
+font-size:14px;
+line-height:1.7;
 opacity:.9;
 }
 
@@ -124,10 +183,24 @@ transform:translateY(0);
 }
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
+
 body{
 background-position:center 95%;
 }
+
+.feature-grid,
+.steps-grid{
+grid-template-columns:1fr;
+}
+
+.nav{
+position:relative;
+top:auto;
+left:auto;
+padding:25px 15px;
+}
+
 }
 
 </style>
@@ -153,7 +226,7 @@ background-position:center 95%;
 
 <p class="intro">
 
-Enjoy 10% off every recurring order and keep freshly roasted specialty coffee arriving exactly when you need it. Ember Elevation subscriptions are built for coffee lovers who value quality, convenience, and consistency.
+Enjoy 10% off every recurring order and keep freshly roasted specialty coffee arriving exactly when you need it. Ember Elevation subscriptions are built for coffee lovers who value quality, convenience, and consistency. Select your favourite coffee, choose your delivery schedule, and let us handle the rest.
 
 </p>
 
@@ -167,89 +240,47 @@ Never worry about running out of coffee again. Every subscription is designed to
 
 </p>
 
-</div>
+<div class="feature-grid">
 
-<div class="section">
+<div class="feature-box">
 
-<h2>SUBSCRIPTION BENEFITS</h2>
+<h3>10% OFF</h3>
 
-<p class="copy">
-
-10% off every recurring order • Freshly roasted before every shipment • Pause anytime • Skip deliveries when needed • Change products anytime • Cancel anytime • Canada-wide delivery
-
+<p>
+Save on every recurring order.
 </p>
 
 </div>
 
-<div class="section">
+<div class="feature-box">
 
-<h2>AVAILABLE COFFEES</h2>
+<h3>FRESHLY ROASTED</h3>
 
-<p class="copy">
-
-<p class="copy">
-
-Subscribers can choose from any coffee in the Ember Elevation collection and receive the same savings regardless of which origin they prefer.
-
+<p>
+Roasted before every shipment.
 </p>
 
 </div>
 
-<div class="section">
+<div class="feature-box">
 
-<h2>COSTA RICA TARRAZÚ</h2>
+<h3>FLEXIBLE</h3>
 
-<div class="copy">
-
-Light-Medium Roast • Bright, balanced, and approachable with notes of caramel, fruit, and sweetness.
-
-</div>
+<p>
+Change, skip, or pause anytime.
+</p>
 
 </div>
 
-<div class="section">
+<div class="feature-box">
 
-<h2>GUATEMALA NAHUALÁ</h2>
+<h3>FULL CONTROL</h3>
 
-<div class="copy">
-
-Medium Roast • Rich chocolate notes with a smooth body and everyday drinkability.
-
-</div>
+<p>
+Manage everything from your account.
+</p>
 
 </div>
-
-<div class="section">
-
-<h2>ETHIOPIA YIRGACHEFFE</h2>
-
-<div class="copy">
-
-Light Roast • Elegant floral aromatics with citrus brightness and a refined finish.
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>PAPUA NEW GUINEA ENORGA</h2>
-
-<div class="copy">
-
-Medium-Dark Roast • Full-bodied, bold, and balanced with deeper chocolate characteristics.
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>THE ELEVATION COLLECTION</h2>
-
-<div class="copy">
-
-Experience three of our most popular coffees in one curated collection while enjoying subscription savings and automatic delivery.
 
 </div>
 
@@ -261,9 +292,71 @@ Experience three of our most popular coffees in one curated collection while enj
 
 <p class="copy">
 
-Choose your coffee, select Subscribe & Save on the product page, pick your preferred delivery schedule, and we'll automatically roast and ship your coffee according to that schedule.
+Getting started takes less than a minute.
 
 </p>
+
+<div class="steps-grid">
+
+<div class="steps-grid">
+
+<div class="step-box">
+
+<div class="step-number">01</div>
+
+<h3>CHOOSE YOUR COFFEE</h3>
+
+<p>
+
+Visit any coffee product page and select the coffee you would like delivered automatically.
+
+</p>
+
+</div>
+
+<div class="step-box">
+
+<div class="step-number">02</div>
+
+<h3>SELECT SUBSCRIBE & SAVE</h3>
+
+<p>
+
+Choose the Subscribe & Save option on the product page to activate recurring delivery.
+
+</p>
+
+</div>
+
+<div class="step-box">
+
+<div class="step-number">03</div>
+
+<h3>CHOOSE FREQUENCY</h3>
+
+<p>
+
+Select the delivery schedule that best matches your brewing habits and coffee consumption.
+
+</p>
+
+</div>
+
+<div class="step-box">
+
+<div class="step-number">04</div>
+
+<h3>ENJOY AUTOMATIC DELIVERY</h3>
+
+<p>
+
+We'll roast and ship your coffee according to your selected schedule automatically.
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -273,19 +366,135 @@ Choose your coffee, select Subscribe & Save on the product page, pick your prefe
 
 <p class="copy">
 
-Every Week • Every 2 Weeks • Every 3 Weeks • Monthly
+Choose the schedule that best matches how quickly you go through coffee. Every option includes the same freshly roasted coffee and the same 10% subscription savings.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-box">
+
+<h3>EVERY WEEK</h3>
+
+<p>
+
+Perfect for households, offices, or heavy daily coffee drinkers.
 
 </p>
 
 </div>
 
+<div class="feature-box">
+
+<h3>EVERY 2 WEEKS</h3>
+
+<p>
+
+A balanced option for most regular coffee drinkers.
+
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>EVERY 3 WEEKS</h3>
+
+<p>
+
+Ideal for moderate coffee consumption while maintaining freshness.
+
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>MONTHLY</h3>
+
+<p>
+
+Best for occasional brewers who still want fresh coffee on hand.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 <div class="section">
 
-<h2>NEVER RUN OUT OF GREAT COFFEE</h2>
+<h2>SUBSCRIPTION BENEFITS</h2>
 
 <p class="copy">
 
-Start your subscription directly through our online store, select your favourite coffee, choose your delivery frequency, and enjoy freshly roasted specialty coffee delivered automatically.
+Every subscription includes freshly roasted coffee, automatic delivery, complete flexibility, and full account control.
+
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-box">
+
+<h3>CHANGE PRODUCTS</h3>
+
+<p>
+
+Switch coffees whenever your preferences change.
+
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>SKIP DELIVERIES</h3>
+
+<p>
+
+Going away? Skip an upcoming shipment anytime.
+
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>PAUSE ANYTIME</h3>
+
+<p>
+
+Take a break without cancelling your subscription.
+
+</p>
+
+</div>
+
+<div class="feature-box">
+
+<h3>CANCEL ANYTIME</h3>
+
+<p>
+
+No contracts, commitments, or cancellation fees.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>READY TO GET STARTED?</h2>
+
+<p class="copy">
+
+Choose your favourite coffee, select Subscribe & Save, and enjoy fresh specialty coffee delivered automatically.
 
 </p>
 
