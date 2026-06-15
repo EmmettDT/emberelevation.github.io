@@ -18,29 +18,19 @@ box-sizing:border-box;
 
 body{
 font-family:serif;
-background-image:url("mountains.jpg");
-background-size:cover;
-background-position:center top;
-background-repeat:no-repeat;
-color:white;
-min-height:100vh;
-overflow-x:hidden;
-}
-
-.overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-min-height:100%;
-background:
+background-image:
 linear-gradient(
-rgba(0,0,0,.60),
+rgba(0,0,0,.45),
 rgba(0,0,0,.35),
-rgba(0,0,0,.75)
-);
-z-index:-1;
+rgba(0,0,0,.55)
+),
+url("mountains.jpg");
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
+background-attachment:scroll;
+color:white;
+overflow-x:hidden;
 }
 
 .nav{
@@ -64,23 +54,21 @@ opacity:.65;
 }
 
 .container{
-position:relative;
-z-index:2;
-max-width:1300px;
+max-width:1100px;
 margin:auto;
-padding:160px 30px 120px;
+padding:180px 30px 140px;
 }
 
 .hero{
 text-align:center;
-max-width:900px;
+max-width:950px;
 margin:auto;
 }
 
 .hero h1{
-font-size:56px;
+font-size:72px;
 font-weight:300;
-letter-spacing:12px;
+letter-spacing:14px;
 margin-bottom:35px;
 }
 
@@ -88,102 +76,103 @@ margin-bottom:35px;
 font-size:22px;
 font-weight:300;
 letter-spacing:6px;
-margin-bottom:35px;
+margin-bottom:45px;
 }
 
 .hero p{
-font-size:20px;
-line-height:1.9;
+font-size:21px;
+line-height:2;
+max-width:1000px;
+margin:auto;
 opacity:.95;
 }
 
 .section{
-margin-top:90px;
-}
-
-.glass{
-background:rgba(0,0,0,.35);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.12);
-padding:45px;
+margin-top:170px;
+text-align:center;
 }
 
 .section-title{
-text-align:center;
-font-size:28px;
-letter-spacing:5px;
+font-size:42px;
 font-weight:300;
-margin-bottom:25px;
+letter-spacing:8px;
+margin-bottom:40px;
+}
+
+.section-subtitle{
+font-size:20px;
+letter-spacing:5px;
+margin-bottom:35px;
+opacity:.95;
 }
 
 .section-text{
-max-width:900px;
+max-width:850px;
 margin:auto;
-text-align:center;
-line-height:2;
-font-size:18px;
+font-size:20px;
+line-height:2.2;
 opacity:.92;
 }
 
 .benefit-grid{
-margin-top:40px;
+margin-top:80px;
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:25px;
+gap:60px;
 }
 
 .benefit-card{
-background:rgba(0,0,0,.35);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.12);
-padding:35px;
 text-align:center;
 }
 
 .benefit-card h3{
-font-size:20px;
+font-size:22px;
 font-weight:300;
-letter-spacing:2px;
-margin-bottom:18px;
+letter-spacing:3px;
+margin-bottom:25px;
 }
 
 .benefit-card p{
-font-size:15px;
-line-height:1.9;
+font-size:18px;
+line-height:2;
 opacity:.9;
 }
 
 .steps-grid{
-margin-top:40px;
+margin-top:80px;
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:25px;
+gap:60px;
 }
 
 .step-card{
-background:rgba(0,0,0,.35);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.12);
-padding:35px;
+text-align:center;
 }
 
 .step-number{
-font-size:34px;
-opacity:.75;
-margin-bottom:15px;
+font-size:42px;
+opacity:.55;
+margin-bottom:20px;
 }
 
 .step-card h3{
-font-size:20px;
+font-size:22px;
 font-weight:300;
-letter-spacing:2px;
-margin-bottom:15px;
+letter-spacing:3px;
+margin-bottom:25px;
 }
 
 .step-card p{
-line-height:1.9;
-font-size:15px;
+font-size:18px;
+line-height:2;
 opacity:.9;
+}
+
+.divider{
+width:120px;
+height:1px;
+background:rgba(255,255,255,.4);
+margin:55px auto;
 }
 
 @media(max-width:1000px){
@@ -198,47 +187,51 @@ padding:25px 15px;
 
 .nav a{
 display:inline-block;
-margin:8px 12px;
+margin:8px 10px;
 font-size:14px;
 }
 
 .container{
-padding:60px 20px 80px;
-}
-
-.benefit-grid,
-.steps-grid{
-grid-template-columns:1fr;
-}
-
-.glass,
-.benefit-card,
-.step-card{
-padding:25px;
+padding:80px 25px 100px;
 }
 
 .hero h1{
-font-size:32px;
-letter-spacing:6px;
+font-size:42px;
+letter-spacing:7px;
 }
 
 .hero h2{
-font-size:16px;
+font-size:17px;
 letter-spacing:3px;
 }
 
 .hero p{
 font-size:17px;
-line-height:1.8;
+line-height:1.9;
+}
+
+.section{
+margin-top:110px;
 }
 
 .section-title{
-font-size:22px;
+font-size:30px;
+letter-spacing:5px;
+}
+
+.section-subtitle{
+font-size:16px;
 letter-spacing:3px;
 }
 
 .section-text{
 font-size:16px;
+}
+
+.benefit-grid,
+.steps-grid{
+grid-template-columns:1fr;
+gap:50px;
 }
 
 }
@@ -248,8 +241,6 @@ font-size:16px;
 </head>
 
 <body>
-
-<div class="overlay"></div>
 
 <div class="nav">
 <a href="index.html">Home</a>
@@ -278,13 +269,13 @@ Enjoy 10% off every recurring order and keep freshly roasted specialty coffee ar
 
 <div class="section">
 
-<div class="glass">
-
 <div class="section-title">
 
 WHY SUBSCRIBE?
 
 </div>
+
+<div class="divider"></div>
 
 <div class="section-text">
 
@@ -292,38 +283,54 @@ Never worry about running out of coffee again. Every subscription is designed to
 
 </div>
 
-</div>
-
-<div class="benefit-grid">
-
 <div class="benefit-grid">
 
 <div class="benefit-card">
+
 <h3>10% OFF</h3>
+
 <p>
+
 Save 10% on every recurring order while enjoying the same exceptional coffee you already love.
+
 </p>
+
 </div>
 
 <div class="benefit-card">
+
 <h3>FRESHLY ROASTED</h3>
+
 <p>
+
 Each order is roasted before shipment to ensure maximum freshness and flavour.
+
 </p>
+
 </div>
 
 <div class="benefit-card">
+
 <h3>FLEXIBLE</h3>
+
 <p>
+
 Choose weekly, bi-weekly, every three weeks, or monthly delivery schedules.
+
 </p>
+
 </div>
 
 <div class="benefit-card">
+
 <h3>FULL CONTROL</h3>
+
 <p>
+
 Pause, skip, update, or cancel your subscription at any time through your customer account.
+
 </p>
+
 </div>
 
 </div>
@@ -332,13 +339,15 @@ Pause, skip, update, or cancel your subscription at any time through your custom
 
 <div class="section">
 
-<div class="glass">
-
 <div class="section-title">
 
 HOW IT WORKS
 
 </div>
+
+<div class="divider"></div>
+
+<div class="steps-grid">
 
 <div class="steps-grid">
 
@@ -402,11 +411,7 @@ We'll roast and ship your coffee according to your chosen schedule automatically
 
 </div>
 
-</div>
-
 <div class="section">
-
-<div class="glass">
 
 <div class="section-title">
 
@@ -414,41 +419,61 @@ DELIVERY OPTIONS
 
 </div>
 
+<div class="divider"></div>
+
 <div class="section-text">
 
 Choose the schedule that best matches your coffee routine. Every option includes the same freshly roasted coffee and the same 10% subscription savings.
 
 </div>
 
-<div class="benefit-grid" style="margin-top:50px;">
+<div class="benefit-grid">
 
 <div class="benefit-card">
+
 <h3>EVERY WEEK</h3>
+
 <p>
+
 Perfect for households, offices, or anyone brewing multiple cups every day.
+
 </p>
+
 </div>
 
 <div class="benefit-card">
+
 <h3>EVERY 2 WEEKS</h3>
+
 <p>
+
 A great balance for regular coffee drinkers who want consistent freshness.
+
 </p>
+
 </div>
 
 <div class="benefit-card">
+
 <h3>EVERY 3 WEEKS</h3>
+
 <p>
+
 Ideal for moderate coffee consumption while maintaining peak flavour.
+
 </p>
+
 </div>
 
 <div class="benefit-card">
+
 <h3>MONTHLY</h3>
+
 <p>
+
 Best for occasional brewers who still want freshly roasted coffee on hand.
+
 </p>
-</div>
 
 </div>
 
@@ -458,15 +483,19 @@ Best for occasional brewers who still want freshly roasted coffee on hand.
 
 <div class="section">
 
-<div class="glass">
-
 <div class="section-title">
 
 AVAILABLE COFFEES
 
 </div>
 
-<div class="steps-grid">
+<div class="divider"></div>
+
+<div class="section-text">
+
+Choose from our collection of carefully selected single-origin coffees, each chosen for clarity, structure, and a distinctive flavour experience in the cup.
+
+</div>
 
 <div class="steps-grid">
 
@@ -528,13 +557,17 @@ Full-bodied, bold, and balanced with deeper chocolate characteristics.
 
 </div>
 
-<div style="margin-top:30px;" class="glass">
+</div>
 
-<div class="section-title" style="margin-bottom:15px;">
+<div class="section">
+
+<div class="section-title">
 
 ELEVATION COLLECTION
 
 </div>
+
+<div class="divider"></div>
 
 <div class="section-text">
 
@@ -544,13 +577,7 @@ Experience three of our most popular coffees in one curated collection. A perfec
 
 </div>
 
-</div>
-
-</div>
-
 <div class="section">
-
-<div class="glass">
 
 <div class="section-title">
 
@@ -558,29 +585,25 @@ SUBSCRIPTION BENEFITS
 
 </div>
 
-<div style="
-max-width:900px;
-margin:auto;
-font-size:18px;
-line-height:2.4;
-text-align:center;
-">
+<div class="divider"></div>
 
-✓ Save 10% on every recurring order<br>
+<div class="section-text">
 
-✓ Freshly roasted before every shipment<br>
+✓ Save 10% on every recurring order<br><br>
 
-✓ Weekly, bi-weekly, every 3 weeks, or monthly delivery options<br>
+✓ Freshly roasted before every shipment<br><br>
 
-✓ Change products anytime<br>
+✓ Weekly, bi-weekly, every 3 weeks, or monthly delivery options<br><br>
 
-✓ Skip upcoming deliveries when needed<br>
+✓ Change products anytime<br><br>
 
-✓ Pause your subscription at any time<br>
+✓ Skip upcoming deliveries when needed<br><br>
 
-✓ Cancel anytime with no commitment<br>
+✓ Pause your subscription at any time<br><br>
 
-✓ Manage subscriptions through your customer account<br>
+✓ Cancel anytime with no commitment<br><br>
+
+✓ Manage subscriptions through your customer account<br><br>
 
 ✓ Canada-wide delivery
 
@@ -588,17 +611,15 @@ text-align:center;
 
 </div>
 
-</div>
-
 <div class="section">
-
-<div class="glass" style="text-align:center;">
 
 <div class="section-title">
 
 NEVER RUN OUT OF GREAT COFFEE
 
 </div>
+
+<div class="divider"></div>
 
 <div class="section-text">
 
@@ -610,16 +631,15 @@ Start your subscription directly through our online store, choose your favourite
 href="https://ember-elevation.myshopify.com/collections/all"
 style="
 display:inline-block;
-margin-top:45px;
-padding:22px 55px;
-border:1px solid white;
+margin-top:60px;
+padding:22px 60px;
+border:1px solid rgba(255,255,255,.8);
 color:white;
 text-decoration:none;
 letter-spacing:4px;
 font-size:15px;
 text-transform:uppercase;
 transition:.3s;
-background:transparent;
 ">
 
 START MY SUBSCRIPTION
@@ -627,10 +647,10 @@ START MY SUBSCRIPTION
 </a>
 
 <div style="
-margin-top:25px;
+margin-top:30px;
 font-size:14px;
 letter-spacing:2px;
-opacity:.8;
+opacity:.75;
 ">
 
 Select your coffee, choose Subscribe & Save, and customize your delivery schedule on the product page.
@@ -639,16 +659,14 @@ Select your coffee, choose Subscribe & Save, and customize your delivery schedul
 
 </div>
 
-</div>
-
 <div style="
-margin-top:90px;
-text-align:center;
+margin-top:170px;
 max-width:900px;
 margin-left:auto;
 margin-right:auto;
-line-height:2;
-font-size:17px;
+text-align:center;
+font-size:19px;
+line-height:2.2;
 opacity:.9;
 ">
 
