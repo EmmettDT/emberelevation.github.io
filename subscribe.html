@@ -34,9 +34,9 @@ width:100%;
 height:100%;
 background:
 linear-gradient(
-rgba(0,0,0,.55),
-rgba(0,0,0,.30),
-rgba(0,0,0,.70)
+rgba(0,0,0,.60),
+rgba(0,0,0,.35),
+rgba(0,0,0,.75)
 );
 z-index:-1;
 }
@@ -69,195 +69,136 @@ padding:160px 30px 120px;
 
 .hero{
 text-align:center;
-max-width:850px;
+max-width:900px;
 margin:auto;
 }
 
 .hero h1{
-font-size:48px;
+font-size:56px;
 font-weight:300;
-letter-spacing:10px;
+letter-spacing:12px;
 margin-bottom:35px;
 }
 
 .hero h2{
-font-size:20px;
+font-size:22px;
 font-weight:300;
-letter-spacing:5px;
+letter-spacing:6px;
 margin-bottom:35px;
 }
 
 .hero p{
-font-size:19px;
+font-size:20px;
 line-height:1.9;
 opacity:.95;
 }
 
-.builder{
+.section{
 margin-top:90px;
-display:grid;
-grid-template-columns:1.3fr .7fr;
-gap:40px;
-align-items:start;
 }
 
-.panel{
+.glass{
 background:rgba(0,0,0,.35);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.12);
+padding:45px;
+}
+
+.section-title{
+text-align:center;
+font-size:28px;
+letter-spacing:5px;
+font-weight:300;
+margin-bottom:25px;
+}
+
+.section-text{
+max-width:900px;
+margin:auto;
+text-align:center;
+line-height:2;
+font-size:18px;
+opacity:.92;
+}
+
+.benefit-grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.benefit-card{
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.12);
+padding:35px;
+text-align:center;
+}
+
+.benefit-card h3{
+font-size:20px;
+font-weight:300;
+letter-spacing:2px;
+margin-bottom:18px;
+}
+
+.benefit-card p{
+font-size:15px;
+line-height:1.9;
+opacity:.9;
+}
+
+.steps-grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.step-card{
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(12px);
 border:1px solid rgba(255,255,255,.12);
 padding:35px;
 }
 
-.panel-title{
-font-size:22px;
-letter-spacing:4px;
-margin-bottom:30px;
-font-weight:300;
+.step-number{
+font-size:34px;
+opacity:.75;
+margin-bottom:15px;
 }
 
-.coffee-card{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:22px 0;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.coffee-info h3{
+.step-card h3{
 font-size:20px;
 font-weight:300;
-margin-bottom:8px;
-}
-
-.coffee-info p{
-font-size:14px;
-opacity:.8;
-letter-spacing:1px;
-}
-
-.qty-controls{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.qty-btn{
-width:36px;
-height:36px;
-background:none;
-border:1px solid rgba(255,255,255,.4);
-color:white;
-font-size:18px;
-cursor:pointer;
-}
-
-.qty-input{
-width:60px;
-height:36px;
-text-align:center;
-background:transparent;
-border:1px solid rgba(255,255,255,.4);
-color:white;
-font-size:16px;
-}
-
-.schedule{
-margin-top:50px;
-}
-
-.schedule select{
-width:100%;
-padding:14px;
-background:rgba(0,0,0,.3);
-border:1px solid rgba(255,255,255,.2);
-color:white;
-font-size:16px;
-margin-top:18px;
-}
-
-.summary-title{
-font-size:22px;
-letter-spacing:4px;
-margin-bottom:25px;
-font-weight:300;
-}
-
-#orderSummary{
-line-height:2;
-font-size:15px;
-margin-bottom:35px;
-}
-
-.summary{
-line-height:2.1;
-font-size:17px;
-}
-
-.summary-item{
-display:flex;
-justify-content:space-between;
-margin-bottom:12px;
-}
-  
-.benefits{
-margin-top:35px;
-padding-top:30px;
-border-top:1px solid rgba(255,255,255,.1);
-line-height:2;
-font-size:15px;
-opacity:.92;
-}
-
-.cta{
-display:block;
-margin-top:40px;
-text-align:center;
-padding:18px;
-border:1px solid white;
-text-decoration:none;
-color:white;
-letter-spacing:3px;
-font-size:13px;
-text-transform:uppercase;
-transition:.3s;
-}
-
-.cta:hover{
-background:white;
-color:black;
-}
-
-.note{
-margin-top:25px;
-text-align:center;
-font-size:14px;
 letter-spacing:2px;
-opacity:.8;
+margin-bottom:15px;
 }
 
-.footer-text{
-margin-top:70px;
-text-align:center;
-max-width:800px;
-margin-left:auto;
-margin-right:auto;
-line-height:2;
-font-size:16px;
+.step-card p{
+line-height:1.9;
+font-size:15px;
 opacity:.9;
 }
 
-@media(max-width:900px){
+@media(max-width:1000px){
 
-.builder{
+.benefit-grid,
+.steps-grid{
 grid-template-columns:1fr;
 }
 
 .hero h1{
-font-size:34px;
+font-size:38px;
 }
 
 .hero h2{
-font-size:16px;
+font-size:18px;
+}
+
+.hero p{
+font-size:18px;
 }
 
 }
@@ -288,353 +229,390 @@ font-size:16px;
 <h2>FRESH COFFEE. DELIVERED AUTOMATICALLY.</h2>
 
 <p>
-Save 10% on every recurring order and enjoy freshly roasted specialty coffee delivered automatically. Build a subscription around your routine and keep your favourite Ember Elevation coffees on hand year-round.
+
+Enjoy 10% off every recurring order and keep freshly roasted specialty coffee arriving exactly when you need it. Ember Elevation subscriptions are built for coffee lovers who value quality, convenience, and consistency. Select your favourite coffees, choose a delivery schedule, and let us handle the rest.
+
 </p>
 
 </div>
 
-<div class="builder">
+<div class="section">
 
-<div class="panel">
+<div class="glass">
 
-<div class="panel-title">BUILD YOUR SUBSCRIPTION</div>
+<div class="section-title">
 
-<div class="coffee-card">
-<div class="coffee-info">
-<h3>Costa Rica Tarrazú</h3>
-<p>Light-Medium Roast • $26 CAD</p>
+WHY SUBSCRIBE?
+
 </div>
 
-<div class="qty-controls">
-<button class="qty-btn">−</button>
-<input id="costaRica" class="qty-input" value="0" readonly>
-<button class="qty-btn">+</button>
-</div>
-</div>
+<div class="section-text">
 
-<div class="coffee-card">
-<div class="coffee-info">
-<h3>Guatemala Nahualá</h3>
-<p>Medium Roast • $26 CAD</p>
-</div>
-
-<div class="qty-controls">
-<button class="qty-btn">−</button>
-<input id="guatemala" class="qty-input" value="0" readonly>
-<button class="qty-btn">+</button>
-</div>
-</div>
-
-<div class="coffee-card">
-<div class="coffee-info">
-<h3>Papua New Guinea Enorga</h3>
-<p>Medium-Dark Roast • $26 CAD</p>
-</div>
-
-<div class="qty-controls">
-<button class="qty-btn">−</button>
-<input id="png" class="qty-input" value="0" readonly>
-<button class="qty-btn">+</button>
-</div>
-</div>
-
-<div class="coffee-card">
-<div class="coffee-info">
-<h3>Ethiopia Yirgacheffe</h3>
-<p>Light Roast • $26 CAD</p>
-</div>
-
-<div class="qty-controls">
-<button class="qty-btn">−</button>
-<input id="ethiopia" class="qty-input" value="0" readonly>
-<button class="qty-btn">+</button>
-</div>
-</div>
-
-<div class="coffee-card">
-<div class="coffee-info">
-<h3>Elevation Collection</h3>
-<p>Three-Origin Collection • $78 CAD</p>
-</div>
-
-<div class="qty-controls">
-<button class="qty-btn">−</button>
-<input id="collection" class="qty-input" value="0" readonly>
-<button class="qty-btn">+</button>
-</div>
-</div>
-
-<div class="schedule">
-
-<div class="panel-title">DELIVERY FREQUENCY</div>
-
-<select id="frequency">
-<option>Every Week</option>
-<option>Every 2 Weeks</option>
-<option>Every 3 Weeks</option>
-<option selected>Monthly</option>
-</select>
+Never worry about running out of coffee again. Every subscription is designed to deliver freshly roasted specialty coffee directly to your door while giving you complete control over your deliveries.
 
 </div>
 
 </div>
 
-<div class="panel">
+<div class="benefit-grid">
 
-<div class="summary-title">
-ORDER SUMMARY
+<div class="benefit-card">
+<h3>10% OFF</h3>
+<p>
+Save 10% on every recurring order while enjoying the same exceptional coffee you already love.
+</p>
 </div>
 
-<div id="orderSummary">
-No coffees selected.
+<div class="benefit-card">
+<h3>FRESHLY ROASTED</h3>
+<p>
+Each order is roasted before shipment to ensure maximum freshness and flavour.
+</p>
 </div>
 
-<div class="summary-title">
+<div class="benefit-card">
+<h3>FLEXIBLE</h3>
+<p>
+Choose weekly, bi-weekly, every three weeks, or monthly delivery schedules.
+</p>
+</div>
+
+<div class="benefit-card">
+<h3>FULL CONTROL</h3>
+<p>
+Pause, skip, update, or cancel your subscription at any time through your customer account.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="glass">
+
+<div class="section-title">
+
+HOW IT WORKS
+
+</div>
+
+<div class="steps-grid">
+
+<div class="step-card">
+
+<div class="step-number">01</div>
+
+<h3>CHOOSE YOUR COFFEE</h3>
+
+<p>
+
+Select from our collection of carefully sourced single-origin coffees and curated offerings.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<div class="step-number">02</div>
+
+<h3>SELECT SUBSCRIBE & SAVE</h3>
+
+<p>
+
+On the product page, choose the Subscribe & Save option to unlock recurring delivery pricing.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<div class="step-number">03</div>
+
+<h3>CHOOSE YOUR SCHEDULE</h3>
+
+<p>
+
+Pick the delivery frequency that best matches your brewing habits and coffee consumption.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<div class="step-number">04</div>
+
+<h3>ENJOY AUTOMATIC DELIVERY</h3>
+
+<p>
+
+We'll roast and ship your coffee according to your chosen schedule automatically.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+  <div class="section">
+
+<div class="glass">
+
+<div class="section-title">
+
+DELIVERY OPTIONS
+
+</div>
+
+<div class="section-text">
+
+Choose the schedule that best matches your coffee routine. Every option includes the same freshly roasted coffee and the same 10% subscription savings.
+
+</div>
+
+<div class="benefit-grid" style="margin-top:50px;">
+
+<div class="benefit-card">
+<h3>EVERY WEEK</h3>
+<p>
+Perfect for households, offices, or anyone brewing multiple cups every day.
+</p>
+</div>
+
+<div class="benefit-card">
+<h3>EVERY 2 WEEKS</h3>
+<p>
+A great balance for regular coffee drinkers who want consistent freshness.
+</p>
+</div>
+
+<div class="benefit-card">
+<h3>EVERY 3 WEEKS</h3>
+<p>
+Ideal for moderate coffee consumption while maintaining peak flavour.
+</p>
+</div>
+
+<div class="benefit-card">
+<h3>MONTHLY</h3>
+<p>
+Best for occasional brewers who still want freshly roasted coffee on hand.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="glass">
+
+<div class="section-title">
+
+AVAILABLE COFFEES
+
+</div>
+
+<div class="steps-grid">
+
+<div class="step-card">
+
+<h3>COSTA RICA TARRAZÚ</h3>
+
+<p>
+
+Light-Medium Roast<br><br>
+
+Bright, balanced, and approachable with notes of caramel, fruit, and sweetness.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<h3>GUATEMALA NAHUALÁ</h3>
+
+<p>
+
+Medium Roast<br><br>
+
+Rich chocolate notes with a smooth body and everyday drinkability.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<h3>ETHIOPIA YIRGACHEFFE</h3>
+
+<p>
+
+Light Roast<br><br>
+
+Elegant floral aromatics with citrus brightness and a refined finish.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<h3>PAPUA NEW GUINEA ENORGA</h3>
+
+<p>
+
+Medium-Dark Roast<br><br>
+
+Full-bodied, bold, and balanced with deeper chocolate characteristics.
+
+</p>
+
+</div>
+
+</div>
+
+<div style="margin-top:30px;" class="glass">
+
+<div class="section-title" style="margin-bottom:15px;">
+
+ELEVATION COLLECTION
+
+</div>
+
+<div class="section-text">
+
+Experience three of our most popular coffees in one curated collection. A perfect way to explore a range of flavour profiles while enjoying subscription savings.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="glass">
+
+<div class="section-title">
+
 SUBSCRIPTION BENEFITS
-</div>
-
-<div class="summary">
-
-<div class="summary-item">
-<span>Recurring Discount</span>
-<span>10% Off</span>
-</div>
-
-<div class="summary-item">
-<span>Fresh Roasting</span>
-<span>Every Order</span>
-</div>
-
-<div class="summary-item">
-<span>Whole Bean</span>
-<span>340g Bags</span>
-</div>
-
-<div class="summary-item">
-<span>Delivery</span>
-<span>Canada Wide</span>
-</div>
 
 </div>
 
-<div class="benefits">
+<div style="
+max-width:900px;
+margin:auto;
+font-size:18px;
+line-height:2.4;
+text-align:center;
+">
 
 ✓ Save 10% on every recurring order<br>
+
+✓ Freshly roasted before every shipment<br>
+
+✓ Weekly, bi-weekly, every 3 weeks, or monthly delivery options<br>
+
 ✓ Change products anytime<br>
-✓ Skip upcoming deliveries<br>
-✓ Pause when needed<br>
-✓ Cancel anytime<br>
-✓ Manage subscriptions through your customer account
+
+✓ Skip upcoming deliveries when needed<br>
+
+✓ Pause your subscription at any time<br>
+
+✓ Cancel anytime with no commitment<br>
+
+✓ Manage subscriptions through your customer account<br>
+
+✓ Canada-wide delivery
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="glass" style="text-align:center;">
+
+<div class="section-title">
+
+NEVER RUN OUT OF GREAT COFFEE
+
+</div>
+
+<div class="section-text">
+
+Start your subscription directly through our Shopify store, choose your favourite coffees, select your delivery frequency, and enjoy fresh specialty coffee delivered automatically.
 
 </div>
 
 <a
-class="cta"
-id="buildSubscription"
-href="#">
-BUILD MY SUBSCRIPTION
+href="https://ember-elevation.myshopify.com/collections/all"
+style="
+display:inline-block;
+margin-top:45px;
+padding:22px 55px;
+border:1px solid white;
+color:white;
+text-decoration:none;
+letter-spacing:4px;
+font-size:15px;
+text-transform:uppercase;
+transition:.3s;
+">
+
+START MY SUBSCRIPTION
+
 </a>
 
-<div class="note">
-Choose your coffees and continue to Shopify to complete your subscription.
-</div>
+<div style="
+margin-top:25px;
+font-size:14px;
+letter-spacing:2px;
+opacity:.8;
+">
+
+Select your coffee, choose Subscribe & Save, and customize your delivery schedule on the product page.
 
 </div>
 
 </div>
 
-<div class="footer-text">
+</div>
 
-Subscriptions are designed to be flexible. Select the coffees you enjoy most, choose a delivery schedule that fits your routine, and receive freshly roasted coffee automatically.
+<div style="
+margin-top:90px;
+text-align:center;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+line-height:2;
+font-size:17px;
+opacity:.9;
+">
+
+At Ember Elevation, we believe exceptional coffee should always be within reach. Our subscription program is designed to provide convenience without compromising quality, ensuring that every delivery arrives freshly roasted and ready to brew.
 
 </div>
 
 </div>
-
-<script>
-
-  const PLANS = {
-"Every Week":"9598304563",
-"Every 2 Weeks":"9598337331",
-"Every 3 Weeks":"9598370099",
-"Monthly":"9598402867"
-};
-
-const summary =
-document.getElementById("orderSummary");
-
-document
-.querySelectorAll(".qty-btn")
-.forEach(button => {
-
-button.addEventListener("click", () => {
-
-const input =
-button.parentElement.querySelector(".qty-input");
-
-let value =
-parseInt(input.value) || 0;
-
-if(button.textContent.includes("+")){
-value++;
-}else{
-value = Math.max(0,value-1);
-}
-
-input.value = value;
-
-updateSummary();
-
-});
-
-});
-
-document
-.getElementById("frequency")
-.addEventListener("change",updateSummary);
-
-function updateSummary(){
-
-const items = [];
-
-const coffees = [
-["Costa Rica","costaRica"],
-["Guatemala","guatemala"],
-["Papua New Guinea","png"],
-["Ethiopia","ethiopia"],
-["Elevation Collection","collection"]
-];
-
-coffees.forEach(coffee => {
-
-const name = coffee[0];
-const id = coffee[1];
-
-const qty =
-parseInt(
-document.getElementById(id).value
-) || 0;
-
-if(qty > 0){
-
-items.push(
-`${name} × ${qty}`
-);
-
-}
-
-});
-
-if(items.length === 0){
-
-summary.innerHTML =
-"No coffees selected.";
-
-return;
-
-}
-
-summary.innerHTML =
-items.join("<br>") +
-"<br><br>" +
-"Frequency: " +
-document.getElementById("frequency").value;
-
-}
-
-updateSummary();
-
-document
-.getElementById("buildSubscription")
-.addEventListener("click", async function(e){
-
-e.preventDefault();
-
-const frequency =
-document.getElementById("frequency").value;
-
-const sellingPlan =
-PLANS[frequency];
-
-const items = [];
-
-[
-["costaRica","53421129662771"],
-["guatemala","53095594033459"],
-["png","53095764197683"],
-["ethiopia","53095858372915"],
-["collection","53131692310835"]
-].forEach(item => {
-
-const qty =
-parseInt(
-document.getElementById(item[0]).value
-) || 0;
-
-if(qty > 0){
-
-items.push({
-id:Number(item[1]),
-quantity:qty,
-selling_plan:Number(sellingPlan)
-});
-
-}
-
-});
-
-if(items.length === 0){
-
-alert("Please select at least one coffee.");
-return;
-
-}
-
-try{
-
-const response = await fetch(
-"https://ember-elevation.myshopify.com/cart/add.js",
-{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-items:items
-})
-}
-);
-
-if(!response.ok){
-
-const errorText =
-await response.text();
-
-console.error(errorText);
-
-alert(errorText);
-
-return;
-
-}
-
-window.location.href =
-"https://ember-elevation.myshopify.com/cart";
-
-}catch(error){
-
-console.error(error);
-
-alert(error);
-
-}
-
-});
-
-</script>
 
 </body>
+
 </html>
-
-
-
