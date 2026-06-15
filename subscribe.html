@@ -20,18 +20,20 @@ body{
 font-family:serif;
 background-image:url("mountains.jpg");
 background-size:cover;
-background-position:center;
-background-attachment:fixed;
+background-position:center top;
+background-repeat:no-repeat;
 color:white;
 min-height:100vh;
+overflow-x:hidden;
 }
 
 .overlay{
-position:fixed;
+position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
+min-height:100%;
 background:
 linear-gradient(
 rgba(0,0,0,.60),
@@ -62,6 +64,8 @@ opacity:.65;
 }
 
 .container{
+position:relative;
+z-index:2;
 max-width:1300px;
 margin:auto;
 padding:160px 30px 120px;
@@ -184,21 +188,57 @@ opacity:.9;
 
 @media(max-width:1000px){
 
+.nav{
+position:relative;
+top:auto;
+left:auto;
+text-align:center;
+padding:25px 15px;
+}
+
+.nav a{
+display:inline-block;
+margin:8px 12px;
+font-size:14px;
+}
+
+.container{
+padding:60px 20px 80px;
+}
+
 .benefit-grid,
 .steps-grid{
 grid-template-columns:1fr;
 }
 
+.glass,
+.benefit-card,
+.step-card{
+padding:25px;
+}
+
 .hero h1{
-font-size:38px;
+font-size:32px;
+letter-spacing:6px;
 }
 
 .hero h2{
-font-size:18px;
+font-size:16px;
+letter-spacing:3px;
 }
 
 .hero p{
-font-size:18px;
+font-size:17px;
+line-height:1.8;
+}
+
+.section-title{
+font-size:22px;
+letter-spacing:3px;
+}
+
+.section-text{
+font-size:16px;
 }
 
 }
@@ -253,6 +293,8 @@ Never worry about running out of coffee again. Every subscription is designed to
 </div>
 
 </div>
+
+<div class="benefit-grid">
 
 <div class="benefit-grid">
 
@@ -362,7 +404,7 @@ We'll roast and ship your coffee according to your chosen schedule automatically
 
 </div>
 
-  <div class="section">
+<div class="section">
 
 <div class="glass">
 
@@ -423,6 +465,8 @@ Best for occasional brewers who still want freshly roasted coffee on hand.
 AVAILABLE COFFEES
 
 </div>
+
+<div class="steps-grid">
 
 <div class="steps-grid">
 
