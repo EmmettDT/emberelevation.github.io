@@ -87,12 +87,12 @@ margin-left:auto;
 margin-right:auto;
 }
 
-/* Keeps each part of the page visually balanced */
 .section{
 margin-bottom:80px;
 }
 
-/* Founder Section */
+
+/* FOUNDER SECTION */
 
 .founder{
 max-width:900px;
@@ -143,25 +143,64 @@ font-style:italic;
 opacity:.92;
 }
 
+
+/* DIVIDER */
+
 .divider{
 width:55px;
 height:1px;
 background:rgba(255,255,255,0.5);
-margin:0 auto 85px;
+margin:0 auto 90px;
 }
 
-.features{
-margin-top:70px;
+
+/* ELEVATION + SOURCING */
+
+.brand-details{
+max-width:900px;
+margin:0 auto 100px;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:30px;
-max-width:600px;
-margin-left:auto;
-margin-right:auto;
-font-size:14px;
-letter-spacing:3px;
-opacity:.9;
+text-align:left;
 }
+
+.detail-section{
+padding:5px 48px 12px;
+}
+
+.detail-section:first-child{
+border-right:1px solid rgba(255,255,255,0.28);
+}
+
+.detail-section h2{
+margin-top:0;
+margin-bottom:28px;
+font-size:18px;
+line-height:1.5;
+}
+
+.detail-section p{
+font-size:17px;
+line-height:1.9;
+max-width:none;
+margin:0;
+}
+
+
+/* ROASTING */
+
+.roasting{
+max-width:700px;
+margin:0 auto;
+padding-top:5px;
+}
+
+.roasting h2{
+margin-top:0;
+}
+
+
+/* ANIMATION */
 
 @keyframes fadeUp{
 from{
@@ -174,7 +213,8 @@ transform:translateY(0);
 }
 }
 
-/* Tablet */
+
+/* TABLET */
 
 @media(max-width:850px){
 
@@ -215,9 +255,35 @@ margin-left:auto;
 margin-right:auto;
 }
 
+.brand-details{
+grid-template-columns:1fr;
+max-width:650px;
+gap:65px;
+text-align:center;
 }
 
-/* Mobile */
+.detail-section{
+padding:0;
+}
+
+.detail-section:first-child{
+border-right:none;
+}
+
+.detail-section h2{
+margin-bottom:20px;
+}
+
+.detail-section p{
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+}
+
+}
+
+
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -251,7 +317,7 @@ margin-bottom:65px;
 }
 
 .founder{
-margin:80px auto 90px;
+margin:80px auto 85px;
 gap:35px;
 }
 
@@ -259,14 +325,21 @@ gap:35px;
 aspect-ratio:4 / 5;
 }
 
-.features{
-grid-template-columns:1fr;
-gap:22px;
-font-size:13px;
+.divider{
+margin-bottom:70px;
 }
 
-.divider{
-margin-bottom:65px;
+.brand-details{
+margin-bottom:80px;
+gap:60px;
+}
+
+.detail-section h2{
+font-size:17px;
+}
+
+.detail-section p{
+font-size:16.5px;
 }
 
 }
@@ -288,6 +361,7 @@ margin-bottom:65px;
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 </div>
+
 
 <div class="container">
 
@@ -312,8 +386,14 @@ The result is a smaller, more focused collection shaped by intention. Each relea
 <div class="founder">
 
 <div class="founder-image">
-<img src="founder-setup.jpeg" alt="Ember Elevation founder's home espresso setup featuring a La Marzocco Linea Micra">
+
+<img
+src="founder-setup.jpeg"
+alt="Ember Elevation founder's home espresso setup featuring a La Marzocco Linea Micra"
+>
+
 </div>
+
 
 <div class="founder-copy">
 
@@ -336,7 +416,7 @@ The name <strong>Ember Elevation</strong> brings together two parts of coffee th
 </p>
 
 <p>
-What started as a personal hobby eventually became a business built around that same interest. I work closely with my roasting partner to source and curate coffees that I genuinely believe are worth drinking, and I personally package every bag that leaves Ember Elevation.
+What started as a personal hobby eventually became a business built around that same interest. I work closely with my roasting partner to select and curate coffees that I genuinely believe are worth drinking, and I personally package every bag that leaves Ember Elevation.
 </p>
 
 <p class="founder-signoff">
@@ -351,37 +431,35 @@ For me, Ember Elevation is more than a coffee brand — it is an extension of a 
 <div class="divider"></div>
 
 
-<div class="section">
+<div class="brand-details">
+
+
+<div class="detail-section">
 
 <h2>WHY ELEVATION MATTERS</h2>
 
 <p>
-Altitude changes everything. At higher elevations, coffee develops more slowly, building complexity over time. Sugars concentrate, acidity sharpens, and the structure becomes more refined.
-</p>
-
-<p>
-From Ethiopia’s highlands to Guatemala’s volcanic slopes and the mountains of Papua New Guinea, these environments produce coffees with clarity, depth, and precision — not by chance, but by nature.
+High-altitude coffees often develop more slowly in cooler growing conditions, allowing greater time for sweetness, acidity, and complexity to form. The result can be a denser, more expressive coffee with remarkable clarity and character — qualities at the heart of Ember Elevation.
 </p>
 
 </div>
 
 
-<div class="section">
+<div class="detail-section">
 
 <h2>RESPONSIBLE SOURCING</h2>
 
 <p>
-Every coffee is sourced through trusted partners who work directly with farms and cooperatives committed to sustainable practices and fair economic standards. The selections come from producers operating within certified organic and fair trade systems, where quality and responsibility go hand in hand.
-</p>
-
-<p>
-Nothing is relabeled or exaggerated. The focus remains on the origin — and the people behind it.
+Our coffees are selected through trusted partners who work with farms and cooperatives committed to quality, responsible practices, and fair economic standards. Every selection is chosen with respect for its origin and the people whose work makes each cup possible.
 </p>
 
 </div>
 
 
-<div class="section">
+</div>
+
+
+<div class="roasting">
 
 <h2>ROASTING APPROACH</h2>
 
@@ -395,31 +473,6 @@ The process is restrained by design. The coffee leads — not the roast.
 
 </div>
 
-
-<div class="features">
-
-<div>HIGH-ELEVATION ORIGINS</div>
-<div>FRESHLY ROASTED</div>
-
-<div>SMALL-BATCH RELEASES</div>
-<div>RESPONSIBLY SOURCED</div>
-
-</div>
-
-
-<div class="section">
-
-<h2>THE EXPERIENCE</h2>
-
-<p>
-Great coffee isn’t complicated — but it is deliberate. The grind, the water, the timing — small details that shape the final cup.
-</p>
-
-<p>
-Ember Elevation exists for that moment. Quiet, focused, and intentional — exactly as it should be.
-</p>
-
-</div>
 
 </div>
 
