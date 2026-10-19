@@ -75,7 +75,7 @@ h2{
 letter-spacing:4px;
 font-weight:300;
 font-size:20px;
-margin:0 0 26px;
+margin:0 0 28px;
 }
 
 .intro{
@@ -108,65 +108,52 @@ margin:0;
 }
 
 
-/* TOP INFO GRID */
+/* MAIN BOX GRID */
 
-.info-grid{
+.box-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:26px;
-max-width:900px;
-margin:0 auto 70px;
-align-items:start;
+max-width:920px;
+margin:0 auto;
 }
 
-.info-card{
-border:1px solid rgba(255,255,255,0.20);
+.box{
+border:1px solid rgba(255,255,255,0.18);
 background:rgba(0,0,0,0.10);
-padding:42px 36px;
+padding:40px 38px;
+min-height:380px;
+display:flex;
+flex-direction:column;
 }
 
-.info-card h2{
-margin-bottom:28px;
-}
-
-.info-card .list{
+.box h2{
 text-align:center;
 }
 
-
-/* CONTENT SECTIONS */
-
-.content-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:26px;
-max-width:900px;
-margin:0 auto 26px;
-align-items:start;
+.box-center{
+justify-content:center;
 }
 
-.content-panel{
-border:1px solid rgba(255,255,255,0.16);
-background:rgba(0,0,0,0.08);
-padding:42px 38px;
+.box-center .list{
+text-align:center;
+}
+
+.box-text{
+justify-content:flex-start;
 text-align:left;
 }
 
-.content-panel h2{
-text-align:center;
-margin-bottom:24px;
-}
-
-.content-panel .text{
+.box-text .text{
 max-width:none;
 text-align:left;
 }
 
 
-/* WIDE CTA SECTION */
+/* PARTNER SECTION */
 
 .partner-section{
-max-width:900px;
+max-width:920px;
 margin:75px auto 0;
 padding:65px 40px;
 border-top:1px solid rgba(255,255,255,0.30);
@@ -259,17 +246,20 @@ font-size:14px;
 padding-top:155px;
 }
 
-.info-grid,
-.content-grid{
+.box-grid{
 grid-template-columns:1fr;
 max-width:700px;
 }
 
-.content-panel{
+.box{
+min-height:auto;
+}
+
+.box-text{
 text-align:center;
 }
 
-.content-panel .text{
+.box-text .text{
 text-align:center;
 }
 
@@ -303,8 +293,7 @@ font-size:17px;
 margin-bottom:65px;
 }
 
-.info-card,
-.content-panel{
+.box{
 padding:36px 26px;
 }
 
@@ -364,9 +353,9 @@ Our collection is built around exceptional high-elevation origins, carefully sel
 </p>
 
 
-<div class="info-grid">
+<div class="box-grid">
 
-<div class="info-card">
+<div class="box box-center">
 <h2>WHY EMBER ELEVATION</h2>
 <div class="list">
 Curated High-Elevation Origins<br>
@@ -378,7 +367,7 @@ Dedicated Partnership Support
 </div>
 </div>
 
-<div class="info-card">
+<div class="box box-center">
 <h2>WHO WE WORK WITH</h2>
 <div class="list">
 Cafés<br>
@@ -390,12 +379,7 @@ Specialty Food Stores
 </div>
 </div>
 
-</div>
-
-
-<div class="content-grid">
-
-<div class="content-panel">
+<div class="box box-text">
 <h2>A DIFFERENT APPROACH</h2>
 <div class="text">
 Most coffee programs offer dozens of interchangeable coffees. Ember Elevation takes a different approach.
@@ -406,7 +390,7 @@ The result is a refined offering that allows businesses to serve something memor
 </div>
 </div>
 
-<div class="content-panel">
+<div class="box box-text">
 <h2>BEYOND THE CUP</h2>
 <div class="text">
 Ember Elevation was founded on the belief that exceptional coffee should tell a story. Every origin in our collection represents a unique place, climate, and growing tradition.
@@ -415,12 +399,7 @@ We help our partners offer more than coffee alone — we help them offer a memor
 </div>
 </div>
 
-</div>
-
-
-<div class="content-grid">
-
-<div class="content-panel">
+<div class="box box-text">
 <h2>WHOLESALE PROGRAMS</h2>
 <div class="text">
 Whether you're serving coffee in a café, stocking retail shelves, supplying an office, or developing a hospitality program, we are happy to build a solution around your needs.
@@ -429,7 +408,7 @@ Wholesale pricing, volume discounts, recurring deliveries, and retail-ready coff
 </div>
 </div>
 
-<div class="content-panel">
+<div class="box box-text">
 <h2>PAYMENT OPTIONS</h2>
 <div class="text">
 Wholesale partners may pay by e-transfer or secure Shopify invoice. Our goal is to keep ordering simple, professional, and convenient while providing responsive support throughout the process.
