@@ -19,6 +19,7 @@ background-repeat:no-repeat;
 min-height:100svh;
 color:white;
 text-align:center;
+overflow-x:hidden;
 }
 
 .overlay{
@@ -41,6 +42,7 @@ position:fixed;
 top:30px;
 left:40px;
 letter-spacing:2px;
+z-index:1000;
 }
 
 .nav a{
@@ -56,9 +58,9 @@ opacity:.6;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
-padding:160px 20px;
+padding:160px 20px 120px;
 animation:fadeUp 1.4s ease;
 }
 
@@ -72,61 +74,15 @@ font-size:42px;
 h2{
 letter-spacing:4px;
 font-weight:300;
-margin-top:55px;
-font-size:22px;
+font-size:20px;
+margin:0 0 30px;
 }
 
 .intro{
 max-width:700px;
-margin:auto;
+margin:0 auto 90px;
 line-height:1.9;
 font-size:18px;
-margin-bottom:60px;
-}
-
-.section{
-margin-bottom:60px;
-}
-
-.text{
-max-width:700px;
-margin:auto;
-font-size:17px;
-line-height:1.9;
-}
-
-.list{
-max-width:600px;
-margin:25px auto;
-font-size:17px;
-line-height:2;
-letter-spacing:1px;
-}
-
-.email{
-font-size:22px;
-letter-spacing:1px;
-font-weight:500;
-margin-top:25px;
-margin-bottom:25px;
-}
-
-button{
-margin-top:20px;
-padding:14px 38px;
-background:transparent;
-color:white;
-border:1px solid white;
-cursor:pointer;
-letter-spacing:2px;
-font-size:12px;
-transition:all .35s ease;
-}
-
-button:hover{
-background:white;
-color:black;
-transform:translateY(-2px);
 }
 
 .divider{
@@ -137,21 +93,231 @@ margin:0 auto 40px auto;
 opacity:.8;
 }
 
+
+/* WHOLESALE GRID */
+
+.wholesale-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+margin:0 auto 28px;
+}
+
+.panel{
+border:1px solid rgba(255,255,255,0.20);
+background:rgba(0,0,0,0.12);
+padding:55px 45px;
+min-height:100%;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+}
+
+.panel h2{
+margin-bottom:30px;
+}
+
+.text{
+font-size:17px;
+line-height:1.9;
+margin:0 auto;
+max-width:700px;
+}
+
+.panel .text{
+max-width:none;
+}
+
+.list{
+font-size:17px;
+line-height:2.15;
+letter-spacing:1px;
+margin:0;
+}
+
+
+/* FEATURED TEXT PANELS */
+
+.story-panel{
+text-align:left;
+}
+
+.story-panel h2{
+text-align:center;
+}
+
+.story-panel .text{
+text-align:left;
+}
+
+
+/* PARTNER SECTION */
+
+.partner-section{
+margin-top:85px;
+padding:75px 50px;
+border-top:1px solid rgba(255,255,255,0.30);
+border-bottom:1px solid rgba(255,255,255,0.30);
+}
+
+.partner-section h2{
+margin-bottom:30px;
+}
+
+.partner-section .text{
+max-width:650px;
+}
+
+.email{
+font-size:22px;
+letter-spacing:1px;
+font-weight:500;
+margin-top:30px;
+margin-bottom:25px;
+}
+
+button{
+margin-top:10px;
+padding:14px 38px;
+background:transparent;
+color:white;
+border:1px solid white;
+cursor:pointer;
+letter-spacing:2px;
+font-size:12px;
+font-family:serif;
+transition:all .35s ease;
+}
+
+button:hover{
+background:white;
+color:black;
+transform:translateY(-2px);
+}
+
+
+/* CLOSING */
+
+.closing{
+max-width:700px;
+margin:75px auto 0;
+font-size:17px;
+line-height:1.9;
+}
+
+
+/* ANIMATION */
+
 @keyframes fadeUp{
+
 from{
 opacity:0;
 transform:translateY(25px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
 
-@media (max-width:768px){
+
+/* TABLET */
+
+@media(max-width:850px){
+
+.nav{
+position:absolute;
+top:24px;
+left:20px;
+right:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:14px 20px;
+}
+
+.nav a{
+margin-right:0;
+font-size:14px;
+}
+
+.container{
+padding-top:155px;
+}
+
+.wholesale-grid{
+grid-template-columns:1fr;
+max-width:700px;
+}
+
+.panel{
+padding:50px 40px;
+}
+
+.story-panel,
+.story-panel .text{
+text-align:center;
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
 body{
 background-position:center 95%;
 }
+
+.container{
+padding:175px 20px 90px;
+}
+
+h1{
+font-size:34px;
+letter-spacing:8px;
+}
+
+h2{
+font-size:18px;
+letter-spacing:3px;
+}
+
+.intro{
+font-size:17px;
+margin-bottom:70px;
+}
+
+.panel{
+padding:42px 28px;
+}
+
+.text{
+font-size:16.5px;
+}
+
+.list{
+font-size:16px;
+}
+
+.partner-section{
+margin-top:65px;
+padding:60px 20px;
+}
+
+.email{
+font-size:18px;
+word-break:break-word;
+}
+
+.closing{
+margin-top:60px;
+font-size:16.5px;
+}
+
 }
 
 </style>
@@ -162,7 +328,9 @@ background-position:center 95%;
 
 <div class="overlay"></div>
 
+
 <div class="nav">
+
 <a href="index.html">Home</a>
 <a href="coffee.html">The Coffee</a>
 <a href="shop.html">Shop</a>
@@ -170,13 +338,17 @@ background-position:center 95%;
 <a href="subscribe.html">Subscribe</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
+
 </div>
 
+
 <div class="container">
+
 
 <h1>WHOLESALE</h1>
 
 <div class="divider"></div>
+
 
 <p class="intro">
 Ember Elevation partners with cafés, retailers, offices, and hospitality businesses seeking something beyond ordinary coffee.
@@ -184,7 +356,13 @@ Ember Elevation partners with cafés, retailers, offices, and hospitality busine
 Our collection is built around exceptional high-elevation origins, carefully selected for character, distinction, and consistency. Every coffee is chosen not simply for how it tastes, but for the experience it creates.
 </p>
 
-<div class="section">
+
+<!-- FIRST ROW -->
+
+<div class="wholesale-grid">
+
+
+<div class="panel">
 
 <h2>WHY EMBER ELEVATION</h2>
 
@@ -199,21 +377,8 @@ Dedicated Partnership Support
 
 </div>
 
-<div class="section">
 
-<h2>A DIFFERENT APPROACH</h2>
-
-<div class="text">
-Most coffee programs offer dozens of interchangeable coffees. Ember Elevation takes a different approach.
-<br><br>
-We focus on a small collection of remarkable coffees sourced from some of the world's most respected growing regions. From the volcanic slopes of Costa Rica to the highlands of Ethiopia and Papua New Guinea, each origin is selected for its individuality and ability to stand apart.
-<br><br>
-The result is a refined offering that allows businesses to serve something memorable, intentional, and genuinely distinctive.
-</div>
-
-</div>
-
-<div class="section">
+<div class="panel">
 
 <h2>WHO WE WORK WITH</h2>
 
@@ -228,19 +393,31 @@ Specialty Food Stores
 
 </div>
 
-<div class="section">
 
-<h2>WHOLESALE PROGRAMS</h2>
+</div>
+
+
+<!-- SECOND ROW -->
+
+<div class="wholesale-grid">
+
+
+<div class="panel story-panel">
+
+<h2>A DIFFERENT APPROACH</h2>
 
 <div class="text">
-Whether you're serving coffee in a café, stocking retail shelves, supplying an office, or developing a hospitality program, we are happy to build a solution around your needs.
+Most coffee programs offer dozens of interchangeable coffees. Ember Elevation takes a different approach.
 <br><br>
-Wholesale pricing, volume discounts, recurring deliveries, and retail-ready coffee options are available upon request.
+We focus on a small collection of remarkable coffees sourced from some of the world's most respected growing regions. From the volcanic slopes of Costa Rica to the highlands of Ethiopia and Papua New Guinea, each origin is selected for its individuality and ability to stand apart.
+<br><br>
+The result is a refined offering that allows businesses to serve something memorable, intentional, and genuinely distinctive.
 </div>
 
 </div>
 
-<div class="section">
+
+<div class="panel story-panel">
 
 <h2>BEYOND THE CUP</h2>
 
@@ -252,7 +429,29 @@ We help our partners offer more than coffee alone — we help them offer a memor
 
 </div>
 
-<div class="section">
+
+</div>
+
+
+<!-- THIRD ROW -->
+
+<div class="wholesale-grid">
+
+
+<div class="panel story-panel">
+
+<h2>WHOLESALE PROGRAMS</h2>
+
+<div class="text">
+Whether you're serving coffee in a café, stocking retail shelves, supplying an office, or developing a hospitality program, we are happy to build a solution around your needs.
+<br><br>
+Wholesale pricing, volume discounts, recurring deliveries, and retail-ready coffee options are available upon request.
+</div>
+
+</div>
+
+
+<div class="panel story-panel">
 
 <h2>PAYMENT OPTIONS</h2>
 
@@ -262,7 +461,13 @@ Wholesale partners may pay by e-transfer or secure Shopify invoice. Our goal is 
 
 </div>
 
-<div class="section">
+
+</div>
+
+
+<!-- PARTNER SECTION -->
+
+<div class="partner-section">
 
 <h2>BECOME A WHOLESALE PARTNER</h2>
 
@@ -282,13 +487,15 @@ emberelevationcoffee@gmail.com
 
 </div>
 
-<div class="section">
 
-<div class="text">
+<!-- CLOSING -->
+
+<div class="closing">
+
 Ember Elevation exists to showcase remarkable coffees from remarkable places. We look forward to partnering with businesses that value quality, craftsmanship, and customer experiences that leave a lasting impression.
-</div>
 
 </div>
+
 
 </div>
 
