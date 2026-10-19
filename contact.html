@@ -18,9 +18,10 @@ background-repeat:no-repeat;
 min-height:100svh;
 color:white;
 text-align:center;
+overflow-x:hidden;
 }
 
-/* cinematic overlay */
+/* CINEMATIC OVERLAY */
 
 .overlay{
 position:fixed;
@@ -37,13 +38,14 @@ z-index:-1;
 pointer-events:none;
 }
 
-/* navigation */
+/* NAVIGATION */
 
 .nav{
 position:fixed;
 top:30px;
 left:40px;
 letter-spacing:2px;
+z-index:1000;
 }
 
 .nav a{
@@ -58,61 +60,160 @@ transition:opacity .3s;
 opacity:.6;
 }
 
-/* container */
+/* CONTAINER */
 
 .container{
-max-width:750px;
+max-width:900px;
 margin:auto;
-padding:160px 20px;
+padding:160px 20px 110px;
 animation:fadeUp 1.4s ease;
 }
 
-/* headings */
+/* HEADINGS */
 
 h1{
 letter-spacing:10px;
 font-weight:300;
-margin-bottom:50px;
+margin-bottom:25px;
 font-size:42px;
 }
 
 h2{
 letter-spacing:4px;
 font-weight:300;
-margin-top:60px;
-font-size:18px;
+font-size:19px;
+margin:0 0 24px;
 }
 
-/* text */
+/* INTRO */
 
-p{
+.divider{
+width:80px;
+height:1px;
+background:white;
+margin:0 auto 40px;
+opacity:.8;
+}
+
+.intro{
 font-size:18px;
 line-height:1.9;
-max-width:600px;
-margin:15px auto;
+max-width:650px;
+margin:0 auto 80px;
 }
 
-/* contact links */
+/* CONTACT OPTIONS */
 
-.contact{
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:26px;
+max-width:860px;
+margin:0 auto;
+}
+
+.contact-card{
+border:1px solid rgba(255,255,255,0.18);
+background:rgba(0,0,0,0.10);
+padding:48px 38px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+min-height:230px;
+}
+
+.contact-card p{
+font-size:17px;
+line-height:1.85;
+margin:0;
+}
+
+/* CONNECT SECTION */
+
+.connect{
+max-width:860px;
+margin:75px auto 0;
+padding:65px 30px;
+border-top:1px solid rgba(255,255,255,0.30);
+border-bottom:1px solid rgba(255,255,255,0.30);
+}
+
+.connect h2{
+margin-bottom:18px;
+}
+
+.connect p{
+font-size:17px;
+line-height:1.85;
+max-width:620px;
+margin:0 auto;
+}
+
+.contact-email{
 margin-top:30px;
-font-size:18px;
+font-size:20px;
 letter-spacing:1px;
 }
 
-.contact a{
-display:block;
-margin:12px 0;
+.actions{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.contact-button{
+display:inline-block;
+padding:14px 32px;
+background:transparent;
 color:white;
+border:1px solid white;
 text-decoration:none;
-transition:opacity .3s;
+letter-spacing:2px;
+font-size:12px;
+font-family:serif;
+transition:all .35s ease;
 }
 
-.contact a:hover{
+.contact-button:hover{
+background:white;
+color:black;
+transform:translateY(-2px);
+}
+
+/* INSTAGRAM SECTION */
+
+.instagram{
+max-width:650px;
+margin:70px auto 0;
+}
+
+.instagram-label{
+font-size:13px;
+letter-spacing:3px;
+text-transform:uppercase;
 opacity:.7;
+margin-bottom:20px;
 }
 
-/* animation */
+.instagram p{
+font-size:17px;
+line-height:1.85;
+margin:0 auto 28px;
+}
+
+/* CLOSING */
+
+.closing{
+max-width:650px;
+margin:65px auto 0;
+font-size:16px;
+line-height:1.9;
+opacity:.88;
+}
+
+/* ANIMATION */
 
 @keyframes fadeUp{
 from{
@@ -123,6 +224,114 @@ to{
 opacity:1;
 transform:translateY(0);
 }
+}
+
+/* TABLET */
+
+@media(max-width:850px){
+
+.nav{
+position:absolute;
+top:24px;
+left:20px;
+right:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:14px 20px;
+}
+
+.nav a{
+margin-right:0;
+font-size:14px;
+}
+
+.container{
+padding-top:155px;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+max-width:650px;
+}
+
+.contact-card{
+min-height:auto;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+body{
+background-position:center 95%;
+}
+
+.container{
+padding:175px 20px 90px;
+}
+
+h1{
+font-size:34px;
+letter-spacing:8px;
+}
+
+h2{
+font-size:18px;
+letter-spacing:3px;
+}
+
+.intro{
+font-size:17px;
+margin-bottom:60px;
+}
+
+.contact-card{
+padding:40px 26px;
+}
+
+.contact-card p{
+font-size:16.5px;
+}
+
+.connect{
+margin-top:60px;
+padding:55px 20px;
+}
+
+.connect p{
+font-size:16.5px;
+}
+
+.contact-email{
+font-size:17px;
+word-break:break-word;
+}
+
+.actions{
+flex-direction:column;
+align-items:center;
+}
+
+.contact-button{
+width:230px;
+box-sizing:border-box;
+}
+
+.instagram{
+margin-top:55px;
+}
+
+.instagram p{
+font-size:16.5px;
+}
+
+.closing{
+margin-top:55px;
+}
+
 }
 
 </style>
@@ -143,58 +352,108 @@ transform:translateY(0);
 <a href="contact.html">Contact</a>
 </div>
 
+
 <div class="container">
 
 <h1>CONTACT</h1>
 
-<p>
-Ember Elevation is built around a simple idea — to share exceptional
-high-elevation coffees from some of the world’s most respected growing
-regions. Each origin is selected for clarity, balance, and character
-in the cup.
+<div class="divider"></div>
+
+<p class="intro">
+Whether you have a question about our coffees, an order, brewing, or a potential partnership, we would be glad to hear from you.
 </p>
 
-<p>
-Our coffees are sourced through specialty producers and roasted by a
-specialty roasting partner who helps bring out the unique qualities of
-each origin.
-</p>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h2>GENERAL INQUIRIES</h2>
 
 <p>
-If you have questions about our coffees, brewing methods, or potential
-collaborations, we would be glad to hear from you.
+For questions about Ember Elevation, our coffees, availability, orders, or brewing, feel free to get in touch directly.
 </p>
-
-<h2>GET IN TOUCH</h2>
-
-<div class="contact">
-
-<a href="mailto:emberelevationcoffee@gmail.com">
-emberelevationcoffee@gmail.com
-</a>
-
-<a href="https://instagram.com/ember_elevation" target="_blank">
-Instagram — @ember_elevation
-</a>
 
 </div>
+
+
+<div class="contact-card">
 
 <h2>COLLABORATIONS</h2>
 
 <p>
-Ember Elevation is always open to thoughtful collaborations with
-creators, cafés, and coffee enthusiasts who share a passion for
-specialty coffee culture. If you are interested in working together,
-feel free to reach out.
-</p>
-
-<p>
-Thank you for supporting a small coffee project built on curiosity,
-craft, and respect for the origins that make exceptional coffee
-possible.
+Ember Elevation is open to thoughtful collaborations with creators, cafés, retailers, hospitality businesses, and others who share an appreciation for specialty coffee.
 </p>
 
 </div>
 
+</div>
+
+
+<div class="connect">
+
+<h2>GET IN TOUCH</h2>
+
+<p>
+For product questions, business inquiries, collaborations, or anything else related to Ember Elevation, reach out anytime.
+</p>
+
+<div class="contact-email">
+emberelevationcoffee@gmail.com
+</div>
+
+<div class="actions">
+
+<a
+href="mailto:emberelevationcoffee@gmail.com"
+class="contact-button"
+>
+EMAIL EMBER ELEVATION
+</a>
+
+<a
+href="https://instagram.com/ember_elevation"
+target="_blank"
+rel="noopener"
+class="contact-button"
+>
+VIEW INSTAGRAM
+</a>
+
+</div>
+
+</div>
+
+
+<div class="instagram">
+
+<div class="instagram-label">
+FOLLOW EMBER ELEVATION
+</div>
+
+<p>
+Follow along on Instagram for coffee, espresso, new releases, and a closer look behind Ember Elevation.
+</p>
+
+<a
+href="https://instagram.com/ember_elevation"
+target="_blank"
+rel="noopener"
+class="contact-button"
+>
+@EMBER_ELEVATION
+</a>
+
+</div>
+
+
+<div class="closing">
+Thank you for supporting a specialty coffee brand built around curiosity, craft, and a genuine passion for exceptional coffee.
+</div>
+
+
+</div>
+
 </body>
+
 </html>
