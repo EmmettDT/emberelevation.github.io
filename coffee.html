@@ -99,6 +99,10 @@ margin-right:auto;
 margin-top:110px;
 }
 
+.our-coffees-heading + .coffee{
+margin-top:80px;
+}
+
 .tasting{
 margin-top:18px;
 font-size:15px;
@@ -126,13 +130,75 @@ letter-spacing:2px;
 opacity:.9;
 }
 
+
+/* BREWING SECTION */
+
 .brew{
-margin-top:90px;
+margin-top:140px;
+padding-top:80px;
+border-top:1px solid rgba(255,255,255,0.35);
 }
 
-.brew p{
-font-size:17px;
+.brew h2{
+margin-top:0;
+margin-bottom:25px;
 }
+
+.brew-intro{
+max-width:700px;
+margin-bottom:65px;
+}
+
+.brew-methods{
+max-width:900px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+}
+
+.brew-method{
+padding:0 30px;
+text-align:left;
+}
+
+.brew-method + .brew-method{
+border-left:1px solid rgba(255,255,255,0.25);
+}
+
+.brew-method h4{
+font-size:16px;
+font-weight:300;
+letter-spacing:3px;
+margin:0 0 22px;
+text-align:center;
+}
+
+.brew-method p{
+font-size:16px;
+line-height:1.85;
+margin:0;
+max-width:none;
+}
+
+.brew-recipe{
+margin-top:28px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,0.22);
+font-size:14px;
+line-height:1.8;
+letter-spacing:1.3px;
+text-align:center;
+opacity:.95;
+}
+
+.brew-note{
+max-width:680px;
+margin:65px auto 0;
+font-size:16px;
+line-height:1.9;
+opacity:.9;
+}
+
 
 @keyframes fadeUp{
 from{
@@ -143,6 +209,53 @@ to{
 opacity:1;
 transform:translateY(0);
 }
+}
+
+
+/* MOBILE BREWING */
+
+@media(max-width:760px){
+
+.brew{
+margin-top:110px;
+padding-top:65px;
+}
+
+.brew-methods{
+grid-template-columns:1fr;
+max-width:620px;
+}
+
+.brew-method{
+padding:38px 0;
+text-align:center;
+}
+
+.brew-method:first-child{
+padding-top:0;
+}
+
+.brew-method + .brew-method{
+border-left:none;
+border-top:1px solid rgba(255,255,255,0.22);
+}
+
+.brew-method p{
+max-width:520px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.brew-recipe{
+max-width:300px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.brew-note{
+margin-top:45px;
+}
+
 }
 
 </style>
@@ -332,36 +445,74 @@ For those who enjoy experiencing coffee with minimal interference, Yirgacheffe o
 
 <h2>BREWING</h2>
 
-<p>
-The same coffee can present completely differently depending on how it’s brewed. Grind size, water temperature, and extraction time all shape the final result — not just in strength, but in how sweetness, acidity, and body are expressed.
+<p class="brew-intro">
+The same coffee can present differently depending on how it is brewed. Grind size, brew ratio, water temperature, and contact time all influence extraction and the balance of sweetness, acidity, and body. These recipes are starting points — taste should always guide the final adjustment.
 </p>
 
-<p>
-<strong>Espresso</strong><br>
-A finer grind increases resistance, building pressure and intensity. Slight changes in grind or yield will shift the balance — shorter shots emphasize acidity, while longer extractions bring out more sweetness and body.
-<br><br>
-18g in → 36g out → 25–30 seconds
-</p>
+
+<div class="brew-methods">
+
+
+<div class="brew-method">
+
+<h4>ESPRESSO</h4>
 
 <p>
-<strong>Pour Over</strong><br>
-A controlled pour highlights clarity and separation of flavors. Slower pours and even saturation allow the coffee to extract evenly, revealing more defined notes rather than blending them together.
-<br><br>
-20g coffee → 300g water → 2:30–3:00 total brew time
+Espresso relies on a fine grind and a short extraction. Grinding finer generally increases resistance and slows the flow of water, while grinding coarser allows the shot to run faster. Begin with a 1:2 brew ratio and adjust the grind until the espresso tastes balanced, sweet, and defined.
 </p>
 
-<p>
-<strong>French Press</strong><br>
-A coarser grind slows extraction and increases body. Because the coffee remains in contact with water longer, the result is heavier and more textured, with less emphasis on acidity and more on depth.
-<br><br>
-30g coffee → 500g water → 4 minute steep
-</p>
+<div class="brew-recipe">
+18g IN<br>
+36g OUT<br>
+25–30 SECONDS
+</div>
+
+</div>
+
+
+<div class="brew-method">
+
+<h4>POUR OVER</h4>
 
 <p>
-Small adjustments change everything. Grind slightly finer to increase intensity, coarser to soften it. Lower temperatures bring out more acidity; higher temperatures emphasize sweetness and weight. The method stays the same — the result does not.
+A controlled pour and even saturation help produce a clean, expressive cup. Start with a medium to medium-fine grind and maintain a steady pour. Adjust slightly finer for greater extraction or coarser for less, using flavour and drawdown time together as your guide.
+</p>
+
+<div class="brew-recipe">
+20g COFFEE<br>
+320g WATER<br>
+2:30–3:30
+</div>
+
+</div>
+
+
+<div class="brew-method">
+
+<h4>FRENCH PRESS</h4>
+
+<p>
+French press uses full immersion, allowing the coffee and water to remain in contact throughout the brew. A coarse grind provides a dependable starting point and produces a rich, textured cup. After the steep, press gently and serve promptly.
+</p>
+
+<div class="brew-recipe">
+30g COFFEE<br>
+500g WATER<br>
+4 MINUTES
+</div>
+
+</div>
+
+
+</div>
+
+
+<p class="brew-note">
+Every coffee, grinder, and brewing setup behaves a little differently. Treat each recipe as a foundation, change one variable at a time, and let the taste of the coffee determine the final adjustment.
 </p>
 
 </div>
+
 
 </div>
 
