@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ember Elevation — Coffees</title>
+<title>Ember Elevation — Shop</title>
 
 <style>
 
@@ -18,9 +18,10 @@ background-repeat:no-repeat;
 min-height:100svh;
 color:white;
 text-align:center;
+overflow-x:hidden;
 }
 
-/* cinematic overlay */
+/* CINEMATIC OVERLAY */
 
 .overlay{
 position:fixed;
@@ -37,13 +38,14 @@ z-index:-1;
 pointer-events:none;
 }
 
-/* navigation */
+/* NAVIGATION */
 
 .nav{
 position:fixed;
 top:30px;
 left:40px;
 letter-spacing:2px;
+z-index:1000;
 }
 
 .nav a{
@@ -58,88 +60,159 @@ transition:opacity .3s;
 opacity:.6;
 }
 
-/* container */
+/* CONTAINER */
 
 .container{
-max-width:900px;
+max-width:980px;
 margin:auto;
-padding:160px 20px;
+padding:160px 20px 120px;
 animation:fadeUp 1.4s ease;
 }
 
-/* headings */
+/* HEADINGS */
 
 h1{
 letter-spacing:10px;
 font-weight:300;
-margin-bottom:40px;
+margin-bottom:25px;
 font-size:42px;
 }
 
 h2{
 letter-spacing:4px;
 font-weight:300;
-margin-top:20px;
-font-size:22px;
+font-size:21px;
+margin:0;
 }
 
-/* intro text */
+/* INTRO */
+
+.divider{
+width:80px;
+height:1px;
+background:white;
+margin:0 auto 40px;
+opacity:.8;
+}
 
 .intro{
-max-width:600px;
-margin:auto;
+max-width:650px;
+margin:0 auto 75px;
 line-height:1.8;
 font-size:18px;
-margin-bottom:80px;
 }
 
-/* coffee blocks */
+/* COFFEE GRID */
 
-.coffee{
-margin-bottom:90px;
+.coffee-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:26px;
+max-width:920px;
+margin:0 auto;
+}
+
+.coffee-card{
+border:1px solid rgba(255,255,255,0.18);
+background:rgba(0,0,0,0.10);
+padding:48px 38px 42px;
+min-height:275px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
 .meta{
-font-size:15px;
+font-size:14px;
 letter-spacing:2px;
-margin-top:8px;
-opacity:.85;
+margin-top:18px;
+opacity:.82;
 }
 
 .notes{
-margin-top:8px;
+margin-top:16px;
 font-size:17px;
-}
-
-.origin{
-max-width:520px;
-margin:12px auto 0 auto;
-font-size:15px;
 line-height:1.7;
-opacity:.9;
 }
 
-/* buttons */
+/* SHOP BUTTON */
 
-button{
-margin-top:20px;
-padding:12px 32px;
+.shop-button{
+display:inline-block;
+margin-top:30px;
+padding:13px 34px;
 background:transparent;
 color:white;
 border:1px solid white;
-cursor:pointer;
+text-decoration:none;
 letter-spacing:2px;
 font-size:12px;
+font-family:serif;
 transition:all .35s ease;
 }
 
-button:hover{
+.shop-button:hover{
 background:white;
 color:black;
 transform:translateY(-2px);
 }
 
-/* animation */
+/* COLLECTION */
+
+.collection{
+max-width:920px;
+margin:75px auto 0;
+padding:60px 40px;
+border-top:1px solid rgba(255,255,255,0.30);
+border-bottom:1px solid rgba(255,255,255,0.30);
+}
+
+.collection-label{
+font-size:13px;
+letter-spacing:3px;
+text-transform:uppercase;
+opacity:.65;
+margin-bottom:20px;
+}
+
+.collection h2{
+font-size:23px;
+}
+
+.collection .meta{
+margin-top:18px;
+}
+
+.collection .notes{
+max-width:650px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* LEARN MORE */
+
+.learn-more{
+max-width:650px;
+margin:70px auto 0;
+font-size:16px;
+line-height:1.8;
+opacity:.85;
+}
+
+.learn-more a{
+color:white;
+text-decoration:none;
+border-bottom:1px solid rgba(255,255,255,0.45);
+padding-bottom:2px;
+transition:opacity .3s;
+}
+
+.learn-more a:hover{
+opacity:.65;
+}
+
+/* ANIMATION */
 
 @keyframes fadeUp{
 from{
@@ -152,12 +225,94 @@ transform:translateY(0);
 }
 }
 
-/* mobile adjustment */
+/* TABLET */
 
-@media (max-width:768px){
+@media(max-width:850px){
+
+.nav{
+position:absolute;
+top:24px;
+left:20px;
+right:20px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:14px 20px;
+}
+
+.nav a{
+margin-right:0;
+font-size:14px;
+}
+
+.container{
+padding-top:155px;
+}
+
+.coffee-grid{
+grid-template-columns:1fr;
+max-width:650px;
+}
+
+.coffee-card{
+min-height:auto;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
 body{
 background-position:center 95%;
 }
+
+.container{
+padding:175px 20px 90px;
+}
+
+h1{
+font-size:34px;
+letter-spacing:8px;
+}
+
+h2{
+font-size:19px;
+letter-spacing:3px;
+}
+
+.intro{
+font-size:17px;
+margin-bottom:60px;
+}
+
+.coffee-card{
+padding:42px 26px 38px;
+}
+
+.meta{
+font-size:13px;
+}
+
+.notes{
+font-size:16px;
+}
+
+.collection{
+margin-top:60px;
+padding:50px 22px;
+}
+
+.collection h2{
+font-size:20px;
+}
+
+.learn-more{
+margin-top:55px;
+font-size:15.5px;
+}
+
 }
 
 </style>
@@ -180,17 +335,19 @@ background-position:center 95%;
 
 <div class="container">
 
-<h1>OUR COFFEES</h1>
+<h1>SHOP</h1>
+
+<div class="divider"></div>
 
 <p class="intro">
-Ember Elevation offers a curated collection of high-elevation coffees
-sourced from some of the most respected growing regions in the world.
-Each origin is selected for clarity, structure, and individuality in
-the cup.
+Choose from Ember Elevation's curated collection of high-elevation specialty coffees. Each origin offers a distinct roast profile and flavour experience.
 </p>
 
 
-<div class="coffee">
+<div class="coffee-grid">
+
+
+<div class="coffee-card">
 
 <h2>ETHIOPIA YIRGACHEFFE</h2>
 
@@ -202,20 +359,17 @@ Light Roast • 1500–1900m
 Lemon • Dark Cocoa • Berry
 </div>
 
-<p class="origin">
-Sourced from Ethiopian cooperatives in the Yirgacheffe region where
-coffee is grown at exceptional elevations. These farms follow Fair
-Trade and organic cultivation practices, producing coffees known for
-their floral aromatics and vibrant citrus clarity.
-</p>
-
-<a href="https://ember-elevation.myshopify.com/products/ember-elevation-papua-new-guinea-enorga-copy">
-<button>Buy</button>
+<a
+href="https://ember-elevation.myshopify.com/products/ember-elevation-papua-new-guinea-enorga-copy"
+class="shop-button"
+>
+SHOP COFFEE
 </a>
 
 </div>
 
-<div class="coffee">
+
+<div class="coffee-card">
 
 <h2>COSTA RICA TARRAZÚ</h2>
 
@@ -227,16 +381,17 @@ Light-Medium Roast • 1200–1800m
 Apricot • Caramel • Blackberry
 </div>
 
-<p class="origin">
-Grown in the renowned Tarrazú region of Costa Rica, where rich volcanic soils and high elevations produce coffees of exceptional quality. This washed coffee offers vibrant acidity, balanced sweetness, and a smooth, refined finish that has made Tarrazú one of the world's most respected coffee-growing regions.
-</p>
-
-<a href="https://ember-elevation.myshopify.com/products/costa-rica-tarrazu">
-<button>Buy</button>
+<a
+href="https://ember-elevation.myshopify.com/products/costa-rica-tarrazu"
+class="shop-button"
+>
+SHOP COFFEE
 </a>
 
 </div>
-<div class="coffee">
+
+
+<div class="coffee-card">
 
 <h2>GUATEMALA NAHUALÁ</h2>
 
@@ -248,21 +403,17 @@ Medium Roast • 1200–1500m
 Walnut • Milk Chocolate • Apricot
 </div>
 
-<p class="origin">
-Grown in the volcanic highlands of Quetzaltenango by producers within
-the Nahualá cooperative. Mineral-rich soils and cool mountain
-conditions produce coffees with balanced sweetness and deep chocolate
-structure.
-</p>
-
-<a href="https://ember-elevation.myshopify.com/products/ember-elevation-guatemala-nahuala">
-<button>Buy</button>
+<a
+href="https://ember-elevation.myshopify.com/products/ember-elevation-guatemala-nahuala"
+class="shop-button"
+>
+SHOP COFFEE
 </a>
 
 </div>
 
 
-<div class="coffee">
+<div class="coffee-card">
 
 <h2>PAPUA NEW GUINEA ENORGA</h2>
 
@@ -274,46 +425,54 @@ Medium-Dark Roast • 1300–1750m
 Chocolate • Lemon • Mango
 </div>
 
-<p class="origin">
-Produced by village growers in the Purosa region of Papua New Guinea’s
-Eastern Highlands through the Highlands Organic Agriculture Co-op.
-Farmers follow organic farming practices while cultivating coffee as
-their primary livelihood, supporting thousands of families within the
-region.
-</p>
-
-<a href="https://ember-elevation.myshopify.com/products/ember-elevation-guatemala-nahuala-copy">
-<button>Buy</button>
+<a
+href="https://ember-elevation.myshopify.com/products/ember-elevation-guatemala-nahuala-copy"
+class="shop-button"
+>
+SHOP COFFEE
 </a>
 
 </div>
 
 
-<div class="coffee">
+</div>
 
-<h2>THE ELEVATION COLLECTION</h2>
+
+<div class="collection">
+
+<div class="collection-label">
+THE ELEVATION COLLECTION
+</div>
+
+<h2>CURATED THREE-ORIGIN COLLECTION</h2>
 
 <div class="meta">
-All Three Origins
+Costa Rica Tarrazú • Guatemala Nahualá • Papua New Guinea Enorga
 </div>
 
 <div class="notes">
-Guatemala Nahualá • Papua New Guinea Enorga • Costa Rica Tarrazú
+Three distinct origins selected to showcase a range of sweetness, structure, brightness, and depth.
 </div>
 
-<p class="origin">
-A curated collection showcasing three distinct coffee-growing regions — the bright citrus and honeyed 
-sweetness of Costa Rica Tarrazú, the balanced chocolate richness of Guatemala Nahualá, and the full-bodied
-complexity of Papua New Guinea Ehorga.
-</p>
-
-<a href="https://ember-elevation.myshopify.com/products/elevation-collection">
-<button>Buy</button>
+<a
+href="https://ember-elevation.myshopify.com/products/elevation-collection"
+class="shop-button"
+>
+SHOP THE COLLECTION
 </a>
 
 </div>
+
+
+<div class="learn-more">
+Looking for detailed origin stories, tasting profiles, and brewing recommendations?
+<br><br>
+<a href="coffee.html">Explore The Coffee</a>
+</div>
+
 
 </div>
 
 </body>
+
 </html>
