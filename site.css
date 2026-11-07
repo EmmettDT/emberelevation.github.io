@@ -127,7 +127,12 @@ p{line-height:1.75}
 .newsletter-wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px}
 .newsletter-wrap h2{font-size:clamp(44px,4.3vw,67px);margin:0 0 20px}
 .newsletter-wrap p{max-width:540px;color:#61584d}
-.newsletter-form{display:flex;align-items:stretch;gap:8px;max-width:550px}
+.newsletter-form{display:block;max-width:550px}
+.newsletter-form-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:start;width:100%}
+.newsletter-form-inner>input[type="email"]{min-width:0;width:100%;height:52px;background:#fbfaf5;border:1px solid #a9a08f;padding:12px 15px;color:#292822;border-radius:0}
+.newsletter-form-inner>button{min-height:52px;margin:0;background:#18231c;color:#fff;border:0;padding:0 28px;letter-spacing:.08em;font-size:11px;text-transform:uppercase;font-weight:700;cursor:pointer}
+.newsletter-form-inner .consent-row{grid-column:1/-1;display:flex;align-items:flex-start;gap:10px;margin-top:7px;font-size:12px;line-height:1.55}
+.newsletter-form-inner .consent-row input[type="checkbox"]{width:17px!important;height:17px!important;min-width:17px;flex-shrink:0;margin:2px 0 0;accent-color:#223126}
 .newsletter-form label{display:block;flex:1;min-width:0}
 .newsletter-form input{width:100%;height:52px;background:#fbfaf5;border:1px solid #a9a08f;padding:12px 15px;color:#292822;border-radius:0}
 .newsletter-form button{background:#18231c;color:#fff;border:0;padding:0 28px;letter-spacing:.08em;font-size:11px;text-transform:uppercase;font-weight:700;cursor:pointer}
@@ -309,7 +314,10 @@ p{line-height:1.75}
 .bundle-art{min-height:325px}.bundle-copy{padding:60px 25px}.bundle-copy h2{font-size:47px}
 .story-visual{min-height:370px}.story-text{padding:62px 25px}.story-text h2{font-size:48px}
 .standard-grid{grid-template-columns:1fr 1fr;gap:26px 16px}.standard-grid h3{margin-top:15px}
-.newsletter-form{display:block}.newsletter-form label{display:block}.newsletter-form button{height:51px;width:100%;margin-top:8px}
+.newsletter-form{display:block}
+.newsletter-form-inner{grid-template-columns:1fr}
+.newsletter-form-inner>button{min-height:51px;width:100%;margin-top:0}
+.newsletter-form-inner .consent-row{grid-column:1}
 .footer-main{grid-template-columns:1fr 1fr;gap:40px 20px}.footer-main>div:first-child{grid-column:1/-1}
 .site-footer{padding-top:62px}
 .page-hero{padding:75px 0}.page-hero h1{font-size:clamp(49px,11vw,70px)}
