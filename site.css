@@ -48,7 +48,7 @@ p{line-height:1.75}
 .wrap{max-width:var(--wrap);padding-inline:clamp(22px,4.5vw,70px);margin-inline:auto}
 .section-pad{padding-block:clamp(70px,9vw,130px)}
 .section-pad-sm{padding-block:clamp(48px,6vw,92px)}
-.eyebrow{display:block;font-size:10px;letter-spacing:.22em;font-weight:700;text-transform:uppercase;color:#8f694d;margin-bottom:22px}
+.eyebrow{display:block;font-size:10px;letter-spacing:.22em;font-weight:700;text-transform:uppercase;color:#79553b;margin-bottom:22px}
 .eyebrow-light{color:#c3a17c}
 .display{font-size:clamp(53px,6.1vw,94px);line-height:1.04}
 .section-title{font-size:clamp(44px,4.9vw,70px);line-height:1.1}
