@@ -245,3 +245,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .ee-featured-media{order:2}
 .ee-featured-copy{order:1}
 }
+
+/* The Coffee page: cap origin name size so the longest word (YIRGACHEFFE) stays inside its column */
+.ee-coffee-education .origin-body .coffee h3{font-size:clamp(43px,4.6vw,57px)}
