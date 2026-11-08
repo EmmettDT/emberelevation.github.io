@@ -198,3 +198,43 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .ee-photo-pair{grid-template-columns:1fr}.ee-photo-pair img{height:330px}
 }
 @media(prefers-reduced-motion:reduce){.ee-intro-photo img,.ee-featured-media img{transition:none!important}}
+
+/* ===== Site improvements (Nov 2026): logo mark, home coffees, subscription band, forms, footer sign-up ===== */
+.brand-mark{width:auto;height:38px;object-fit:contain;filter:brightness(.78) saturate(1.25) contrast(1.15)}
+.brand{gap:14px}
+.product-bestfor{font-size:11px;line-height:1.55;color:#7a5a3c;letter-spacing:.04em;margin:-6px 0 16px}
+.ee-home-coffees{background:#f1ece2}
+.ee-home-coffees-note{margin:34px 0 0;font-size:13px;color:#61584d;text-align:center}
+.ee-home-coffees-note a,.ee-choose-note a{color:inherit;text-underline-offset:4px}
+.ee-sub-band{background:#1c2920;color:#f3efe6;padding-block:clamp(60px,7vw,100px)}
+.ee-sub-band-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.ee-sub-band h2{color:#f6f3e9;font-size:clamp(40px,4.3vw,64px);line-height:1.08;margin:0 0 18px}
+.ee-sub-band p{color:#cbd1c6;max-width:520px;margin:0}
+.ee-sub-band .btn{flex-shrink:0}
+.sub-original .ee-choose{scroll-margin-top:110px}
+.sub-original .ee-choose .product-grid{margin-top:28px}
+.ee-choose-note{margin:28px 0 0;font-size:14px;color:#575950}
+.ee-inquiry-form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;max-width:640px;scroll-margin-top:110px}
+.ee-inquiry-form label{display:flex;flex-direction:column;gap:7px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#cbd1c6}
+.ee-inquiry-form label:has(textarea){grid-column:1/-1}
+.ee-inquiry-form input,.ee-inquiry-form textarea{width:100%;background:#fbfaf5;border:1px solid #a9a08f;border-radius:0;padding:13px 15px;font:inherit;font-size:14px;letter-spacing:0;text-transform:none;font-weight:400;color:#292822}
+.ee-inquiry-form textarea{resize:vertical;min-height:110px}
+.ee-inquiry-form button{grid-column:1/-1;justify-self:start;background:#eee9dc;color:#1c281f;border:0;padding:15px 22px;font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;cursor:pointer}
+.ee-inquiry-form button:hover{background:#fff}
+.footer-news{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:start;border-top:1px solid #49544b;padding:40px 0 46px}
+.footer-news p{font-size:13px;line-height:1.8;color:#aeb7aa;margin:0}
+.footer-news .newsletter-form-inner>input[type="email"]{background:#f5eee2}
+.footer-news .newsletter-form-inner>button{background:#b78d65;color:#15201b}
+.footer-news .newsletter-form-inner>button:hover{background:#cfa57c}
+.footer-news .consent-row{color:#aeb7aa;font-size:11px}
+@media(max-width:900px){
+.ee-sub-band-inner{display:block}
+.ee-sub-band .btn{margin-top:28px}
+.footer-news{grid-template-columns:1fr;gap:22px}
+}
+@media(max-width:620px){
+.brand-mark{height:32px}
+.brand{gap:10px}
+.ee-inquiry-form{grid-template-columns:1fr}
+.product-bestfor{font-size:10px}
+}
