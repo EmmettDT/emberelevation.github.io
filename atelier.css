@@ -303,3 +303,5 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .ee-story-actions .btn{width:100%;justify-content:center}
 }
 @media(min-width:761px){.ee-about-intro img{max-height:none;min-height:100%}}
+.longform .founder-copy .ee-chapter{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin:34px 0 12px}
+.ee-story-quote{font-family:var(--serif);font-style:italic;font-size:clamp(26px,2.6vw,36px);line-height:1.3;color:#2b3830;border-left:2px solid var(--copper);margin:26px 0 26px;padding:4px 0 4px 24px}
