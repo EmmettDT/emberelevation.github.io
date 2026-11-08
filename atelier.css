@@ -311,3 +311,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .ee-story-family{margin:28px 0 8px}
 .ee-story-family img{display:block;width:100%;max-width:520px;height:auto;aspect-ratio:3/4;object-fit:cover}
 .ee-story-family figcaption{font-size:12px;color:#7a7b70;margin-top:10px;font-style:italic;font-family:var(--serif)}
+.about-original .ee-founder-family{background:none;min-height:0}
+.about-original .ee-founder-family img{display:block;height:auto;aspect-ratio:3/4;max-height:none}
+.about-original .ee-family-caption{font-family:var(--serif);font-style:italic;font-size:13px;line-height:1.5;color:#7a7b70;margin:10px 0 0}
