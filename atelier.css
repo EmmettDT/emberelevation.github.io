@@ -238,3 +238,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .ee-inquiry-form{grid-template-columns:1fr}
 .product-bestfor{font-size:10px}
 }
+
+/* Home: "Coffee with character" photo on the right so it alternates with the section above */
+@media(min-width:761px){
+.ee-featured{grid-template-columns:45% 55%}
+.ee-featured-media{order:2}
+.ee-featured-copy{order:1}
+}
