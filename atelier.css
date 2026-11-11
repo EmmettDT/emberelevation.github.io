@@ -314,3 +314,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .about-original .ee-founder-family{background:none;min-height:0}
 .about-original .ee-founder-family img{display:block;height:auto;aspect-ratio:3/4;max-height:none}
 .about-original .ee-family-caption{font-family:var(--serif);font-style:italic;font-size:13px;line-height:1.5;color:#7a7b70;margin:10px 0 0}
+
+/* Shop page: keep long coffee names (YIRGACHEFFE, NAHUALÁ) inside their cards on wide screens */
+@media(min-width:1000px){.ee-products .product-card h3{font-size:clamp(26px,2vw,28px)}}
