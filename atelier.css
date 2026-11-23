@@ -317,5 +317,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 /* Shop page: keep long coffee names (YIRGACHEFFE, NAHUALÁ) inside their cards on wide screens */
 @media(min-width:1000px){.ee-products .product-card h3{font-size:clamp(26px,2vw,28px)}}
 
-/* Keep the "01 / ORIGIN" labels above the coffee photos instead of on top of them */
-.product-card .product-card-media img{padding-top:42px}
+/* Coffee cards: "01 / ORIGIN" label sits in its own strip; photo fills the card below it, same on computer and phone */
+.product-card .product-card-media img{padding:42px 0 0;object-fit:cover}
+.product-card .product-card-media:hover img{transform:none}
+.ee-products .product-card-media img{padding:42px 7% 7%;object-fit:contain}
