@@ -161,8 +161,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .ee-intro-copy .ee-caption{margin-top:35px}
 .ee-intro-photo{height:520px;min-height:0}
 .ee-photo-credit{font-size:8px}
-.ee-quiet-bar{grid-template-columns:1fr 1fr}
-.ee-quiet-bar>div:last-child{grid-column:1/-1}
+.ee-quiet-bar{grid-template-columns:1fr}
 .ee-prologue{padding-block:76px}
 .ee-ritual,.ee-featured,.ee-origins-hero,.ee-shop-collection,.ee-brew-intro-photo,.ee-about-intro,.ee-contact-hero{grid-template-columns:1fr}
 .ee-ritual-photo{min-height:420px}
@@ -318,4 +317,5 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 /* Shop page: keep long coffee names (YIRGACHEFFE, NAHUALÁ) inside their cards on wide screens */
 @media(min-width:1000px){.ee-products .product-card h3{font-size:clamp(26px,2vw,28px)}}
 
-@media(max-width:1050px){.ee-products .product-card-media img{padding-top:42px}}
+/* Keep the "01 / ORIGIN" labels above the coffee photos instead of on top of them */
+.product-card .product-card-media img{padding-top:42px}
