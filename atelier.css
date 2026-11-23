@@ -317,3 +317,5 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 
 /* Shop page: keep long coffee names (YIRGACHEFFE, NAHUALÁ) inside their cards on wide screens */
 @media(min-width:1000px){.ee-products .product-card h3{font-size:clamp(26px,2vw,28px)}}
+
+@media(max-width:1050px){.ee-products .product-card-media img{padding-top:42px}}
